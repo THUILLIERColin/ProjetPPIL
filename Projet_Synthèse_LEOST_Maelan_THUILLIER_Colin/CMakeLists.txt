@@ -3,4 +3,4 @@ project(ClientCpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ClientCpp main.cpp Vecteur.cpp Vecteur.h Erreur.cpp Erreur.h Cercle.cpp Cercle.h Forme.cpp Forme.h segment.cpp segment.h Groupe.cpp Groupe.h Polygone.cpp Polygone.h)
+add_executable(ClientCpp main.cpp Vecteur2D.cpp Vecteur2D.h Erreur.cpp Erreur.h Cercle.cpp Cercle.h Forme.cpp Forme.h segment.cpp segment.h FormeComplexe.cpp FormeComplexe.h Polygone.cpp Polygone.h)
