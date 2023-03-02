@@ -76,7 +76,7 @@ public :
      */
     inline friend ostream& operator << (ostream& os, const Forme* s);
 
-    /** \Description  Opérateur d'affichage
+    /** \Description  Opérateur de conversion d'objet en chaîne de caractères.
      */
     virtual operator string() const = 0;
 };
