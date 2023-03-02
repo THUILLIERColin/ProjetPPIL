@@ -6,7 +6,7 @@
 #define PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_GROUPE_H
 
 
-class Groupe: public Forme
+class FormeComplexe: public Forme
 
 };
 
