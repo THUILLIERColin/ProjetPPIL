@@ -1,12 +1,14 @@
-//
-// Created by Maelan Leost on 02/03/2023.
-//
+/**
+ * @author Leost Maelan
+ */
 
 #ifndef PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_FORME_H
 #define PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_FORME_H
 
 using namespace std;
 #include "Vecteur2D.h"
+
+// On fait tout dans le point h ?
 
 class Forme {
 protected :
@@ -15,7 +17,7 @@ protected :
 public :
 
     /**  Constructeur vide */
-    Forme();
+    Forme(); // Pourquoi ?
 
     /**  Constructeur */
     Forme(const int& couleur) : _couleur(couleur) {}
