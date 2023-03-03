@@ -83,12 +83,7 @@ public :
      * @param u est le centre de l'homothétie
      * @param k est le coefficient d'homothétie
      */
-     void homothetie(const Vecteur2D& u, const double& k){
-        for (int i = 0; i < _points.size(); i++)
-        {
-            *_points[i] =  ( *_points[i] - u )*k  + u ;
-        }
-    }
+     void homothetie(const Vecteur2D& u, const double& k);
 
     /**
      * @brief Opération de rotation

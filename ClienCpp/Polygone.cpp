@@ -93,12 +93,12 @@ void Polygone::translation(const Vecteur2D &u) {
     }
 }
 
-/*void Polygone::homothetie(const Vecteur2D &u, const double &k) {
+void Polygone::homothetie(const Vecteur2D &u, const double &k) {
     for (int i = 0; i < _points.size(); i++)
     {
         *_points[i] =  ( *_points[i] - u )*k  + u ;
     }
-}*/
+}
 
 void Polygone::rotation(const Vecteur2D &u, const double angle) {
     return;
