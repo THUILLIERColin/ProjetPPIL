@@ -3,5 +3,5 @@ project(ClientCpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ClientCpp main.cpp Cercle.cpp Cercle.h Erreur.cpp Erreur.h Forme.cpp Forme.h FormeComplexe.cpp FormeComplexe.h Matrices2x2.cpp Matrices2x2.h Polygone.cpp Polygone.h Segment.cpp Segment.h Vecteur2D.cpp Vecteur2D.h Visiteur/VisiteurDeLibrairie.h Visiteur/Visiteur.h Visiteur/Visiteur.cpp Visiteur/VisiteurDeLibrairie.cpp Communication/InitCommunication.cpp Communication/InitCommunication.h)
+add_executable(ClientCpp main.cpp Formes/Cercle.cpp Formes/Cercle.h Erreur/Erreur.cpp Erreur/Erreur.h Formes/Forme.cpp Formes/Forme.h Formes/FormeComplexe.cpp Formes/FormeComplexe.h Formes/Matrices2x2.cpp Formes/Matrices2x2.h Formes/Polygone.cpp Formes/Polygone.h Formes/Segment.cpp Formes/Segment.h Formes/Vecteur2D.cpp Formes/Vecteur2D.h Visiteur/VisiteurDeLibrairie.h Visiteur/Visiteur.h Visiteur/Visiteur.cpp Visiteur/VisiteurDeLibrairie.cpp Communication/InitCommunication.cpp Communication/InitCommunication.h)
 

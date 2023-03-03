@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "../Forme.h"
+#include "../Formes/Forme.h"
 #include <string>
 #include <iostream>
 #include <sstream>

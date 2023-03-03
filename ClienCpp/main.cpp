@@ -2,9 +2,9 @@
  * @authors LEOST Maelan et THUILLIER Colin
  */
 
-#include "Polygone.h"
-#include "Cercle.h"
-#include "Segment.h"
+#include "Formes/Polygone.h"
+#include "Formes/Cercle.h"
+#include "Formes/Segment.h"
 #include "Communication/InitCommunication.h"
 
 int main(){

@@ -13,7 +13,7 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include "../Erreur.h"
+#include "../Erreur/Erreur.h"
 
 #define INVALID_SOCKET -1
 #define SOCKET_ERROR -1

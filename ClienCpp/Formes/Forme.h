@@ -5,8 +5,8 @@
 #pragma once
 
 #include "Matrices2x2.h"
-#include "Erreur.h"
-#include "Visitor/VisiteurDeLibrairie.h"
+#include "../Erreur/Erreur.h"
+#include "../Visiteur/VisiteurDeLibrairie.h"
 
 class Forme {
 protected :
