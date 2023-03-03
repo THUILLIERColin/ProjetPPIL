@@ -2,8 +2,7 @@
 // Created by Maelan Leost on 02/03/2023.
 //
 
-#ifndef PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_FORME_H
-#define PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_FORME_H
+#pragma once
 
 using namespace std;
 #include "Vecteur2D.h"
@@ -64,7 +63,7 @@ public :
     * @param u est le centre de l'homothétie
     * @param k est le coefficient d'homothétie
     **/
-    virtual void homothetie(const Vecteur2D& u,double k) = 0;
+    virtual void homothetie(const Vecteur2D&, double k) = 0;
 
     /**  \Description  Opération de rotation
      * @param u est le centre de la rotation
@@ -88,6 +87,3 @@ inline ostream& operator << (ostream& os, const Forme* s)
     os << (string)(*s);
     return os;
 }
-
-
-#endif //PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_FORME_H
