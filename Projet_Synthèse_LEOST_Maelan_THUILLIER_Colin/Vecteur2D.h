@@ -1,3 +1,7 @@
+/**
+ * @author update by THUILLIER Colin
+ */
+
 #pragma once
 #include <string>
 #include <sstream>
