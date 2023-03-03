@@ -7,13 +7,12 @@
 #include <vector>
 #include "Forme.h"
 #include "Vecteur2D.h"
-#include "Triangle.h"
 
 class Polygone: public Forme {
 private :
     vector<Vecteur2D*> _points;
 public :
-
+    /*** Constructeur ***/
     Polygone(const int couleur=0x000000);
 
     Polygone(vector<Vecteur2D*> points, const int couleur);
@@ -22,6 +21,7 @@ public :
 
     virtual Polygone* clone() const;
 
+    /*** Destructeur ***/
     virtual ~Polygone();
 
     /**

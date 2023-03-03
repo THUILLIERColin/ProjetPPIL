@@ -12,7 +12,9 @@ Polygone::Polygone(vector<Vecteur2D *> points, const int couleur) : Forme(couleu
 
 Polygone::Polygone(const Polygone &p) : Forme(p.getCouleur()) {
     removeAllPoints();
-    _points = p._points;
+    for (int i = 0; i < p.getNbPoints(); i++) {
+        addPoint(*(p.getPoint(i)->clone()));
+    }
 }
 
 Polygone *Polygone::clone() const {
@@ -24,11 +26,25 @@ Polygone::~Polygone() {
 }
 
 Vecteur2D Polygone::getMinXMinY() const {
-    return Vecteur2D();
+    double minX = _points[0]->x , minY = _points[0]->y;
+
+    for(int i = 0 ; i < _points.size() ; i++){
+        if ( _points[i]->x < minX ) minX =_points[i]->x;
+        if ( _points[i]->y < minY ) minY =_points[i]->y;
+    }
+
+    return Vecteur2D(minX,minY);
 }
 
 Vecteur2D Polygone::getMaxXMaxY() const {
-    return Vecteur2D();
+    double maxX = _points[0]->x , maxY = _points[0]->y;
+
+    for(int i = 0 ; i < _points.size() ; i++){
+        if ( _points[i]->x > maxX ) maxX =_points[i]->x;
+        if ( _points[i]->y > maxY ) maxY =_points[i]->y;
+    }
+
+    return Vecteur2D(maxX,maxY);
 }
 
 double Polygone::calculerAire() const {
@@ -59,7 +75,17 @@ double Polygone::calculerAire() const {
 }
 
 Vecteur2D Polygone::getCentreDeSymetrie() const {
-    return Vecteur2D();
+    double x =  0 , y = 0;
+
+    // On parcourt tous les points du polygone
+    for (int i = 0; i < _points.size(); ++i)
+    {
+        // On additionne les coordonnées de tous les points
+        x += _points[i]->x;
+        y += _points[i]->y;
+    }
+    // On divise par le nombre de points pour obtenir la moyenne et donc le centre de symétrie
+    return Vecteur2D(x/_points.size(),y/_points.size());
 }
 
 int Polygone::getNbPoints() const {
@@ -101,7 +127,20 @@ void Polygone::homothetie(const Vecteur2D &u, const double &k) {
 }
 
 void Polygone::rotation(const Vecteur2D &u, const double angle) {
-    return;
+    // On convertit l'angle en radians
+    double m11 = cos(angle);
+    double m21 = sin(angle);
+    double m12 = -m21;
+    double m22 = m11;
+    // Le nom des variables est veut dire par exemple m11 est la valeur de la matrice de rotation en 1,1
+    
+    Matrices2x2 M(m11,m12,m21,m22); // On crée la matrice de rotation
+    
+    // On parcourt tous les points du polygone
+    for (int i = 0; i < _points.size(); i++)
+    {
+        *_points[i] = M * ( *_points[i] - u ) + u ; // On applique la formule de rotation
+    }
 }
 
 Polygone::operator string() const {
@@ -115,6 +154,5 @@ Polygone::operator string() const {
     os << _points[i]->x << " , " << _points[i]->y;
     os << " ) " << _couleur;
     return os.str();
-
 }
 

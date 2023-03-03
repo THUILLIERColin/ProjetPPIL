@@ -1,7 +1,7 @@
-//
-// Created by Maelan Leost on 02/03/2023.
-//
-
+/**
+ * @author LEOST Maelan
+ * updated by THUILLIER Colin
+ */
 #pragma once
 
 #include "Matrices2x2.h"
