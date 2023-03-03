@@ -71,7 +71,7 @@ void Segment::translation(const Vecteur2D &u)
   * sert a agrandir ou rétrécir la figure
  **/
 
-void Segment::homothetie(const Vecteur2D &u, double k)
+void Segment::homothetie(const Vecteur2D &u, const double& k)
 {
     Vecteur1 =  (Vecteur1 - u)*k  + u;
     Vecteur2 =  (Vecteur2 - u)*k  + u;

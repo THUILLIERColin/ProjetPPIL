@@ -8,14 +8,6 @@ FormeComplexe::FormeComplexe(const int couleur) : Forme(couleur) {}
 
 FormeComplexe::FormeComplexe(vector<Forme *> listeFormes, const int couleur) : Forme(couleur), listeFormes(listeFormes) {}
 
-FormeComplexe::FormeComplexe(const FormeComplexe &formeComplexe) {
-    supprimerListeFormes();
-
-    for (int i = 0; i < formeComplexe.listeFormes.size(); i++) {
-        ajouterForme(formeComplexe.listeFormes[i]->clone());
-    }
-}
-
 FormeComplexe *FormeComplexe::clone() const {
     return new FormeComplexe(*this);
 }

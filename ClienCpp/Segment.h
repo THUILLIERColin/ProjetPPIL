@@ -70,7 +70,7 @@ public :
     * @param k est le coefficient d'homothétie
      * sert a agrandir ou rétrécir la figure
     **/
-    virtual void homothetie(const Vecteur2D& u,double k);
+    virtual void homothetie(const Vecteur2D& u, const double& k);
 
     /**  \Description  Opération de rotation
      * @param u est le centre de la rotation

@@ -6,8 +6,6 @@ mise en oeuvre de la classe Erreur
 */
 
 
-using namespace std;
-
 #include <stdio.h>
 #include <string.h>
 #include <iostream>

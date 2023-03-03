@@ -14,7 +14,6 @@ public :
     /*** Constructeur ***/
     FormeComplexe(const int couleur=0x000000);
     FormeComplexe(vector<Forme*> listeFormes, const int couleur=0x000000);
-    FormeComplexe(const FormeComplexe& formeComplexe);
     virtual FormeComplexe* clone() const;
 
     /*** Destructeur ***/
@@ -65,7 +64,7 @@ public :
     friend inline ostream& operator<<(ostream& os, const FormeComplexe& formeComplexe);
 
 };
-inline ostream& operator<<(ostream& os, const FormeComplexe& formeComplexe){
+inline ostream& operator<<(ostream& os, const FormeComplexe& formeComplexe) {
     os << "FormeComplexe : " << endl;
     for (int i = 0; i < formeComplexe.listeFormes.size(); i++) {
         os << *formeComplexe.listeFormes[i] << endl;
