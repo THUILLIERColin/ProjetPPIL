@@ -8,6 +8,7 @@
 #include "Forme.h"
 #include "Constante.h"
 #include "Vecteur2D.h"
+#include "Matrices2x2.h"
 #include <sstream>
 #include <iostream>
 
@@ -25,10 +26,21 @@ public :
     * Constructeurs et destructeur
     *
     * **********************************************************************/
-    /**  \brief  Constructeur  */
+    /**  \Description  Constructeur
+     * @param x
+     * @param y
+     * @param _rayon
+     * @param couleur
+     * sert à construire un cercle
+     */
     Cercle(int x, int y, double _rayon, const int& couleur) : Forme(_couleur), _rayon(_rayon),_centre(x,y) {}
 
-    /**  \brief  Constructeur  */
+    /**  \Description  Constructeur
+     * @param _centre
+     * @param _rayon
+     * @param couleur
+     * sert à construire un cercle
+     */
     Cercle(Vecteur2D _centre, double _rayon, const int& couleur) : Forme(_couleur), _rayon(_rayon),_centre(_centre) {}
 
     /**  \Description  Destructeur
@@ -70,22 +82,16 @@ public :
      * **********************************************************************/
 
     /** \Description  Clone la forme
-    */
-    /**
-     * \Description Clone l'instance courante du cercle.
-     * @return Cercle* Un pointeur sur une nouvelle instance d'un cercle.
-     * @detail Il s'agit d'une allocation dynamique (new).
+     * @return Cercle
+     * sert à cloner un cercle
      */
-    /** \Description  Clone la forme
-    */
-    Cercle *Cercle::clone() const
-    {
-        return new Cercle(*this);
-    }
+    Cercle* clone() const;
 
     /**
 	 * \Description Constructeur par recopie.
 	 * @param op Cercle Une instance du cercle à copier.
+     * @detail Il s'agit d'une allocation dynamique (new).
+     * se sert pour copier un cercle
 	 */
     Cercle(const Cercle& op);
 
@@ -97,11 +103,13 @@ public :
 
     /** \Description Avoir le point X minimal et point Y minimal  du plan selon la figure
     * @return un vecteur2D qui contient le le point min x et le point min Y
+     * sert à avoir le point min x et le point min Y
     */
     virtual Vecteur2D getMinXMinY() const =0;
 
     /** \Description  Avoir le point X maximal et point Y maximal  du plan selon la figure
      * @return un vecteur2D qui contient le le point max x et le point max Y
+     * sert à avoir le point max x et le point max Y
      */
     virtual Vecteur2D getMaxXMaxY() const =0;
 
@@ -188,7 +196,11 @@ public :
 
 };
 
-
+/** \Description opérateur d affichage
+ * @param os
+ * @param s
+ * @return
+ */
 inline ostream& operator << (ostream& os, const Cercle& s)
 {
     return os << (string)s;

@@ -55,21 +55,41 @@ Vecteur2D Segment::getMaxXMaxY() const {
      * **********************************************************************/
 
 /**
- * \brief    Opération de translation
- */
+   * \Descprition Opération de translation
+   * @param u est le vecteur de translation
+    * sert a déplacer la figure
+   */
 void Segment::translation(const Vecteur2D &u)
 {
     Vecteur1 = Vecteur1 + u;
     Vecteur2 = Vecteur2 + u;
 }
 
-/**
- * \brief    Opération d'homothétie
- */
+/** \Description Opération d'homothétie
+ * @param u est le centre de l'homothétie
+ * @param k est le coefficient d'homothétie
+  * sert a agrandir ou rétrécir la figure
+ **/
 void Segment::homothetie(const Vecteur2D &u, double k)
 {
     Vecteur1 =  (Vecteur1 - u)*k  + u;
     Vecteur2 =  (Vecteur2 - u)*k  + u;
+}
+
+/**  \Description  Opération de rotation
+* @param u est le centre de la rotation
+* sert a faire tourner la figure
+*/
+void Segment::rotation(const Vecteur2D &u, const double angle)
+{
+    double m11 = cos(angle);
+    double m21 = sin(angle);
+    double m12 = -m21;
+    double m22 = m11;
+
+    Matrices2x2 M(m11,m12,m21,m22);
+    Vecteur1 =  M * (Vecteur1 - u) + u ;
+    Vecteur2 =  M * (Vecteur2 - u) + u ;
 }
 
 /************************************************************************
@@ -78,11 +98,16 @@ void Segment::homothetie(const Vecteur2D &u, double k)
 *
 * **********************************************************************/
 
+/** \Description  Calculer l'aire du segment (0)
+ * @return 0
+*/
 double Segment::calculerAire() const
 {
     return 0;
 }
 
+/** \Description  Avoir le centre de symétrie du segment
+ */
 Vecteur2D Segment::getCentreDeSymetrie() const
 {
     Vecteur2D g = (Vecteur1+Vecteur2)*(1/2.0);

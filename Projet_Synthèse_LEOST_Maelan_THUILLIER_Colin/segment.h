@@ -7,6 +7,7 @@
 
 #include "Forme.h"
 #include "Vecteur2D.h"
+#include "Matrices2x2.h"
 
 using namespace std;
 
@@ -64,17 +65,20 @@ public :
     /**
     * \Descprition Opération de translation
     * @param u est le vecteur de translation
+     * sert a déplacer la figure
     */
     virtual void translation(const Vecteur2D& u) ;
 
     /** \Description Opération d'homothétie
     * @param u est le centre de l'homothétie
     * @param k est le coefficient d'homothétie
+     * sert a agrandir ou rétrécir la figure
     **/
     virtual void homothetie(const Vecteur2D& u,double k);
 
     /**  \Description  Opération de rotation
      * @param u est le centre de la rotation
+     * sert a faire tourner la figure
      */
     virtual void rotation(const Vecteur2D &u, const double angle );
 
