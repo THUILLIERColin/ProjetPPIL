@@ -41,6 +41,7 @@ public:
     /**
      * @brief Calcule la norme du vecteur
      * @return la norme du vecteur
+     * @details La norme d'un vecteur est sa longueur, c'est la distance euclidienne entre le point d'origine du vecteur et son extrémité
      */
     double norm() const;
 
@@ -48,6 +49,7 @@ public:
      * @brief Calcule le produit scalaire entre deux vecteurs
      * @param u
      * @return le produit scalaire entre deux vecteurs
+     * @details Le produit scalaire est la somme des produits des coordonnées des deux vecteurs
      */
     double produitScalaire(const Vecteur2D & u) const;
 
@@ -85,7 +87,7 @@ inline const Vecteur2D Vecteur2D::operator - (const Vecteur2D & u) const
 }
 
 double Vecteur2D::norm() const {
-    return sqrt(x*x + y*y);
+    return abs(sqrt(x*x + y*y));
 }
 
 double Vecteur2D::produitScalaire(const Vecteur2D & u) const {
