@@ -1,6 +1,6 @@
-//
-// Created by Maelan Leost on 02/03/2023.
-//
+/**
+ * @author LEOST Maelan
+ */
 
 #include "Forme.h"
 

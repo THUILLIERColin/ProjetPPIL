@@ -1,5 +1,5 @@
-//
-// Created by Maelan Leost on 02/03/2023.
-//
+/**
+ * @author THUILLIER Colin
+ */
 
 #include "FormeComplexe.h"

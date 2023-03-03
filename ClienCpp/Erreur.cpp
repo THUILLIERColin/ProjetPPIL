@@ -1,4 +1,7 @@
 /**
+ * @author LEOST Maelan
+ */
+ /**
 mise en oeuvre de la classe Erreur
 */
 

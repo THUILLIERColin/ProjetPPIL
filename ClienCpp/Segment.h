@@ -9,7 +9,8 @@
 class Segment : public Forme
 {
 private :
-    Vecteur2D Vecteur1, Vecteur2; //points du segment
+    Vecteur2D Vecteur1; //points du segment
+    Vecteur2D Vecteur2; //points du segment
 
 public :
     /************************************************************************
@@ -49,7 +50,7 @@ public :
     /**  \Description  clone de la classe
      * @return Segment
      */
-    // Segment* clone() const { return new Segment(*this); }
+    Segment* clone() const { return new Segment(*this); }
 
     /************************************************************************
      *

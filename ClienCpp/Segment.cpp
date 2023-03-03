@@ -70,6 +70,7 @@ void Segment::translation(const Vecteur2D &u)
  * @param k est le coefficient d'homothétie
   * sert a agrandir ou rétrécir la figure
  **/
+
 void Segment::homothetie(const Vecteur2D &u, double k)
 {
     Vecteur1 =  (Vecteur1 - u)*k  + u;
