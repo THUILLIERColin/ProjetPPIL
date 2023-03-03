@@ -1,3 +1,7 @@
+/**
+ * @author THUILLIER Colin
+ */
+
 #include "FormeComplexe.h"
 
 FormeComplexe::FormeComplexe(const int couleur) : Forme(couleur) {}

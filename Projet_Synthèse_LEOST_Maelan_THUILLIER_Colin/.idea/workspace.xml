@@ -7,9 +7,7 @@
     <option name="reloaded" value="true" />
   </component>
   <component name="CMakeRunConfigurationManager">
-    <generated>
-      <config projectName="ClientCpp" targetName="ClientCpp" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -54,9 +52,9 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="ClientCpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ClientCpp" TARGET_NAME="ClientCpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ClientCpp" RUN_TARGET_NAME="ClientCpp">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -72,7 +70,7 @@
       <workItem from="1677743028591" duration="687000" />
       <workItem from="1677743824516" duration="609000" />
       <workItem from="1677774063491" duration="27168000" />
-      <workItem from="1677857628349" duration="423000" />
+      <workItem from="1677857628349" duration="698000" />
     </task>
     <servers />
   </component>

@@ -70,7 +70,7 @@ public :
     * @param u est le centre de l'homothétie
     * @param k est le coefficient d'homothétie
     **/
-    virtual void homothetie(const Vecteur2D&, const double& k) = 0;
+    //virtual void homothetie(const Vecteur2D&, const double& k) = 0;
 
     /**  \Description  Opération de rotation
      * @param u est le centre de la rotation
