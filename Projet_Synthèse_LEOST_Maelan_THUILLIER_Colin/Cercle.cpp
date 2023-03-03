@@ -1,9 +1,11 @@
-//
-// Created by Maelan Leost on 02/03/2023.
-//
+/**
+ * @author LEOST Maelan
+ */
 
 #include "Cercle.h"
 #include "Constante.h"
+#include "Erreur.h"
+
 
 using namespace std;
 
@@ -31,7 +33,7 @@ void Cercle::setRayon(double rayon) {
 
 /************************************************************************
  *
- * Clone et constructeur par copie
+ *constructeur par copie
  *
  * **********************************************************************/
 
@@ -41,7 +43,7 @@ Cercle::Cercle(const Cercle& op) : Forme(op.getCouleur())
 {
     if (op._rayon <= 0)
     {
-        throw ("Impossible de construire un cercle avec ce rayon.");
+        throw Erreur("Impossible de construire un cercle avec ce rayon.");
     }
     else
     {
@@ -117,16 +119,6 @@ const Cercle& Cercle::operator = (const Cercle& op)
     return *this;
 }
 
-/**
- * \Description Surcharge de l'opérateur ==.
- * @detail Compare l'instance avec le vecteur passé en paramètre.
- * @param op Cercle
- * @return bool
- */
-bool Cercle::operator == (const Cercle& op)const
-{
-    return (_centre == op._centre) && (_rayon == op._rayon) && operator==(op);
-}
 
 /**
  * \Description Surcharge de l'opérateur !=.

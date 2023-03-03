@@ -31,6 +31,7 @@ public:
     inline const Vecteur2D operator - () const;
 
     inline const Vecteur2D operator - (const Vecteur2D & u) const;
+    inline const Vecteur2D operator == (const Vecteur2D & u) const;
 
     operator string() const;
 
@@ -61,6 +62,11 @@ inline const Vecteur2D Vecteur2D::operator - () const
 inline const Vecteur2D Vecteur2D::operator - (const Vecteur2D & u) const
 {
     return Vecteur2D( x-u.x, y-u.y);
+}
+
+inline const bool Vecteur2D::operator == (const Vecteur2D & u) const
+{
+    return (x==u.x && y==u.y);
 }
 
 Vecteur2D::operator string() const

@@ -1,6 +1,6 @@
-//
-// Created by Maelan Leost on 02/03/2023.
-//
+/**
+ * @author LEOST Maelan
+ */
 
 #ifndef PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_CERCLE_H
 #define PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_CERCLE_H
@@ -26,10 +26,10 @@ public :
     *
     * **********************************************************************/
     /**  \brief  Constructeur  */
-    Cercle(int x, int y, double _rayon, const int& couleur = " ") : Forme(_couleur), _rayon(_rayon),_centre(x,y) {}
+    Cercle(int x, int y, double _rayon, const int& couleur) : Forme(_couleur), _rayon(_rayon),_centre(x,y) {}
 
     /**  \brief  Constructeur  */
-    Cercle(Vecteur2D _centre, double _rayon, const int& couleur = " ") : Forme(_couleur), _rayon(_rayon),_centre(_centre) {}
+    Cercle(Vecteur2D _centre, double _rayon, const int& couleur) : Forme(_couleur), _rayon(_rayon),_centre(_centre) {}
 
     /**  \Description  Destructeur
      * sert à détruire l'objet
@@ -78,7 +78,7 @@ public :
      */
     /** \Description  Clone la forme
     */
-    Cercle* Cercle::clone() const
+    Cercle *Cercle::clone() const
     {
         return new Cercle(*this);
     }
