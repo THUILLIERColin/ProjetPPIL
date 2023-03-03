@@ -57,30 +57,50 @@ void Matrices2x2::setVecteur2(const Vecteur2D &vecteur2) {
 * **********************************************************************/
 
 /** \Description operateur binaire +
-    * @param m
-    * @return Matrices2x2
-    * sert a additionner deux matrices
+* @param m
+* @return Matrices2x2
+* sert a additionner deux matrices
 */
 const Matrices2x2 Matrices2x2::operator+(const Matrices2x2 &m) const
 {
     return Matrices2x2(Vecteur1+m.Vecteur1,Vecteur2+m.Vecteur2);
 }
 
+/** \Description operateur binaire -
+    * @param m
+    * @return Matrices2x2
+    * sert a soustraire deux matrices
+    */
 const Matrices2x2 Matrices2x2::operator-(const Matrices2x2 &m) const
 {
     return Matrices2x2(Vecteur1-m.Vecteur1,Vecteur2-m.Vecteur2);
 }
 
+/** \Description operateur unaire -
+ * @param
+ * @return
+ * sert a inverser une matrice
+ */
 const Matrices2x2 Matrices2x2::operator-() const
 {
     return Matrices2x2(-Vecteur1,-Vecteur2);
 }
 
+/** \Description operateur binaire *
+* @param a
+* @return Matrices2x2
+* sert a multiplier une matrice par un reel
+*/
 const Matrices2x2 Matrices2x2::operator*(const double &a) const
 {
     return Matrices2x2(Vecteur1*a,Vecteur2*a);
 }
 
+/** \Description operateur binaire *
+* @param vec
+* @return Vecteur2D
+* sert a multiplier une matrice par un vecteur
+*/
 const Vecteur2D Matrices2x2::operator*(const Vecteur2D &vecteur) const
 {
     double l1 = Vecteur1.x*vecteur.x + Vecteur1.y*vecteur.y;
@@ -88,11 +108,21 @@ const Vecteur2D Matrices2x2::operator*(const Vecteur2D &vecteur) const
     return Vecteur2D(l1,l2);
 }
 
+/** \Description operateur binaire *
+* @param vec
+* @return Vecteur2D
+* sert a multiplier une matrice par un vecteur
+*/
 const Matrices2x2 Matrices2x2::operator*(const Matrices2x2 &m) const
 {
     return Matrices2x2();
 }
 
+/** \Description operateur binaire =
+* @param a
+* @return Matrices2x2
+* sert a affecter une matrice a une autre
+*/
 Matrices2x2& Matrices2x2::operator=(const Matrices2x2 &m)
 {
     if (this== &m)
@@ -105,6 +135,15 @@ Matrices2x2& Matrices2x2::operator=(const Matrices2x2 &m)
     return *this;
 }
 
+/** \Description operateur binaire ==
+ * @param matrice
+ * @return
+ * sert a comparer deux matrices
+ */
+const bool Matrices2x2::operator==(const Matrices2x2 &m) const
+{
+    return (Vecteur1==m.Vecteur1 && Vecteur2==m.Vecteur2);
+}
 
 /************************************************************************
 *

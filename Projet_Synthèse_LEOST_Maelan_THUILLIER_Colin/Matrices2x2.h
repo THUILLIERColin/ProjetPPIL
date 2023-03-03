@@ -85,10 +85,10 @@ public:
     */
    const Matrices2x2 operator * (const Matrices2x2 & m) const;
 
-    /** \Description operateur binaire *
+    /** \Description operateur binaire =
     * @param a
     * @return Matrices2x2
-    * sert a multiplier une matrice par une matrice
+    * sert a affecter une matrice a une autre
     */
    Matrices2x2& operator = (const Matrices2x2& m) ;
 
@@ -98,6 +98,14 @@ public:
    * sert a multiplier une matrice par un vecteur
    */
    const Vecteur2D operator * (const Vecteur2D & vec) const;
+
+    /** \Description operateur binaire ==
+     * @param matrice
+     * @return
+     * sert a comparer deux matrices
+     */
+    const bool operator == (const Matrices2x2 & matrice) const;
+
 
     /** \Description operateur unaire -
      * @param
