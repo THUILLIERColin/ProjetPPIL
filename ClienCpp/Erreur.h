@@ -1,7 +1,3 @@
-/**
- * @author LEOST Maelan
- */
-
 #pragma once
 /**
 classe Erreur

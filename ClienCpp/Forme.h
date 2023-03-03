@@ -1,7 +1,7 @@
 /**
  * @author LEOST Maelan
+ * updated by THUILLIER Colin
  */
-
 #pragma once
 
 #include "Matrices2x2.h"

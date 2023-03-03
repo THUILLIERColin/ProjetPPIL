@@ -1,5 +1,9 @@
 #include "Vecteur2D.h"
 
+const Vecteur2D* Vecteur2D::clone() const {
+    return new Vecteur2D(*this);
+}
+
 double Vecteur2D::norm() const {
     return abs(sqrt(x*x + y*y));
 }

@@ -27,6 +27,7 @@ public:
  *
  * */
     inline Vecteur2D(const char * s);
+    const Vecteur2D* clone() const;
     inline const Vecteur2D operator + (const Vecteur2D & u) const;
     inline const Vecteur2D operator * (const double & a) const;
 /**
@@ -70,8 +71,7 @@ inline const Vecteur2D operator *(const double & a, const Vecteur2D & u) { retur
 
 //------------ implémentation des fonctions inline ----------------------
 
-inline  Vecteur2D::
-Vecteur2D(const double & x, const double & y): x(x),y(y){}
+inline  Vecteur2D::Vecteur2D(const double & x, const double & y): x(x),y(y){}
 
 inline const Vecteur2D Vecteur2D::operator + (const Vecteur2D & u) const
 {
