@@ -3,7 +3,6 @@
  */
 
 #include "Cercle.h"
-#include "Constante.h"
 #include "Erreur.h"
 #include <cmath>
 

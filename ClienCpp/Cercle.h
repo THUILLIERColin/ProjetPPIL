@@ -5,7 +5,6 @@
 #pragma once
 
 #include "Forme.h"
-#include "Constante.h"
 #include "Vecteur2D.h"
 #include "Matrices2x2.h"
 #include <sstream>
