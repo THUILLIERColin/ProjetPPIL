@@ -1,10 +1,17 @@
 /**
- * @author LEOST Maelan et THUILLIER Colin
+ * @authors LEOST Maelan et THUILLIER Colin
  */
- #include "Polygone.h"
+
+#include "Polygone.h"
 #include "Cercle.h"
 #include "Segment.h"
+#include "Communication/InitCommunication.h"
+
 int main(){
+
+    /**************************************************************************
+     *  Partie 1 : Les tests
+     *************************************************************************/
     printf("Test sur le polygone\n");
     Polygone p(0x000000);
     p.addPoint(Vecteur2D(1,1));
@@ -50,17 +57,14 @@ int main(){
     cout << segment.getMinXMinY() << endl;
     cout << segment.getMaxXMaxY() << endl;
 
-
-
     printf("\n");
-    /**
-    printf("test sur le Triangle\n");
-    Triangle triangle(1, 1, 2,2, 3,3, 0x000000);
-    cout << triangle.calculerAire() << endl;
-    cout << triangle.getCentreDeSymetrie() << endl;
-    cout << triangle.getMinXMinY() << endl;
-    cout << triangle.getMaxXMaxY() << endl;
-    */
+
+    /**************************************************************************
+     *  Partie 2 : Le réseau
+     *************************************************************************/
+    // Initialisation de la communication
+    // prendre l'instance dans InitCommunication
+    InitCommunication *initCommunication = InitCommunication::getInstance();
 
 
     return 0;
