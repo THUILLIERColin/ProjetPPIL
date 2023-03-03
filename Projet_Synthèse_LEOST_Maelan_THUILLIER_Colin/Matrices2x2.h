@@ -114,7 +114,32 @@ public:
      */
     const Matrices2x2 operator - () const;
 
+    /************************************************************************
+    *
+    * Methodes pour les calculs de matrices
+    *
+    * **********************************************************************/
 
+    /** \Description methode determinant
+     * @param
+     * @return double
+     * sert a calculer le determinant d'une matrice
+     */
+    const double produitScalaire() const;
+
+    /** \Description methode inverse
+     * @param
+     * @return Matrices2x2
+     * sert a calculer l'inverse d'une matrice
+     */
+    const Matrices2x2 inverse() const ;
+
+    /** \Description methode comatrice
+     * @param
+     * @return Matrices2x2
+     * sert a calculer la comatrice d'une matrice
+     */
+    const Matrices2x2 comatrice() const;
     /************************************************************************
     *
     * Methodes pour l'affichage
