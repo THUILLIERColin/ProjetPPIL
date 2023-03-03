@@ -70,10 +70,6 @@ public :
     virtual void rotation(const Vecteur2D &u, const double angle ) = 0;
 
 
-    /** \Description  Opérateur d'affichage en friend car on a besoin de la classe fille
-     */
-    inline friend ostream& operator << (ostream& os, const Forme* s);
-
     /** \Description  Opérateur de conversion d'objet en chaîne de caractères.
      */
     virtual operator string() const = 0;

@@ -1,23 +1,18 @@
 /**
- * @author Thuillier Colin
+ * @author THUILLIER Colin
  */
 
 #include "Polygone.h"
 
-Polygone::Polygone(const int couleur) {
-    _couleur = couleur;
-}
+Polygone::Polygone(const int couleur) : Forme(couleur) {}
 
-Polygone::Polygone(vector<Vecteur2D *> points, const int couleur) {
+Polygone::Polygone(vector<Vecteur2D *> points, const int couleur) : Forme(couleur) {
     _points = points;
-    _couleur = couleur;
 }
 
-Polygone::Polygone(const Polygone &p) {
+Polygone::Polygone(const Polygone &p) : Forme(p.getCouleur()) {
     removeAllPoints();
-
     _points = p._points;
-    _couleur = p._couleur;
 }
 
 Polygone *Polygone::clone() const {
@@ -120,5 +115,6 @@ Polygone::operator string() const {
     os << _points[i]->x << " , " << _points[i]->y;
     os << " ) " << _couleur;
     return os.str();
+
 }
 

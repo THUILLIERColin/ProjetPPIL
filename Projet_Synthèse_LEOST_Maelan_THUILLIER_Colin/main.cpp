@@ -1,5 +1,15 @@
 #include <iostream>
 #include "Vecteur2D.h"
+
+#include "Cercle.h"
+#include "Constante.h"
+#include "Erreur.h"
+#include "Groupe.h"
+#include "Forme.h"
+#include "Matrices2x2.h"
+#include "Segment.h"
+#include "Triangle.h"
+
 #include "Polygone.h"
 
 
