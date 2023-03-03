@@ -53,7 +53,7 @@ public :
     /**  \Description  clone de la classe
      * @return Segment
      */
-    Segment* clone() const { return new Segment(*this); }
+    // Segment* clone() const { return new Segment(*this); }
 
     /************************************************************************
      *

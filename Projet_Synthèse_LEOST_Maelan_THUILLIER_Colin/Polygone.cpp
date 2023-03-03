@@ -21,7 +21,7 @@ Polygone::Polygone(const Polygone &p) {
 }
 
 Polygone *Polygone::clone() const {
-    // return new Polygone(*this);
+    return new Polygone(*this);
 }
 
 Polygone::~Polygone() {
@@ -98,12 +98,12 @@ void Polygone::translation(const Vecteur2D &u) {
     }
 }
 
-void Polygone::homothetie(const Vecteur2D &u, const double &k) {
+/*void Polygone::homothetie(const Vecteur2D &u, const double &k) {
     for (int i = 0; i < _points.size(); i++)
     {
         *_points[i] =  ( *_points[i] - u )*k  + u ;
     }
-}
+}*/
 
 void Polygone::rotation(const Vecteur2D &u, const double angle) {
     return;
@@ -123,7 +123,7 @@ Polygone::operator string() const {
 }
 
 int main(){
-    Polygone p;
+    Polygone p(0xFFFFFF);
     Vecteur2D v1(1,2);
     Vecteur2D v2(3,4);
     Vecteur2D v3(5,6);

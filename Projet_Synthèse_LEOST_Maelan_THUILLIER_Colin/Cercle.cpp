@@ -5,6 +5,7 @@
 #include "Cercle.h"
 #include "Constante.h"
 #include "Erreur.h"
+#include <cmath>
 
 
 using namespace std;
@@ -112,7 +113,7 @@ void Cercle::translation(const Vecteur2D& u)
 * @param k est le coefficient d'homothétie
  * sert à agrandir ou rétrécir le cercle
 **/
-void Cercle::homothetie( const Vecteur2D &u, double k)
+void Cercle::homothetie( const Vecteur2D &u, const double& k)
 {
     _centre = (_centre - u)*k  + u;
     _rayon *= k;
@@ -148,7 +149,7 @@ void Cercle::rotation(const Vecteur2D &u, const double angle)
  */
 double Cercle::calculerAire() const
 {
-    return _rayon * _rayon * PI;
+    return _rayon * _rayon * M_PI;
 }
 
 

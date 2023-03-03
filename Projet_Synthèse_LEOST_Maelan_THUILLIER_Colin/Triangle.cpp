@@ -20,7 +20,7 @@ Triangle::Triangle(const Triangle &t) {
 }
 
 Triangle *Triangle::clone() const {
-
+    return new Triangle(*this);
 }
 
 Triangle::~Triangle() {

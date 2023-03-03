@@ -83,7 +83,12 @@ public :
      * @param u est le centre de l'homothétie
      * @param k est le coefficient d'homothétie
      */
-    virtual void homothetie(const Vecteur2D& u, const double& k);
+     void homothetie(const Vecteur2D& u, const double& k){
+        for (int i = 0; i < _points.size(); i++)
+        {
+            *_points[i] =  ( *_points[i] - u )*k  + u ;
+        }
+    }
 
     /**
      * @brief Opération de rotation
@@ -98,3 +103,8 @@ public :
     virtual operator string() const;
 
 };
+inline ostream& operator << (ostream& os, const Polygone& s)
+{
+    os << (string)(s);
+    return os;
+}

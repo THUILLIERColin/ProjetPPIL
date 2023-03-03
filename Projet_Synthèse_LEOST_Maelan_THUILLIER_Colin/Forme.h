@@ -4,7 +4,6 @@
 
 #pragma once
 
-using namespace std;
 #include "Vecteur2D.h"
 
 class Forme {
@@ -63,7 +62,7 @@ public :
     * @param u est le centre de l'homothétie
     * @param k est le coefficient d'homothétie
     **/
-    virtual void homothetie(const Vecteur2D&, double k) = 0;
+    virtual void homothetie(const Vecteur2D&, const double& k) = 0;
 
     /**  \Description  Opération de rotation
      * @param u est le centre de la rotation
@@ -82,9 +81,9 @@ public :
 
 /** \Description  Opérateur d'affichage
    */
-inline ostream& operator << (ostream& os, const Forme* s)
+inline ostream& operator << (ostream& os, const Forme& s)
 {
-    os << (string)(*s);
+    os << (string)(s);
     return os;
 
 }
