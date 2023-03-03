@@ -35,13 +35,33 @@ int main(){
     cout << segment.getCentreDeSymetrie() << endl;
     cout << segment.getMinXMinY() << endl;
     cout << segment.getMaxXMaxY() << endl;
+    segment.translation(Vecteur2D(2,1));
+    printf("test sur le Segment apres translation\n");
+    cout << segment.getCentreDeSymetrie() << endl;
+    cout << segment.getMinXMinY() << endl;
+    cout << segment.getMaxXMaxY() << endl;
+    printf("test sur le Segment apres homothetie\n");
+    segment.homothetie(Vecteur2D(2,1),5);
+    cout << segment.getCentreDeSymetrie() << endl;
+    cout << segment.getMinXMinY() << endl;
+    cout << segment.getMaxXMaxY() << endl;
+    printf("test sur le Segment apres rotation\n");
+    cout << segment.getCentreDeSymetrie() << endl;
+    cout << segment.getMinXMinY() << endl;
+    cout << segment.getMaxXMaxY() << endl;
 
-    /**
-    cout << segment.translation(Vecteur2D(2,1)) << endl;
-    cout << segment.homothetie(Vecteur2D(2,1),5) << endl;
-    cout << segment.rotation(Vecteur2D(1,1),10) << endl;
-    */
+
 
     printf("\n");
+    /**
+    printf("test sur le Triangle\n");
+    Triangle triangle(1, 1, 2,2, 3,3, 0x000000);
+    cout << triangle.calculerAire() << endl;
+    cout << triangle.getCentreDeSymetrie() << endl;
+    cout << triangle.getMinXMinY() << endl;
+    cout << triangle.getMaxXMaxY() << endl;
+    */
+
+
     return 0;
 }
