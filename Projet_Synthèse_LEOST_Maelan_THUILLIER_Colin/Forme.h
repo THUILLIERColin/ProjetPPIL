@@ -72,7 +72,11 @@ public :
 
     /** \Description  Opérateur de conversion d'objet en chaîne de caractères.
      */
-    virtual operator string() const = 0;
+    virtual operator string() const{
+        ostringstream os;
+        os << "Couleur : " << _couleur << endl;
+        return os.str();
+    }
 };
 
 /** \Description  Opérateur d'affichage

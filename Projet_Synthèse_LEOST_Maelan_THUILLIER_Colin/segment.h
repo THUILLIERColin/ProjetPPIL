@@ -24,7 +24,7 @@ public :
 
     /**  \Description  Constructeur
     */
-    Segment(double g, double h, double d, double b, const string& couleur) : Forme(_couleur) , Vecteur1(g, h), Vecteur2(d, b) {}
+    Segment(double g, double h, double d, double b, const int& couleur) : Forme(couleur) , Vecteur1(g, h), Vecteur2(d, b) {}
 
     /**  \Description  Deconstructeur
      * sert à détruire l'objet

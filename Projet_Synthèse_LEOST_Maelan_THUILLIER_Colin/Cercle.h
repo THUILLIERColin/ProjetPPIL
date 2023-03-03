@@ -28,11 +28,11 @@ public :
     /**  \Description  Constructeur
      * @param x
      * @param y
-     * @param _rayon
+     * @param rayon
      * @param couleur
      * sert à construire un cercle
      */
-    Cercle(int x, int y, double _rayon, const int& couleur) : Forme(_couleur), _rayon(_rayon),_centre(x,y) {}
+    Cercle(int x, int y, double rayon, const int& couleur) : Forme(couleur), _rayon(rayon),_centre(x,y) {}
 
     /**  \Description  Constructeur
      * @param _centre
@@ -40,7 +40,7 @@ public :
      * @param couleur
      * sert à construire un cercle
      */
-    Cercle(Vecteur2D _centre, double _rayon, const int& couleur) : Forme(_couleur), _rayon(_rayon),_centre(_centre) {}
+    Cercle(Vecteur2D _centre, double rayon, const int& couleur) : Forme(couleur), _rayon(rayon),_centre(_centre) {}
 
     /**  \Description  Destructeur
      * sert à détruire l'objet
