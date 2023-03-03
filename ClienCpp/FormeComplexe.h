@@ -4,11 +4,11 @@
 #pragma once
 
 #include "Forme.h"
-
 #include <vector>
 
 
-class FormeComplexe: public Forme{
+class FormeComplexe: public Forme
+{
 private :
     vector<Forme*> listeFormes;
 public :
@@ -44,7 +44,7 @@ public :
      void supprimerListeFormes();
 
     /**
-     * @brief Méthode qui permet d'obtenir la forme a l'indice i
+     * @Description Méthode qui permet d'obtenir la forme a l'indice i
      * @param i
      * @return la forme a l'indice i
      */
@@ -110,6 +110,11 @@ public :
     */
     virtual void rotation(const Vecteur2D &u, const double angle);
 
+    /************************************************************************
+    *
+    * Methodes pour l'affichage
+    *
+    **********************************************************************/
     virtual operator string() const;
 
     friend inline ostream& operator<<(ostream& os, const FormeComplexe& formeComplexe);
