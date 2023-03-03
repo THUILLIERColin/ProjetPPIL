@@ -124,6 +124,10 @@ public :
     */
     friend inline ostream& operator << (ostream& os, const Segment& m);
 
+    /************************************************************************
+     * Visiteur
+     * **********************************************************************/
+    const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const;
 
 };
 

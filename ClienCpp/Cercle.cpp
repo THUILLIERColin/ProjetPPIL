@@ -226,3 +226,7 @@ Cercle::operator string()const
        << " ] " << endl;
     return os.str();
 }
+
+const void* Cercle::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const{
+    return visiteur->visite(this, s);
+}

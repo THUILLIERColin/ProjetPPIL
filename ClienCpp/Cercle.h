@@ -191,6 +191,11 @@ public :
     /** \Description  Surcharge de l'opérateur <<.
     */
     friend inline ostream& operator << (ostream& os, const Cercle& c);
+
+    /************************************************************************
+     * Visiteur
+     * **********************************************************************/
+    const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const;
 };
 
 /** \Description opérateur d affichage

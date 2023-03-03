@@ -123,3 +123,7 @@ FormeComplexe::operator string() const {
     }
     return oss.str();
 }
+
+const void* FormeComplexe::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const{
+    return visiteur->visite(this, s);
+}

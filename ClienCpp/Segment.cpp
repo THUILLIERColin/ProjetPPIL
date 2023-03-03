@@ -122,3 +122,7 @@ Vecteur2D Segment::getCentreDeSymetrie() const
     Vecteur2D g = (Vecteur1+Vecteur2)*(1/2.0);
     return g;
 }
+
+const void *Segment::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const {
+    return visiteur->visite(this,s);
+}

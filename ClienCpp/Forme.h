@@ -6,6 +6,7 @@
 
 #include "Matrices2x2.h"
 #include "Erreur.h"
+#include "Visitor/VisiteurDeLibrairie.h"
 
 class Forme {
 protected :
@@ -92,6 +93,15 @@ public :
         os << (string) forme;
         return os;
     }
+
+    /**
+     * @author THUILLIER Colin
+     * @brief Visiteur de librairie qui va se charger de dessiner le polygone
+     * @param visiteur (VisiteurDeLibrairie) visiteur de la librairie qui va dessiner le polygone
+     * @param s (SOCKET) socket de communication avec le client
+     * @return void (le visiteur dessine le polygone)
+     */
+    virtual const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const=0;
 };
 
 

@@ -63,6 +63,11 @@ public :
 
     friend inline ostream& operator<<(ostream& os, const FormeComplexe& formeComplexe);
 
+    /************************************************************************
+     * Visiteur
+     * **********************************************************************/
+    const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const;
+
 };
 inline ostream& operator<<(ostream& os, const FormeComplexe& formeComplexe) {
     os << "FormeComplexe : " << endl;
