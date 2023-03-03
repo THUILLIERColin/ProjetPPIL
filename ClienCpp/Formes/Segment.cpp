@@ -3,6 +3,8 @@
  */
 
 #include "Segment.h"
+#include "../Visiteur/VisiteurDeLibrairie.h"
+
 
 
 using namespace std;

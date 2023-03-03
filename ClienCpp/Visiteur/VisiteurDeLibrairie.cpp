@@ -4,6 +4,8 @@
 
 #include "VisiteurDeLibrairie.h"
 
+using namespace std;
+
 const void *VisiteurDeLibrairie::visite(const Forme *forme, SOCKET *s) const {
     int r;
 

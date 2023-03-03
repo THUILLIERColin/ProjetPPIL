@@ -3,6 +3,7 @@
  */
 
 #include "Cercle.h"
+#include "../Visiteur/VisiteurDeLibrairie.h"
 #include <cmath>
 
 

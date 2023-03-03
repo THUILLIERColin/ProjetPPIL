@@ -2,6 +2,8 @@
 * @author THUILLIER Colin
 */
 
+#pragma once
+
 #include "Visiteur.h"
 
 class VisiteurDeLibrairie : public Visiteur {

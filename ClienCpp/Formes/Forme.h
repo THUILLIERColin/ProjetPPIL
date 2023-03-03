@@ -6,7 +6,9 @@
 
 #include "Matrices2x2.h"
 #include "../Erreur/Erreur.h"
-#include "../Visiteur/VisiteurDeLibrairie.h"
+#include <pcap/socket.h>
+
+class VisiteurDeLibrairie;
 
 class Forme {
 protected :
