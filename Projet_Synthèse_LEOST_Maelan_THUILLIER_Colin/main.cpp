@@ -1,14 +1,21 @@
 #include <iostream>
 #include "Vecteur2D.h"
+#include "Polygone.h"
 
 
-/*int main() {
-    cout << "essai des vecteurs 2D \n";
+int main(){
+    Polygone p(0xFFFFFF);
+    Vecteur2D v1(1,2);
+    Vecteur2D v2(3,4);
+    Vecteur2D v3(5,6);
+    Vecteur2D v4(7,8);
+    p.addPoint(v1);
+    p.addPoint(v2);
+    p.addPoint(v3);
+    p.addPoint(v4);
+    cout << p << endl;
 
-    Vecteur2D u1(2, 3), u2(2, 3), v(5), w, v1(35, -63), u3(3, 4), u4(3, -4), v3;
-
-    cout << " u1 = " << u1 << endl;
-    cout << " u2 = " << u2 << endl;
-    cout << " u1 - u2 = " << u1 - u2 << endl;
-    cout << " 5*u1 = " << 5 * u1 << endl;
-}*/
+    p.homothetie(Vecteur2D(0,0),2);
+    cout << p << endl;
+    return 0;
+}

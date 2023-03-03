@@ -42,10 +42,11 @@ void Cercle::setRayon(double rayon) {
 * @return Cercle
 * sert à cloner un cercle
 */
-//Cercle* Cercle::clone() const
-//{
-//    return new Cercle(*this);
-//}
+/**
+Cercle* Cercle::clone() const
+{
+    return new Cercle(*this);
+} */
 
 /**
  * \Description Constructeur par recopie.
@@ -190,7 +191,16 @@ bool Cercle::operator != (const Cercle& op)const
     return !(*this == op);
 }
 
-
+/**
+ * \Description Surcharge de l'opérateur ==.
+ * @detail Compare l'instance avec le vecteur passé en paramètre.
+ * @param op Cercle
+ * @return bool
+ */
+bool Cercle::operator == (const Cercle& op)const
+{
+    return (_centre == op._centre) && (_rayon == op._rayon);
+}
 /************************************************************************
  *
  * Methodes pour l'affichage
