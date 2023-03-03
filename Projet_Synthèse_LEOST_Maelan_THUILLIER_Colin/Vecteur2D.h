@@ -2,6 +2,7 @@
 #include <string>
 #include <sstream>
 #include <iostream>
+#include <math.h>
 
 #ifndef PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_VECTEUR_H
 #define PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_VECTEUR_H
@@ -30,8 +31,20 @@ public:
  * */
     inline const Vecteur2D operator - () const;
 
+    /**
+     * - binaire (c'est-à- dire soustraction de deux vecteurs)
+     * @param u
+     * @return le vecteur résultant de la soustraction
+     */
     inline const Vecteur2D operator - (const Vecteur2D & u) const;
-    inline const Vecteur2D operator == (const Vecteur2D & u) const;
+
+    /**
+     * @brief Calcule la norme du vecteur
+     * @return la norme du vecteur
+     */
+    double norm() const;
+
+    inline const bool operator == (const Vecteur2D & u) const;
 
     operator string() const;
 
@@ -62,6 +75,10 @@ inline const Vecteur2D Vecteur2D::operator - () const
 inline const Vecteur2D Vecteur2D::operator - (const Vecteur2D & u) const
 {
     return Vecteur2D( x-u.x, y-u.y);
+}
+
+double Vecteur2D::norm() const {
+    return sqrt(x*x + y*y);
 }
 
 inline const bool Vecteur2D::operator == (const Vecteur2D & u) const
