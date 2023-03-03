@@ -7,7 +7,7 @@
 #include "Forme.h"
 
 
-class Groupe: public Forme
+class FormeComplexe: public Forme
 {
 
 };

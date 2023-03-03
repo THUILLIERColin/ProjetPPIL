@@ -4,7 +4,7 @@
 #include "Cercle.h"
 #include "Constante.h"
 #include "Erreur.h"
-#include "Groupe.h"
+#include "FormeComplexe.h"
 #include "Forme.h"
 #include "Matrices2x2.h"
 #include "Segment.h"
