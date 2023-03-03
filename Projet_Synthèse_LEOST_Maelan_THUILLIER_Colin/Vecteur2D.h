@@ -8,8 +8,7 @@
 #include <iostream>
 #include <math.h>
 
-#ifndef PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_VECTEUR_H
-#define PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_VECTEUR_H
+
 
 using namespace std;
 
@@ -116,5 +115,3 @@ ostream & operator << (ostream & os, const Vecteur2D & u)
     return os;
 }
 
-
-#endif //PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_VECTEUR_H

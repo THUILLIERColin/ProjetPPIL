@@ -2,8 +2,7 @@
  * @author LEOST Maelan
  */
 
-#ifndef PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_SEGMENT_H
-#define PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_SEGMENT_H
+#pragma once
 
 #include "Forme.h"
 #include "Vecteur2D.h"
@@ -138,5 +137,3 @@ inline ostream& operator << (ostream& os, const Segment& s)
 
 
 
-
-#endif //PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_SEGMENT_H

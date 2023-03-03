@@ -99,4 +99,3 @@ inline /*static*/ void Erreur::testeNonVide(const void *d, const char * message)
 #endif
 }
 
-#endif //PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_ERREUR_H

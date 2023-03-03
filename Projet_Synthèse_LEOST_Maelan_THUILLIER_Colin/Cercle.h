@@ -2,8 +2,7 @@
  * @author LEOST Maelan
  */
 
-#ifndef PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_CERCLE_H
-#define PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_CERCLE_H
+#pragma once
 
 #include "Forme.h"
 #include "Constante.h"
@@ -207,4 +206,3 @@ inline ostream& operator << (ostream& os, const Cercle& s)
 }
 
 
-#endif //PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_CERCLE_H

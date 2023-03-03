@@ -2,8 +2,7 @@
  * @author LEOST Maelan
  */
 
-#ifndef CLIENTCPP_MATRICES2X2_H
-#define CLIENTCPP_MATRICES2X2_H
+#pragma once
 
 #include "Vecteur2D.h"
 #include <sstream>
@@ -173,4 +172,3 @@ os << (string) s;
 return os;
 }
 
-#endif //CLIENTCPP_MATRICES2X2_H
