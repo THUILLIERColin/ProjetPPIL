@@ -29,6 +29,8 @@ double Cercle::getRayon() const {
 }
 
 void Cercle::setRayon(double rayon) {
+    if(rayon < 0)
+        throw Erreur("Le rayon doit être positif");
     _rayon = rayon;
 }
 
@@ -57,15 +59,8 @@ Cercle* Cercle::clone() const
 
 Cercle::Cercle(const Cercle& op) : Forme(op.getCouleur())
 {
-    if (op._rayon <= 0)
-    {
-        throw Erreur("Impossible de construire un cercle avec ce rayon.");
-    }
-    else
-    {
-        _centre = op._centre;
-        _rayon = op._rayon;
-    }
+    _centre = op.getCentre();
+    _rayon = op.getRayon();
 }
 
 /************************************************************************

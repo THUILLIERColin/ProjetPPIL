@@ -32,7 +32,9 @@ public :
      * @param couleur
      * sert à construire un cercle
      */
-    Cercle(int x, int y, double rayon, const int& couleur) : Forme(couleur), _rayon(rayon),_centre(x,y) {}
+    Cercle(int x, int y, double rayon, const int& couleur) : Forme(couleur),_centre(x,y) {
+        setRayon(rayon);
+    }
 
     /**  \Description  Constructeur
      * @param _centre

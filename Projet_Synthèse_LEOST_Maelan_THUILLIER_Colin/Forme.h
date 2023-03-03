@@ -22,6 +22,13 @@ public :
     */
     virtual Forme* clone() const = 0;
 
+    /**
+     * @brief Constructeur de copie
+     */
+    Forme(const Forme& forme){
+        _couleur = forme._couleur;
+    }
+
     /** \Description  Destructeur
      */
     virtual ~Forme() {}

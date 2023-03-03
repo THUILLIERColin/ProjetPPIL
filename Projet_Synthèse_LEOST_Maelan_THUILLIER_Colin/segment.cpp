@@ -92,6 +92,14 @@ void Segment::rotation(const Vecteur2D &u, const double angle)
     Vecteur2 =  M * (Vecteur2 - u) + u ;
 }
 
+Segment::operator string() const{
+    stringstream ss;
+    ss << "Segment : " << endl;
+    ss << "Vecteur1 : " << Vecteur1 << endl;
+    ss << "Vecteur2 : " << Vecteur2 << endl;
+    return ss.str();
+}
+
 /************************************************************************
 *
 * Methodes pour calculerAire et getCentreDeSymetrie
