@@ -14,7 +14,7 @@ private :
     vector<Vecteur2D*> _points;
 public :
 
-    Polygone(const int couleur);
+    Polygone(const int couleur=0x000000);
 
     Polygone(vector<Vecteur2D*> points, const int couleur);
 
@@ -101,6 +101,11 @@ public :
      * @brief Surcharge de l'opérateur string
      */
     virtual operator string() const;
+
+    /**
+     * @brief Surcharge de l'opérateur <<
+     */
+    friend inline ostream& operator<<(ostream& os, const Polygone& p);
 
 };
 inline ostream& operator << (ostream& os, const Polygone& s)

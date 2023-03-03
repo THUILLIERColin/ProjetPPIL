@@ -3,7 +3,6 @@
  */
 
 #include "Cercle.h"
-#include "Erreur.h"
 #include <cmath>
 
 
@@ -211,7 +210,7 @@ bool Cercle::operator == (const Cercle& op)const
  * **********************************************************************/
 
 /**
- * \Description Surcharge de l'opérateur <<.
+ * \Description Surcharge de l'opérateur string
  * @detail Affiche le cercle.
  * @return
  * sert à afficher

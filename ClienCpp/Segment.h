@@ -5,10 +5,6 @@
 #pragma once
 
 #include "Forme.h"
-#include "Vecteur2D.h"
-#include "Matrices2x2.h"
-
-using namespace std;
 
 class Segment : public Forme
 {
@@ -125,7 +121,7 @@ public :
 
     /** \Description  Opérateur d'affichage.
     */
-    friend ostream& operator << (ostream& os, const Segment& m);
+    friend inline ostream& operator << (ostream& os, const Segment& m);
 
 
 };

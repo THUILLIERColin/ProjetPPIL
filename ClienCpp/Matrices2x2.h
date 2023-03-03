@@ -157,7 +157,7 @@ public:
      * @param s
      * @return
      */
-    friend ostream & operator << (ostream & os, const Matrices2x2 & s);
+    friend inline ostream & operator << (ostream & os, const Matrices2x2 & s);
 
 };
 
@@ -166,7 +166,7 @@ public:
  * @param s
  * @return
  */
-ostream & operator << (ostream & os, const Matrices2x2 & s)
+inline ostream & operator << (ostream & os, const Matrices2x2 & s)
 {
 os << (string) s;
 return os;

@@ -5,8 +5,6 @@
 #pragma once
 
 #include "Forme.h"
-#include "Vecteur2D.h"
-#include "Matrices2x2.h"
 #include <sstream>
 #include <iostream>
 
@@ -190,8 +188,9 @@ public :
     */
     operator string() const;
 
-    /** \Description  Opérateur d'affichage.
+    /** \Description  Surcharge de l'opérateur <<.
     */
+    friend inline ostream& operator << (ostream& os, const Cercle& c);
 };
 
 /** \Description opérateur d affichage

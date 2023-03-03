@@ -22,7 +22,6 @@ public:
 
 
     inline static void testeEgalite(int m, int n, const char * message);
-    /************************************************************************
 /**
  * v�rifie que a <= b
  * lance une exception si a > b

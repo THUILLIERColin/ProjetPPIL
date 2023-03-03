@@ -1,12 +1,15 @@
-#include "Vecteur2D.h"
+#include "Polygone.h"
 
 int main(){
-    Vecteur2D v1(1,2);
-    Vecteur2D v2(3,4);
 
-    cout << v1 << endl;
-    cout << v2 << endl;
+    Polygone p(0x000000);
+    p.addPoint(Vecteur2D(1,1));
+    p.addPoint(Vecteur2D(1,2));
+    p.addPoint(Vecteur2D(2,2));
 
-    cout << v1+v2 << endl;
+    cout << p.calculerAire() << endl;
+    cout << p.getCentreDeSymetrie() << endl;
+    cout << p.getNbPoints() << endl;
+
     return 0;
 }

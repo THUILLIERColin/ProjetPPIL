@@ -4,7 +4,8 @@
 
 #pragma once
 
-#include "Vecteur2D.h"
+#include "Matrices2x2.h"
+#include "Erreur.h"
 
 class Forme {
 protected :
@@ -84,15 +85,13 @@ public :
         os << "Couleur : " << _couleur << endl;
         return os.str();
     }
+
+    /** \Description  Opérateur d'affichage
+     */
+    friend inline ostream& operator<<(ostream& os, const Forme& forme) {
+        os << (string) forme;
+        return os;
+    }
 };
-
-/** \Description  Opérateur d'affichage
-   */
-inline ostream& operator << (ostream& os, const Forme& s)
-{
-    os << (string)(s);
-    return os;
-
-}
 
 
