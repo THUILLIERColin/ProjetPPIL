@@ -1,7 +1,5 @@
-#include "Triangle.h"
-
 /**
- * @author Thuillier Colin
+ * @author THUILLIER Colin
  */
 
 #include "Triangle.h"

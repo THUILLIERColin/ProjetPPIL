@@ -37,25 +37,30 @@ Vecteur2D Polygone::getMaxXMaxY() const {
 }
 
 double Polygone::calculerAire() const {
-    // Il faut faire la création d'un triangle
-    Triangle triangle;
-    if (_points.size() < 3)
-    {
-        return 0;
+    // Calcul de l'aire d'un polygone à partir de ses points
+    double aire = 0.0;
+    const int n = _points.size();
+
+    // On considère le premier point comme point de référence
+    Vecteur2D p0 = *_points[0];
+
+    // On parcourt les côtés du polygone
+    for (int i = 1; i < n - 1; ++i) {
+        Vecteur2D p1 = *_points[i];
+        Vecteur2D p2 = *_points[i + 1];
+
+        // On calcule les longueurs des côtés du triangle formé par les trois points
+        double a = (p1 - p0).norm();
+        double b = (p2 - p1).norm();
+        double c = (p2 - p0).norm();
+
+        // On calcule le demi-périmètre
+        double s = (a + b + c) / 2.0;
+
+        // On applique la formule de Héron pour calculer l'aire du triangle
+        aire += sqrt(s * (s - a) * (s - b) * (s - c));
     }
-    else
-    {
-        double aire = 0;
-        for (int i = 0; i < _points.size()-2; ++i)
-        {
-            Vecteur2D a = *_points[0];
-            Vecteur2D b = *_points[i+1];
-            Vecteur2D c = *_points[i+2];
-            triangle = Triangle(a,b,c);
-            aire += triangle.calculerAire();
-        }
-        return aire;
-    }
+    return aire;
 }
 
 Vecteur2D Polygone::getCentreDeSymetrie() const {
@@ -86,7 +91,7 @@ void Polygone::removeAllPoints() {
     _points.clear();
 }
 
-int Polygone::translation(const Vecteur2D &u) {
+void Polygone::translation(const Vecteur2D &u) {
     for (int i = 0; i < _points.size(); i++)
     {
         *_points[i] = *_points[i] + u;
