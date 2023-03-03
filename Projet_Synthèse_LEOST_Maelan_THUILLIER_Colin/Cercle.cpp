@@ -148,6 +148,15 @@ double Cercle::calculerAire() const
     return _rayon * _rayon * M_PI;
 }
 
+/**
+ * \Description      Méthode qui retourne le centre de symétrie du rond
+ * @return     Un Vecteur2D
+ * sert à avoir le centre de symétrie du cercle
+ */
+Vecteur2D Cercle::getCentreDeSymetrie() const
+{
+    return _centre;
+}
 
 /************************************************************************
  *
