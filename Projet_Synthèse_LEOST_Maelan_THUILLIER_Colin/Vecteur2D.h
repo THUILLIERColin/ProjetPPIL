@@ -44,6 +44,13 @@ public:
      */
     double norm() const;
 
+    /**
+     * @brief Calcule le produit scalaire entre deux vecteurs
+     * @param u
+     * @return le produit scalaire entre deux vecteurs
+     */
+    double produitScalaire(const Vecteur2D & u) const;
+
     inline const bool operator == (const Vecteur2D & u) const;
 
     operator string() const;
@@ -79,6 +86,10 @@ inline const Vecteur2D Vecteur2D::operator - (const Vecteur2D & u) const
 
 double Vecteur2D::norm() const {
     return sqrt(x*x + y*y);
+}
+
+double Vecteur2D::produitScalaire(const Vecteur2D & u) const {
+    return x*u.x + y*u.y;
 }
 
 inline const bool Vecteur2D::operator == (const Vecteur2D & u) const
