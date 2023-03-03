@@ -2,7 +2,7 @@
  * @author LEOST Maelan
  */
 
-#include "segment.h"
+#include "Segment.h"
 
 
 using namespace std;

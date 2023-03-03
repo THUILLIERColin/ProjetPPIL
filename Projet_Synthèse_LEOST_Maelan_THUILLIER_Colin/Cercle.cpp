@@ -44,11 +44,11 @@ void Cercle::setRayon(double rayon) {
 * @return Cercle
 * sert à cloner un cercle
 */
-/**
+
 Cercle* Cercle::clone() const
 {
     return new Cercle(*this);
-} */
+}
 
 /**
  * \Description Constructeur par recopie.
@@ -57,7 +57,7 @@ Cercle* Cercle::clone() const
  * se sert pour copier un cercle
  */
 
-Cercle::Cercle(const Cercle& op) : Forme(op.getCouleur())
+Cercle::Cercle(const Cercle& op) : Forme(op)
 {
     _centre = op.getCentre();
     _rayon = op.getRayon();

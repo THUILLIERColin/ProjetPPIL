@@ -106,13 +106,13 @@ public :
     * @return un vecteur2D qui contient le le point min x et le point min Y
      * sert à avoir le point min x et le point min Y
     */
-    virtual Vecteur2D getMinXMinY() const =0;
+    virtual Vecteur2D getMinXMinY() const;
 
     /** \Description  Avoir le point X maximal et point Y maximal  du plan selon la figure
      * @return un vecteur2D qui contient le le point max x et le point max Y
      * sert à avoir le point max x et le point max Y
      */
-    virtual Vecteur2D getMaxXMaxY() const =0;
+    virtual Vecteur2D getMaxXMaxY() const;
 
     /************************************************************************
      *
@@ -124,18 +124,18 @@ public :
     * \Descprition Opération de translation
     * @param u est le vecteur de translation
     */
-    virtual void translation(const Vecteur2D& u) = 0;
+    virtual void translation(const Vecteur2D& u);
 
     /** \Description Opération d'homothétie
     * @param u est le centre de l'homothétie
     * @param k est le coefficient d'homothétie
     **/
-    virtual void homothetie(const Vecteur2D& u,const double& k) = 0;
+    virtual void homothetie(const Vecteur2D& u,const double& k);
 
     /**  \Description  Opération de rotation
      * @param u est le centre de la rotation
      */
-    virtual void rotation(const Vecteur2D &u, const double angle ) = 0;
+    virtual void rotation(const Vecteur2D &u, const double angle );
 
     /************************************************************************
      *
@@ -193,8 +193,6 @@ public :
 
     /** \Description  Opérateur d'affichage.
     */
-    friend ostream& operator << (ostream& os, const Cercle& s);
-
 };
 
 /** \Description opérateur d affichage
