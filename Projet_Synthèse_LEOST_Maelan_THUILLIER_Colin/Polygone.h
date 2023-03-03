@@ -7,6 +7,8 @@ using namespace std;
 
 #include <vector>
 #include "Forme.h"
+#include "Vecteur2D.h"
+#include "Triangle.h"
 
 class Polygone: public Forme {
 private :
@@ -53,12 +55,12 @@ public :
     /**
      * @brief Avoir le point d'indice i
      */
-    Vecteur2D getPoint(const int& i) const;
+    Vecteur2D* getPoint(const int& i) const;
 
     /**
      * @brief Ajouter un point au polygone
      */
-    void addPoint(const Vecteur2D& p);
+    Polygone& addPoint(const Vecteur2D& p);
 
     /**
      * @brief Supprimer un point du polygone
@@ -70,11 +72,30 @@ public :
      */
     void removeAllPoints();
 
+    /**
+     * @brief Opération de translation
+     * @param u est le vecteur de translation
+     * @return un nouveau polygone
+     */
+    virtual void translation(const Vecteur2D& u);
 
+    /**
+     * @brief Opération d'homothétie
+     * @param u est le centre de l'homothétie
+     * @param k est le coefficient d'homothétie
+     */
+    virtual void homothetie(const Vecteur2D& u, const double& k);
 
+    /**
+     * @brief Opération de rotation
+     * @param u est le centre de la rotation
+     * @param angle est l'angle de rotation
+     */
+    virtual void rotation(const Vecteur2D &u, const double angle);
 
-
-
-
+    /**
+     * @brief Surcharge de l'opérateur string
+     */
+    virtual operator string() const;
 
 };

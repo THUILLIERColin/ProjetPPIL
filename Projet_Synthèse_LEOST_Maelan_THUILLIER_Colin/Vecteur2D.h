@@ -30,6 +30,7 @@ public:
  * */
     inline const Vecteur2D operator - () const;
 
+    inline const Vecteur2D operator - (const Vecteur2D & u) const;
 
     operator string() const;
 
@@ -55,6 +56,11 @@ inline const Vecteur2D Vecteur2D::operator * (const double & a) const
 inline const Vecteur2D Vecteur2D::operator - () const
 {
     return Vecteur2D(-x,-y);
+}
+
+inline const Vecteur2D Vecteur2D::operator - (const Vecteur2D & u) const
+{
+    return Vecteur2D( x-u.x, y-u.y);
 }
 
 Vecteur2D::operator string() const
