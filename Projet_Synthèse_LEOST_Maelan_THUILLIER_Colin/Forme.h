@@ -15,7 +15,7 @@ protected :
 public :
 
     /**  Constructeur vide */
-    Forme();
+    Forme(); // Pourquoi ?
 
     /**  Constructeur */
     Forme(const int& couleur) : _couleur(couleur) {}
