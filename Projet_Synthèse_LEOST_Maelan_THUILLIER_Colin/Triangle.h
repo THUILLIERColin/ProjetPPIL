@@ -9,7 +9,7 @@
 #include "Polygone.h"
 
 
-class Triangle : public Polygone {
+class Triangle{
 private :
     Vecteur2D _a;
     Vecteur2D _b;
@@ -57,9 +57,16 @@ public :
      */
     ~Triangle();
 
-    Vecteur2D getMinXMinY() const override;
-    Vecteur2D getMaxXMaxY() const override;
-    double calculerAire() const override;
+    Vecteur2D getMinXMinY() const;
+    Vecteur2D getMaxXMaxY() const;
+    double calculerAire() const;
+
+    /**
+     * @brief  Calcule la distance entre un point et un segment de droite
+     *
+     */
+    static double distancePointSegment(const Vecteur2D& p, const Vecteur2D& a, const Vecteur2D& b);
+
 
     Vecteur2D getCentreDeSymetrie() const;
     void translation(const Vecteur2D &u);

@@ -56,6 +56,8 @@ public:
      */
     double produitScalaire(const Vecteur2D & u) const;
 
+    const double distance(const Vecteur2D &b) const;
+
     inline const bool operator == (const Vecteur2D & u) const;
 
     operator string() const;
@@ -96,6 +98,8 @@ double Vecteur2D::norm() const {
 double Vecteur2D::produitScalaire(const Vecteur2D & u) const {
     return x*u.x + y*u.y;
 }
+
+
 
 inline const bool Vecteur2D::operator == (const Vecteur2D & u) const
 {

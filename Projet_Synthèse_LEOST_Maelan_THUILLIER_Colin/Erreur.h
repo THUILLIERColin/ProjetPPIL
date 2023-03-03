@@ -2,16 +2,10 @@
 // Created by Maelan Leost on 02/03/2023.
 //
 
-#ifndef PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_ERREUR_H
-#define PROJET_SYNTHÈSE_LEOST_MAELAN_THUILLIER_COLIN_ERREUR_H
-
-
 #pragma once
 /**
 classe Erreur
 */
-#ifndef ERREUR
-#define ERREUR
 
 using namespace std;
 

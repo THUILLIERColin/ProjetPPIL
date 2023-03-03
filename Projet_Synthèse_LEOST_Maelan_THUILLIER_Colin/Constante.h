@@ -5,5 +5,9 @@
 #pragma once
 
 
-
 const double PI = 3.141592653589793;
+
+class Enum {
+    const double PI = 3.141592653589793;
+};
+
