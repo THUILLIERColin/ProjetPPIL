@@ -12,38 +12,34 @@ public class DessinerFormeComplexe extends ExpertDessiner {
     public boolean dessiner(String requete, FenetreDeDessin cadreDeDessin, boolean memeFenetre, Vecteur2D Vmin, Vecteur2D Vmax) {
         if (requete.contains("FormeComplexe"))
         {
-            int crochetDeb = requete.indexOf(": [");
-            String type = requete.substring(0, crochetDeb).trim();
+            // FormeComplexe : { Cercle [ 1 , 2 , 1 ] 16711680 ; Cercle [ 2 , 3 , 2 ] 16711680 } ( 0 , 0 ) / ( 10 , 10 )
+            int accoladeDeb = requete.indexOf("{");
+            String type = requete.substring(0, accoladeDeb).trim();
 
             if (type.contains("FormeComplexe"))
             {
-                int crochetOuvrant = requete.indexOf("(");
-                int crochetFermant = requete.indexOf(")");
-                String part1= requete.substring(crochetDeb+1).trim().toLowerCase();
-                String entreCrochet = requete.substring(crochetOuvrant+1,crochetFermant);
-
-                //System.out.println("type = "+type);
-                //System.out.println("part1 ="+part1);
-                // System.out.println("entre crochet ="+entreCrochet);
+                int crochetFermant = requete.indexOf("}");
+                String entreCrochet = requete.substring(accoladeDeb+1,crochetFermant);
 
                 String apresCrochetFermant = requete.substring(crochetFermant+1);
-                String vects[] = apresCrochetFermant.split(" I ");
+                String vects[] = apresCrochetFermant.split(" / ");
 
-                /*
+                String formes[] = entreCrochet.split(";");
+
+                System.out.println("FormeComplexe : { " + entreCrochet + " } " + apresCrochetFermant);
+                System.out.println("Vecteurs : " + vects[0] + " / " + vects[1]);
+                System.out.println("Formes : " + formes[0] + " / " + formes[1]);
+
+                // On recupere les coordonnees du vecteur
                 Vecteur2D vmin = new Vecteur2D(vects[1]);
                 Vecteur2D vmax = new Vecteur2D(vects[2]);
 
 
-                String formes[] = entreCrochet.split(";");
 
-                Handler h1 = new DrawCircleHandler();
-                Handler h2 = new DrawLineHandler();
-                Handler h3 = new DrawPolygonHandler();
-                Handler h4 = new DrawGroupeHandler();
-                h1.setNextChain(h2);
-                h2.setNextChain(h3);
-                h3.setNextChain(h4);
+                ExpertDessiner expertFormeInterieur = new DessinerCercle(new DessinerFormeComplexe(new DessinerSegment(new DessinerPolygone(null))));
 
+
+                /*
                 CadreDessin cadreDessin2 = new CadreDessin(cadreDessin.getTitle(),cadreDessin.bordGauche,
                         cadreDessin.bordSuperieur, cadreDessin.getWidth(),cadreDessin.getHeight());
                 cadreDessin.dispose();

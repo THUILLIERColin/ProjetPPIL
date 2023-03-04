@@ -124,12 +124,12 @@ void FormeComplexe::rotation(const Vecteur2D &u, const double angle) {
 
 FormeComplexe::operator string() const {
     ostringstream oss;
-    oss << "FormeComplexe : " << endl;
-    for (int i = 0; i < listeFormes.size(); ++i)
+    oss << "FormeComplexe : { ";
+    for (int i = 0; i < listeFormes.size()-1; ++i)
     {
-        oss << "Forme " << i << " : " << endl;
-        oss << (string) *listeFormes[i] << endl;
+        oss << (string) *listeFormes[i] << " ; ";
     }
+    oss << (string) *listeFormes[listeFormes.size()-1] << " } " << this->getMinXMinY() << " / " << this->getMaxXMaxY();
     return oss.str();
 }
 

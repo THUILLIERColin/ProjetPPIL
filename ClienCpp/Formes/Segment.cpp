@@ -101,8 +101,8 @@ Segment::operator string() const{
        << Vecteur1.x << " , "
        << Vecteur1.y << " , "
        << Vecteur2.x << " , "
-       << Vecteur2.y << " , "
-       << _couleur << "]" << endl;
+       << Vecteur2.y << " ] "
+       << _couleur;
     return ss.str();
 }
 
