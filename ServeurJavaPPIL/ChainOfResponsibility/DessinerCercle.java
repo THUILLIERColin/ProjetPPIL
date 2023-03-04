@@ -1,6 +1,8 @@
 package ChainOfResponsibility;
 
+import Monde.Dessiner.Couple;
 import Monde.Dessiner.FenetreDeDessin;
+import Monde.Dessiner.GenererMonde;
 import Monde.Vecteur2D;
 
 import java.awt.*;
@@ -48,48 +50,41 @@ public class DessinerCercle extends ExpertDessiner{
 
                 System.out.println("Cercle [ " + x + " , " + y + " , " + r + " ] " + couleur );
 
-                /*
-                // on affecte a la forme la couleur specifique
-                cadreDeDessin.graphics.setColor(Color.decode("#" + couleur));
+                // On donne la couleur au cercle
+                fenetreDeDessin.graphics.setColor(Color.decode("#" + couleur));
 
-                // debut de la tranformation monde ecran
-
-                TransfoMondeEcran t;
+                // On va convertir les coordonnees du cercle du monde vers le monde ecran
                 Vecteur2D centre = new Vecteur2D(Xcentre,Ycentre);
 
-                // savoir si le message vient du groupe ou pas
-                if(memeFenetre){
+                // On verifie si la figure est dans le groupe ou pas
+                if(diffFenetre){
+                    GenererMonde monde = new GenererMonde(Vmin, Vmax, new Vecteur2D(0,-fenetreDeDessin.HAUTEUR), new Vecteur2D(fenetreDeDessin.LARGEUR,0));
 
-                    t = TransfoMondeEcran.creerTransfoMondeEcran(
-                            Vmin, Vmax,
-                            new Vecteur2D(0,-cadreDeDessin.HAUTEUR),
-                            new Vecteur2D(cadreDeDessin.LARGEUR,0));
+                    centre = monde.transforme(centre);
 
-                    centre = t.transforme(centre);
-
-                    r = t.convertirRayonDuCercle(centre,r,Vmin, Vmax );  // rayon converti en monde ecran
+                    r = monde.convertirRayonDuCercle(centre,r,Vmin, Vmax );  // rayon converti en monde ecran
 
 
                 }
                 else {
 
-                    Pair<Vecteur2D> p = TransfoMondeEcran.basGaucheHautDroitCercle(centre,r);
+                    Couple<Vecteur2D> p = GenererMonde.basGaucheHautDroitCercle(centre,r);
 
-                    t = TransfoMondeEcran.creerTransfoMondeEcran(
+                    GenererMonde monde = new GenererMonde(
                             p.getPremier(),p.getDeuxieme(),
-                            new Vecteur2D(0, cadreDeDessin.HAUTEUR),
-                            new Vecteur2D(cadreDeDessin.LARGEUR,0));
+                            new Vecteur2D(0, fenetreDeDessin.HAUTEUR),
+                            new Vecteur2D(fenetreDeDessin.LARGEUR,0));
 
-                    // on convertis le rayon du cercle en monde ecran
-                    r = t.convertirRayonDuCercle(centre,r,new Vecteur2D(centre.getX()-r,centre.getY()-r),
+                    // On convertit le rayon du cercle du monde vers le monde ecran
+                    r = monde.convertirRayonDuCercle(centre,r,new Vecteur2D(centre.getX()-r,centre.getY()-r),
                             new Vecteur2D(centre.getX()+r,centre.getY()+r));
 
-                    centre = t.transforme(centre);
+                    centre = monde.transforme(centre);
 
                 }
-                // fin de la tranformation monde ecran
-                cadreDessin.graphics.fillOval((int)centre.getX(),(int)centre.getY(),r,r);*/
-
+                // On dessine le cercle
+                fenetreDeDessin.graphics.setColor(Color.black);
+                fenetreDeDessin.graphics.fillOval((int)centre.getX(),(int)centre.getY(),r,r);
                 return true;
             }
         }

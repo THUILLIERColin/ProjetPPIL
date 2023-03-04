@@ -87,7 +87,7 @@ public class DessinerPolygone extends ExpertDessiner {
                 Polygon p = new Polygon(y,x,x.length/2);
 
                 // dessin du plugone
-                cadreDessin.graphics.fillPolygon(p);;*/
+                cadreDessin.graphics.fillPolygon(p);*/
 
                 return true;
             }

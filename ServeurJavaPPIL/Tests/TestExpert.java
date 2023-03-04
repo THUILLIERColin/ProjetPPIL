@@ -23,9 +23,15 @@ public class TestExpert {
         requetes[2] = requete3;
         requetes[3] = requete4;
 
-        DessinerCercle dessinerCercle = new DessinerCercle(new DessinerPolygone(new DessinerSegment(new DessinerFormeComplexe(null))));
-        for (String requete1 : requetes) {
-            dessinerCercle.envoieAuParseur(requete1, null, false, null, null);
+        try {
+            FenetreDeDessin fenetreDeDessin = new FenetreDeDessin("Fenetre de dessin",60,60,FenetreDeDessin.LARGEUR, FenetreDeDessin.HAUTEUR);
+
+            DessinerCercle dessinerCercle = new DessinerCercle(new DessinerPolygone(new DessinerSegment(new DessinerFormeComplexe(null))));
+            for (String requete1 : requetes) {
+                dessinerCercle.envoieAuParseur(requete1, fenetreDeDessin, false, null, null);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
