@@ -9,9 +9,9 @@
 
 FormeComplexe::FormeComplexe(const int couleur) : Forme(couleur) {}
 
-FormeComplexe::FormeComplexe(vector<Forme *> listeFormes, const int couleur) : Forme(couleur), listeFormes(listeFormes) {
-    for (Forme* f : listeFormes) {
-        f->setCouleur(couleur);
+FormeComplexe::FormeComplexe(vector<Forme *> listeFormes, const int couleur) : Forme(couleur) {
+    for(int i = 0 ; i < listeFormes.size() ; i++) {
+        ajouterForme(listeFormes[i]);
     }
 }
 
@@ -27,6 +27,7 @@ FormeComplexe& FormeComplexe::ajouterForme(Forme *forme) {
     Forme *f = forme->clone();
     f->setCouleur(getCouleur());
     listeFormes.push_back(f);
+    delete forme;
     return (*this);
 }
 
