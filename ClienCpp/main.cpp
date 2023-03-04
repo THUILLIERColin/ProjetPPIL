@@ -5,6 +5,8 @@
 #include "Formes/Polygone.h"
 #include "Formes/Cercle.h"
 #include "Formes/Segment.h"
+#include "Formes/Couleur.h"
+#include "Visiteur/Sauvegarde/VisiteurDeSauvegardeTxt.h"
 #include "Communication/InitCommunication.h"
 
 int main(){
@@ -13,7 +15,9 @@ int main(){
      *  Partie 1 : Les tests
      *************************************************************************/
     printf("Test sur le polygone\n");
-    Polygone p(0x000000);
+    Polygone p((int) Couleur::ROUGE); // il faudra la retransformer en hexa
+    cout << "Couleur du polygone (int) : " << p.getCouleur() << endl;
+    cout << "Couleur du polygone (hexa) : " << std::hex << p.getCouleur() << endl;
     p.addPoint(Vecteur2D(1,1));
     p.addPoint(Vecteur2D(1,2));
     p.addPoint(Vecteur2D(2,2));
@@ -65,6 +69,16 @@ int main(){
     // Initialisation de la communication
     // prendre l'instance dans InitCommunication
     InitCommunication *initCommunication = InitCommunication::getInstance();
+
+    /**************************************************************************
+     *  Partie 3 : La sauvegarde
+     *************************************************************************/
+     cout << "Test de la sauvegarde" << endl;
+
+    // On sauvegarde le polygone
+    p.sauvegarde(new VisiteurDeSauvegardeTxt);
+    cercle.sauvegarde(new VisiteurDeSauvegardeTxt);
+    segment.sauvegarde(new VisiteurDeSauvegardeTxt);
 
 
     return 0;

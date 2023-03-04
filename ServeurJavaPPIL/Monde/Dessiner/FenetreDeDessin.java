@@ -8,6 +8,10 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class FenetreDeDessin extends Frame {
+
+    public final static int LARGEUR = 600; // La largeur de la fenętre
+    public final static int HAUTEUR = 600; // La hauteur de la fenętre
+
     public Graphics graphics;      // pour dessiner sur this
     public final int bordGauche, bordSuperieur;
 
