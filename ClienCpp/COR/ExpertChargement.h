@@ -8,6 +8,9 @@ using namespace std;
 //on fait class Forme pour éviter les erreurs de compilation
 class Forme;
 
+/**
+ * \Description    Classe abstraite qui sert à résoudre le problème de la ligne lue
+ */
 class ExpertChargement
 {
 protected ://protected pour que les classes filles puissent y accéder
