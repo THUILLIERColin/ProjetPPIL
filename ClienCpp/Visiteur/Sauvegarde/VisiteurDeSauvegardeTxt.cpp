@@ -35,6 +35,6 @@ const void *VisiteurDeSauvegardeTxt::visite(const Forme *forme) const {
     } else {
         cerr << "Impossible d'ouvrir le fichier de sauvegarde" << endl;
     }
-    
+
     return 0;
 }

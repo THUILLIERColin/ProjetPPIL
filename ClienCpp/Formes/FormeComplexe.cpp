@@ -27,7 +27,6 @@ FormeComplexe& FormeComplexe::ajouterForme(Forme *forme) {
     Forme *f = forme->clone();
     f->setCouleur(getCouleur());
     listeFormes.push_back(f);
-    delete forme;
     return (*this);
 }
 
