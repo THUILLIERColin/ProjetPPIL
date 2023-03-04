@@ -6,6 +6,7 @@ package Monde.Dessiner;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferStrategy;
 
 public class FenetreDeDessin extends Frame {
 
@@ -13,6 +14,12 @@ public class FenetreDeDessin extends Frame {
     public final static int HAUTEUR = 600; // La hauteur de la fenętre
 
     public Graphics graphics;      // pour dessiner sur this
+
+    @Override
+    public BufferStrategy getBufferStrategy() {
+        return super.getBufferStrategy();
+    }
+
     public final int bordGauche, bordSuperieur;
 
     /**
@@ -51,6 +58,7 @@ public class FenetreDeDessin extends Frame {
 
         this.setBounds(bordGauche, bordSuperieur, l, h); // on définit les dimensions de la fenêtre
 
+        this.setResizable(false); // on ne peut pas redimensionner la fenêtre
         this.setVisible(true); // on rend la fenêtre visible
 
         /* *************************************************************

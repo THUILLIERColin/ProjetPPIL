@@ -83,8 +83,8 @@ public class DessinerCercle extends ExpertDessiner{
 
                 }
                 // On dessine le cercle
-                fenetreDeDessin.graphics.setColor(Color.black);
-                fenetreDeDessin.graphics.fillOval((int)centre.getX(),(int)centre.getY(),r,r);
+                fenetreDeDessin.graphics.drawOval((int)centre.getX(),(int)centre.getY(),r,r);
+                System.out.println("Cercle [ " + centre.getX() + " , " + centre.getY() + " , " + r + " ] " + couleur );
                 return true;
             }
         }
