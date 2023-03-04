@@ -15,7 +15,7 @@ double Vecteur2D::produitScalaire(const Vecteur2D & u) const {
 Vecteur2D::operator string() const
 {
     ostringstream os;
-    os << "( " << x <<", " << y << ")";
+    os << "(" << x <<", " << y << ")";
     return os.str();
 }
 

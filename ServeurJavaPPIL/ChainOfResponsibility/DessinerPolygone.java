@@ -47,7 +47,7 @@ public class DessinerPolygone extends ExpertDessiner {
                 System.out.println("Polygone [ " + coordonnees + " ] " + couleur );
                 /*
                 // on lui affcete sa couleur
-                cadreDeDessin.graphics.setColor(Color.decode("#" + Integer.toHexString(Integer.parseInt(couleur))));
+                cadreDeDessin.graphics.setColor(Color.decode("#" + couleur));
 
                 // debut de la tranformation monde ecran
 

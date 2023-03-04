@@ -26,11 +26,10 @@ public class DessinerFormeComplexe extends ExpertDessiner {
 
                 String formes[] = entreCrochet.split(";");
 
-                System.out.println("FormeComplexe : { " + entreCrochet + " } " + apresCrochetFermant);
-                System.out.println("Vecteurs : " + vects[0] + " / " + vects[1]);
-                System.out.println("Formes : " + formes[0] + " / " + formes[1]);
-
                 // On recupere les coordonnees du vecteur
+
+
+                /*
                 Vecteur2D vmin = new Vecteur2D(vects[1]);
                 Vecteur2D vmax = new Vecteur2D(vects[2]);
 
@@ -39,7 +38,7 @@ public class DessinerFormeComplexe extends ExpertDessiner {
                 ExpertDessiner expertFormeInterieur = new DessinerCercle(new DessinerFormeComplexe(new DessinerSegment(new DessinerPolygone(null))));
 
 
-                /*
+
                 CadreDessin cadreDessin2 = new CadreDessin(cadreDessin.getTitle(),cadreDessin.bordGauche,
                         cadreDessin.bordSuperieur, cadreDessin.getWidth(),cadreDessin.getHeight());
                 cadreDessin.dispose();

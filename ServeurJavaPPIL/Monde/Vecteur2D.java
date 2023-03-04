@@ -21,6 +21,16 @@ public class Vecteur2D {
     }
 
     /**
+     * Constructeur d'un vecteur 2D à partir d'un string
+     * @param s string de la forme "(x,y)"
+     */
+    public Vecteur2D(String s) {
+        String[] tokens = s.split("[(), ]+");
+        this.x = Double.parseDouble(tokens[1]);
+        this.y = Double.parseDouble(tokens[2]);
+    }
+
+    /**
      * Clone un vecteur
      * @return un nouveau vecteur identique
      */

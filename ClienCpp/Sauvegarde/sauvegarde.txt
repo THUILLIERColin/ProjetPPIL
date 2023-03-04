@@ -1,4 +1,4 @@
-Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] 16711680
-Cercle [ 1 , 2 , 1 ] 16711680
-Segment : [ 1 , 1 , 2 , 2 ] 16711680
-FormeComplexe : {Cercle [ 1 , 2 , 1 ] 0 ; Segment : [ 1 , 1 , 2 , 2 ] 0 ; Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] 0 } ( 0, 1) / ( 2, 3)
+Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] ff0000
+Cercle [ 1 , 2 , 1 ] ff0000
+Segment [ 1 , 1 , 2 , 2 ] ff0000
+FormeComplexe : { Cercle [ 1 , 2 , 1 ] 0 ; Segment [ 1 , 1 , 2 , 2 ] 0 ; Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] 0 } ( 0 , 1 ) / ( 2 , 3 )

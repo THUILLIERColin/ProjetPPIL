@@ -50,7 +50,7 @@ public class DessinerCercle extends ExpertDessiner{
 
                 /*
                 // on affecte a la forme la couleur specifique
-                cadreDeDessin.graphics.setColor(Color.decode("#" + Integer.toHexString(Integer.parseInt(couleur))));
+                cadreDeDessin.graphics.setColor(Color.decode("#" + couleur));
 
                 // debut de la tranformation monde ecran
 

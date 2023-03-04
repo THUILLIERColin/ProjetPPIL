@@ -12,10 +12,10 @@ public class TestExpert {
         // Création d'un tableau de String
         String[] requetes = new String[4];
 
-        String requete = "Cercle [ 1 , 2 , 1 ] 16711680";
-        String requete2 = "Polygone [ 1 , 2 , 3 , 4 , 5 , 6 ] 16711680";
-        String requete3 = "Segment [ 1 , 2 , 1 , 3 ] 16711680";
-        String requete4 = "FormeComplexe : { Cercle [ 1 , 2 , 1 ] 16711680 ; Cercle [ 2 , 3 , 2 ] 16711680 } ( 0 , 0 ) / ( 10 , 10 )";
+        String requete = "Cercle [ 1 , 2 , 1 ] ff0000";
+        String requete2 = "Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] ff0000";
+        String requete3 = "Segment [ 1 , 1 , 2 , 2 ] ff0000";
+        String requete4 = "FormeComplexe : { Cercle [ 1 , 2 , 1 ] 0 ; Segment [ 1 , 1 , 2 , 2 ] 0 ; Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] 0 } ( 0 , 1 ) / ( 2 , 3 )";
 
 
         requetes[0] = requete;

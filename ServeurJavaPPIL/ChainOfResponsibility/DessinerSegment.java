@@ -41,7 +41,7 @@ public class DessinerSegment extends ExpertDessiner {
 
                 /*
                 // on affecte a la forme la couleur specifique
-                cadreDeDessin.graphics.setColor(Color.decode("#" + Integer.toHexString(Integer.parseInt(couleur))));
+                cadreDeDessin.graphics.setColor(Color.decode("#" + couleur));
 
                 //origine de la droite
                 Vecteur2D deb = new Vecteur2D(gauche,haut) ;
