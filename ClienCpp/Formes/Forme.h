@@ -9,7 +9,7 @@
 #include <pcap/socket.h>
 
 class VisiteurDeLibrairie;
-class VisiteurDeSauvegardeTxt;
+class VisiteurDeSauvegarde;
 
 class Forme {
 protected :
@@ -112,7 +112,7 @@ public :
      * @param visiteur (VisiteurDeSauvegardeTxt) visiteur de la librairie qui va sauvegarder la forme
      * @return void (le visiteur sauvegarde la forme)
      */
-    virtual const void *sauvegarde(const VisiteurDeSauvegardeTxt *visiteur) const = 0;
+    virtual const void *sauvegarde(const VisiteurDeSauvegarde *visiteur) const = 0;
 };
 
 

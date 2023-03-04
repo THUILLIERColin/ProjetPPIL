@@ -4,7 +4,7 @@
 
 #include "FormeComplexe.h"
 #include "../Visiteur/Librairie/VisiteurDeLibrairie.h"
-#include "../Visiteur/Sauvegarde/VisiteurDeSauvegardeTxt.h"
+#include "../Visiteur/Sauvegarde/VisiteurDeSauvegarde.h"
 
 
 FormeComplexe::FormeComplexe(const int couleur) : Forme(couleur) {}
@@ -140,6 +140,6 @@ const void* FormeComplexe::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *
     return visiteur->visite(this, s);
 }
 
-const void *FormeComplexe::sauvegarde(const VisiteurDeSauvegardeTxt *visiteur) const {
+const void *FormeComplexe::sauvegarde(const VisiteurDeSauvegarde *visiteur) const {
     return visiteur->visite(this);
 }

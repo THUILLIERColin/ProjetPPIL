@@ -4,7 +4,7 @@
 
 #include "Polygone.h"
 #include "../Visiteur/Librairie/VisiteurDeLibrairie.h"
-#include "../Visiteur/Sauvegarde/VisiteurDeSauvegardeTxt.h"
+#include "../Visiteur/Sauvegarde/VisiteurDeSauvegarde.h"
 
 
 Polygone::Polygone(const int couleur) : Forme(couleur) {}
@@ -168,6 +168,6 @@ const void *Polygone::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) co
     return visiteur->visite(this, s);
 }
 
-const void *Polygone::sauvegarde(const VisiteurDeSauvegardeTxt *visiteur) const {
+const void *Polygone::sauvegarde(const VisiteurDeSauvegarde *visiteur) const {
     return visiteur->visite(this);
 }

@@ -4,7 +4,7 @@
 
 #include "Segment.h"
 #include "../Visiteur/Librairie/VisiteurDeLibrairie.h"
-#include "../Visiteur/Sauvegarde/VisiteurDeSauvegardeTxt.h"
+#include "../Visiteur/Sauvegarde/VisiteurDeSauvegarde.h"
 
 
 using namespace std;
@@ -133,6 +133,6 @@ const void *Segment::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) con
     return visiteur->visite(this,s);
 }
 
-const void *Segment::sauvegarde(const VisiteurDeSauvegardeTxt *visiteur) const {
+const void *Segment::sauvegarde(const VisiteurDeSauvegarde *visiteur) const {
     return visiteur->visite(this);
 }

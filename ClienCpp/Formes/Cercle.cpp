@@ -4,7 +4,7 @@
 
 #include "Cercle.h"
 #include "../Visiteur/Librairie/VisiteurDeLibrairie.h"
-#include "../Visiteur/Sauvegarde/VisiteurDeSauvegardeTxt.h"
+#include "../Visiteur/Sauvegarde/VisiteurDeSauvegarde.h"
 #include <cmath>
 
 using namespace std;
@@ -235,6 +235,6 @@ const void* Cercle::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) cons
     return visiteur->visite(this, s);
 }
 
-const void *Cercle::sauvegarde(const VisiteurDeSauvegardeTxt *visiteur) const {
+const void *Cercle::sauvegarde(const VisiteurDeSauvegarde *visiteur) const {
     return visiteur->visite(this);
 }

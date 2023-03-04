@@ -197,7 +197,7 @@ public :
      * **********************************************************************/
     const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const;
 
-    const void* sauvegarde(const VisiteurDeSauvegardeTxt *visiteur) const;
+    const void* sauvegarde(const VisiteurDeSauvegarde *visiteur) const;
 };
 
 /** \Description opérateur d affichage
