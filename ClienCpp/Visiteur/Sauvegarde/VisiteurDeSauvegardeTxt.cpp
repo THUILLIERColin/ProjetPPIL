@@ -7,6 +7,7 @@
 #include <string>
 #include <fstream>
 
+// Si on a le temps ajouter un paramètre pour le nom du fichier
 const void *VisiteurDeSauvegardeTxt::visite(const Forme *forme) const {
     ofstream file;
     // On charge le fichier de sauvegarde.txt
