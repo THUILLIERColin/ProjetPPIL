@@ -3,3 +3,13 @@ Cercle [ 1 , 2 , 1, 16711680 ]
 
 Segment : [ 1 , 1 , 2 , 2 , 16711680]
 
+FormeComplexe : 
+Forme 0 : 
+Cercle [ 1 , 2 , 1, 0 ] 
+
+Forme 1 : 
+Segment : [ 1 , 1 , 2 , 2 , 0]
+
+Forme 2 : 
+Polygone [ 1 , 1 , 1 , 2 , 2 , 20 ] 
+

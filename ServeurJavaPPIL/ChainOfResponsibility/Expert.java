@@ -6,7 +6,7 @@ import Monde.Vecteur2D;
 public abstract class Expert {
     /**
      * Envoie la requête au parseur
-     * @param requete requete à traiter
+     * @param requete requete de la forme dessiner
      * @param cadreDeDessin cadre de dessin
      * @param memeFenetre sert a savoir si on dessine dans la meme fenetre
      * @param Vmin vecteur minimum

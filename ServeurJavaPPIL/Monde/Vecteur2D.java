@@ -28,6 +28,14 @@ public class Vecteur2D {
         return new Vecteur2D(x, y);
     }
 
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
     /**
      * Additionne deux vecteurs
      * @param u vecteur à additionner

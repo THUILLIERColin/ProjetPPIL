@@ -92,13 +92,13 @@ int main(){
     /**************************************************************************
      *  Partie 3 : La sauvegarde
      *************************************************************************/
-     cout << "Test de la sauvegarde" << endl;
+     cout << "On sauvegarde les formes" << endl;
 
     // On sauvegarde le polygone
     p.sauvegarde(new VisiteurDeSauvegardeTxt);
     cercle.sauvegarde(new VisiteurDeSauvegardeTxt);
     segment.sauvegarde(new VisiteurDeSauvegardeTxt);
-
+    formeComplexe.sauvegarde(new VisiteurDeSauvegardeTxt);
 
     return 0;
 }
