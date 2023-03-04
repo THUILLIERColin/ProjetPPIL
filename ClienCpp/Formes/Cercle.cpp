@@ -3,9 +3,9 @@
  */
 
 #include "Cercle.h"
-#include "../Visiteur/VisiteurDeLibrairie.h"
+#include "../Visiteur/Librairie/VisiteurDeLibrairie.h"
+#include "../Visiteur/Sauvegarde/VisiteurDeSauvegarde.h"
 #include <cmath>
-
 
 using namespace std;
 
@@ -228,6 +228,13 @@ Cercle::operator string()const
     return os.str();
 }
 
+/************************************************************************
+ * Implémentation des visiteurs
+ * **********************************************************************/
 const void* Cercle::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const{
     return visiteur->visite(this, s);
+}
+
+const void *Cercle::sauvegarde(const VisiteurDeSauvegarde *visiteur) const {
+    return visiteur->visite(this);
 }

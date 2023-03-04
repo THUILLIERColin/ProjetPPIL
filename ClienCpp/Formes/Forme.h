@@ -9,6 +9,7 @@
 #include <pcap/socket.h>
 
 class VisiteurDeLibrairie;
+class VisiteurDeSauvegarde;
 
 class Forme {
 protected :
@@ -104,6 +105,14 @@ public :
      * @return void (le visiteur dessine le polygone)
      */
     virtual const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const=0;
+
+    /**
+     * @author THUILLIER Colin
+     * @brief Visiteur de sauvegarde qui va se charger de sauvegarder la forme dans un fichier txt
+     * @param visiteur (VisiteurDeSauvegardeTxt) visiteur de la librairie qui va sauvegarder la forme
+     * @return void (le visiteur sauvegarde la forme)
+     */
+    virtual const void *sauvegarde(const VisiteurDeSauvegarde *visiteur) const = 0;
 };
 
 

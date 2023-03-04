@@ -1,14 +1,11 @@
 /**
  * @author LEOST Maelan
-/**
-* @author LEOST Maelan
 */
 
 #pragma once
 #include <string>
 #include "ExpertChargement.h"
 #include "../Erreur/Erreur.h"
-#include
 
 using namespace std;
 
@@ -38,5 +35,6 @@ protected:
     virtual Forme *resoudre1(const string &ligne) const = 0;
 
 };
+
 
 

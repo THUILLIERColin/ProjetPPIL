@@ -3,7 +3,8 @@
  */
 
 #include "Polygone.h"
-#include "../Visiteur/VisiteurDeLibrairie.h"
+#include "../Visiteur/Librairie/VisiteurDeLibrairie.h"
+#include "../Visiteur/Sauvegarde/VisiteurDeSauvegarde.h"
 
 
 Polygone::Polygone(const int couleur) : Forme(couleur) {}
@@ -158,7 +159,15 @@ Polygone::operator string() const {
     return os.str();
 }
 
+/****************************************************************************************
+ * Implementation des visiteurs
+ ****************************************************************************************/
+
 const void *Polygone::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const
 {
     return visiteur->visite(this, s);
+}
+
+const void *Polygone::sauvegarde(const VisiteurDeSauvegarde *visiteur) const {
+    return visiteur->visite(this);
 }

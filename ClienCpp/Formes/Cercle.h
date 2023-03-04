@@ -193,9 +193,11 @@ public :
     friend inline ostream& operator << (ostream& os, const Cercle& c);
 
     /************************************************************************
-     * Visiteur
+     * Visiteurs
      * **********************************************************************/
     const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const;
+
+    const void* sauvegarde(const VisiteurDeSauvegarde *visiteur) const;
 };
 
 /** \Description opérateur d affichage

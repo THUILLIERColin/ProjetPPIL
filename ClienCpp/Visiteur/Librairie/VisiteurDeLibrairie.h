@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "../Formes/Forme.h"
+#include "../../Formes/Forme.h"
 #include <string>
 #include <iostream>
 #include <sstream>
@@ -22,18 +22,15 @@
 typedef struct sockaddr_in SOCKADDR_IN;
 typedef struct sockaddr SOCKADDR;
 
-class Visiteur {
-public :
+class VisiteurDeLibrairie {
+public:
     /**
-     * @brief Visiteur qui permettra de dessiner une forme avec une librairie graphique
+     * @brief Visite qui permet de dessiner une forme avec une librairie graphique
      * @param forme (Forme*) la forme à dessiner
      * @param s (Socket*) le socket de communication avec le serveur
+     * @return 0 si tout s'est bien passé
+     * @throw Erreur si l'envoi de la requete a échoué
      */
-    virtual const void *visite(const Forme * forme, SOCKET * s) const = 0;
+    virtual const void *visite(const Forme *forme, SOCKET *s) const = 0;
 
-    /**
-    * @brief Visiteur qui permettre de sauvegarder une forme dans un fichier de sauvegarde
-    * @param forme (Forme*) la forme à sauvegarder
-    */
-    virtual const void *visite(const Forme * forme) const = 0;
 };
