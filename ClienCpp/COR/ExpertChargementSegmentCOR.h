@@ -25,34 +25,34 @@ public:
      * @return    la forme lue
      */
     Forme *resoudre1(const string &ligne) const {
-        const string cherche = "segment";
+        const string cherche = "Segment";
         string::size_type pos = ligne.find(cherche); // on cherche le mot "segment" dans la ligne
         while (pos != string::npos) //tant qu on ne le trouve pas
         {
             // "croix" trouvé
-            vector<double> points; // vecteur de points
+            vector<double> points; // ve'cteur de points
 
             // on extrait tout ce qui se trouve entre les parenthèses
-            unsigned firstParenthesis = ligne.find("("); // on cherche la première parenthèse
-            unsigned lastParenthesis = ligne.find(")");  // on cherche la dernière parenthèse
-            string coordonnees = ligne.substr(firstParenthesis + 1, lastParenthesis - firstParenthesis -
-                                                                    1); // on extrait tout ce qui se trouve entre les parenthèses avec la methode substr
+            unsigned parentheseDeDebut = ligne.find("["); // on cherche la première parenthèse
+            unsigned parentheseDeFin = ligne.find("]");  // on cherche la dernière parenthèse
+            string coordonnees = ligne.substr(parentheseDeDebut + 1, parentheseDeFin - parentheseDeDebut -1); // on extrait tout ce qui se trouve entre les parenthèses avec la methode substr
             istringstream is(coordonnees); // on crée un flux de lecture à partir de la chaine de caractère coordonnees
 
             // on enlève toutes les virgules et on stocke les nombres dans un vecteur
-            string t; // on crée une chaine de caractère
-            while (getline(is, t, ','))
-                points.push_back(stod(t)); // on lit le flux is et on stocke les valeurs dans le vecteur points
+            string valeurLues; // on crée une chaine de caractère
+            while (getline(is, valeurLues, ','))
+                points.push_back(stod(valeurLues)); // on lit le flux is et on stocke les valeurs dans le vecteur points
 
             // récupération de la couleur qui est un int en hexadecimal dans la ligne note #FF0000
             int couleur;
             //couleur est stocké dans la ligne sous la forme FF0000 ( en string) il faut donc la passé en string
-            istringstream iss(ligne.substr(lastParenthesis + 1, ligne.size()));// on crée un flux de lecture à partir de la chaine de caractère ligne
+            istringstream iss(ligne.substr(parentheseDeFin + 1, ligne.size()));// on crée un flux de lecture à partir de la chaine de caractère ligne
             iss >> hex >> couleur; // on lit le flux iss et on stocke la valeur dans la variable couleur
 
             // création de la forme en des données du fichier de visite
             return new Segment(points[0], points[1], points[2], points[3], couleur);
         }
+
         return NULL;
     };
 

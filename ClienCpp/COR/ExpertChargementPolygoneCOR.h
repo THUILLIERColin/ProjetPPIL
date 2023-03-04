@@ -28,37 +28,37 @@ public:
      */
     Forme *resoudre1(const string &ligne) const
     {
-        const string cherche = "polygone";
-        string::size_type pos = ligne.find(cherche);
+        const string cherche = "Polygone";
+        string::size_type pos = ligne.find(cherche);// on cherche le mot "polygone" dans la ligne lue
         while (pos != string::npos)
         {
             // "polygone" trouvé
-            vector<double> points;
+            vector<double> points; // vecteur de double qui contiendra les coordonnées des points du polygone
 
             // on extrait tout ce qui se trouve entre les parenthèses
-            unsigned firstParenthesis = ligne.find("(");
-            unsigned lastParenthesis = ligne.find(")");
-            string coordonnees = ligne.substr (firstParenthesis + 1, lastParenthesis - firstParenthesis - 1);
-            istringstream is(coordonnees );
+            unsigned parentheseDeDebut = ligne.find("[");// on cherche la position de la parenthese ouvrante
+            unsigned parentheseDeFin = ligne.find("]"); // on cherche la position de la parenthese fermante
+            string coordonnees = ligne.substr (parentheseDeDebut + 1, parentheseDeFin - parentheseDeDebut - 1);
+            istringstream is(coordonnees ); // on crée un flux de lecture à partir de la chaine de caractère coordonnees
 
             // on enlève toutes les virgules et on stocke les nombres dans un vecteur
             string t;
-            while ( getline( is, t, ',' ) ) points.push_back(stod(t));
+            while ( getline( is, t, ',' ) ) points.push_back(stod(t)); // on lit le flux is et on stocke la valeur dans la variable t
 
             // tab de vecteurs
-            vector<Vecteur2D*> vecteurs;
+            vector<Vecteur2D*> vecteur;
 
-            for(int x=0, y=1; y < points.size(); x+=2, y+=2)
-                vecteurs.push_back(new Vecteur2D(points[x], points[y]));
+            for(int x=0, y=1; y < points.size(); x+=2, y+=2) // on crée un vecteur de vecteur2D à partir des points du polygone
+                vecteur.push_back(new Vecteur2D(points[x], points[y]));// on crée un vecteur2D à partir des points du polygone
 
             // récupération de la couleur qui est un int en hexadecimal dans la ligne note #FF0000
             int couleur;
             //couleur est stocké dans la ligne sous la forme FF0000 ( en string) il faut donc la passé en string
-            istringstream iss(ligne.substr(lastParenthesis + 1, ligne.size()));// on crée un flux de lecture à partir de la chaine de caractère ligne
+            istringstream iss(ligne.substr(parentheseDeFin + 1, ligne.size()));// on crée un flux de lecture à partir de la chaine de caractère ligne
             iss >> hex >> couleur; // on lit le flux iss et on stocke la valeur dans la variable couleur
 
             // création de la forme en des données du fichier de visite
-            return new Polygone(vecteurs, couleur);
+            return new Polygone(vecteur, couleur);
         }
         return NULL;
     };

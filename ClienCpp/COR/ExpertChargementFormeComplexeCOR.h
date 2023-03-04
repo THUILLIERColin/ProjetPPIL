@@ -37,9 +37,9 @@ public:
             // "formecomplexe" trouvé
 
             // on extrait tout ce qui se trouve entre les crochets => liste des formes du groupe
-            unsigned firstCrochet = ligne.find("[");
-            unsigned lastCrochet = ligne.find("]");
-            string coordonnees = ligne.substr (firstCrochet + 1, lastCrochet - firstCrochet - 1); // on récupère la liste des formes du groupe
+            unsigned parentheseDeDebut = ligne.find("[");
+            unsigned parentheseDeFin = ligne.find("]");
+            string coordonnees = ligne.substr (parentheseDeDebut + 1, parentheseDeFin - parentheseDeDebut - 1); // on récupère la liste des formes du groupe
             istringstream is(coordonnees );// on crée un flux de lecture à partir de la chaine de caractère coordonnees
 
             // String lue entre les crochets

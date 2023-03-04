@@ -86,7 +86,7 @@ public :
      */
     virtual operator string() const{
         ostringstream os;
-        os << "Couleur : " << _couleur << endl;
+        os << "couleur : " << _couleur << endl;
         return os.str();
     }
 

@@ -220,11 +220,10 @@ Cercle::operator string()const
 {
     ostringstream os;
     os << "Cercle [ "
-       << "Centre : " << _centre << ", "
-       << "Rayon: " << _rayon << ", "
-       << Forme::operator string() << ", "
-       << "Aire : " << calculerAire()
-       << " ] " << endl;
+        << _centre.x << " , "
+        << _centre.y << " , "
+       << _rayon << ", "
+       << _couleur << " ] " << endl;
     return os.str();
 }
 
