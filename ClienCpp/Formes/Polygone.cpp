@@ -154,8 +154,8 @@ Polygone::operator string() const {
     {
         os << _points[i]->x << " , " << _points[i]->y << " , ";
     }
-    os << _points[i]->x << " , " << _points[i]->y;
-    os << _couleur<< " ] " ;
+    os << _points[i]->x << " , " << _points[i]->y << " ] " ;
+    os << hex << _couleur << endl;
     return os.str();
 }
 

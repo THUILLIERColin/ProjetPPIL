@@ -222,8 +222,8 @@ Cercle::operator string()const
     os << "Cercle [ "
         << _centre.x << " , "
         << _centre.y << " , "
-       << _rayon << ", "
-       << _couleur << " ] " << endl;
+       << _rayon << " ] "
+       << hex << _couleur << endl;
     return os.str();
 }
 

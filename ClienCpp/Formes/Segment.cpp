@@ -97,12 +97,12 @@ void Segment::rotation(const Vecteur2D &u, const double angle)
 
 Segment::operator string() const{
     stringstream ss;
-    ss << "Segment : [ "
+    ss << "Segment [ "
        << Vecteur1.x << " , "
        << Vecteur1.y << " , "
        << Vecteur2.x << " , "
-       << Vecteur2.y << " , "
-       << _couleur << "]" << endl;
+       << Vecteur2.y  << "]"
+       << hex << _couleur << endl;
     return ss.str();
 }
 

@@ -13,3 +13,20 @@ Segment : [ 1 , 1 , 2 , 2 , 0]
 Forme 2 : 
 Polygone [ 1 , 1 , 1 , 2 , 2 , 20 ] 
 
+Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] ff0000
+
+Cercle [ 1 , 2 , 1 ] ff0000
+
+Segment [ 1 , 1 , 2 , 2]ff0000
+
+FormeComplexe : 
+Forme 0 : 
+Cercle [ 1 , 2 , 1 ] 0
+
+Forme 1 : 
+Segment [ 1 , 1 , 2 , 2]0
+
+Forme 2 : 
+Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] 0
+
+

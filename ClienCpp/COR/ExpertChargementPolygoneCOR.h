@@ -42,8 +42,8 @@ public:
             istringstream is(coordonnees ); // on crée un flux de lecture à partir de la chaine de caractère coordonnees
 
             // on enlève toutes les virgules et on stocke les nombres dans un vecteur
-            string t;
-            while ( getline( is, t, ',' ) ) points.push_back(stod(t)); // on lit le flux is et on stocke la valeur dans la variable t
+            string valeurLues;
+            while ( getline( is, valeurLues, ',' ) ) points.push_back(stod(valeurLues)); // on lit le flux is et on stocke la valeur dans la variable t
 
             // tab de vecteurs
             vector<Vecteur2D*> vecteur;
