@@ -25,18 +25,17 @@ public:
      * @return    la forme lue
      */
     Forme *resoudre1(const string &ligne) const {
-        const string cherche = "segment";
+        const string cherche = "Segment";
         string::size_type pos = ligne.find(cherche); // on cherche le mot "segment" dans la ligne
         while (pos != string::npos) //tant qu on ne le trouve pas
         {
             // "croix" trouvé
-            vector<double> points; // vecteur de points
+            vector<double> points; // ve'cteur de points
 
             // on extrait tout ce qui se trouve entre les parenthèses
-            unsigned firstParenthesis = ligne.find("("); // on cherche la première parenthèse
-            unsigned lastParenthesis = ligne.find(")");  // on cherche la dernière parenthèse
-            string coordonnees = ligne.substr(firstParenthesis + 1, lastParenthesis - firstParenthesis -
-                                                                    1); // on extrait tout ce qui se trouve entre les parenthèses avec la methode substr
+            unsigned firstParenthesis = ligne.find("["); // on cherche la première parenthèse
+            unsigned lastParenthesis = ligne.find("]");  // on cherche la dernière parenthèse
+            string coordonnees = ligne.substr(firstParenthesis + 1, lastParenthesis - firstParenthesis -1); // on extrait tout ce qui se trouve entre les parenthèses avec la methode substr
             istringstream is(coordonnees); // on crée un flux de lecture à partir de la chaine de caractère coordonnees
 
             // on enlève toutes les virgules et on stocke les nombres dans un vecteur
@@ -53,6 +52,7 @@ public:
             // création de la forme en des données du fichier de visite
             return new Segment(points[0], points[1], points[2], points[3], couleur);
         }
+
         return NULL;
     };
 

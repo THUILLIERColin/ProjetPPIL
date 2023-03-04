@@ -27,16 +27,16 @@ public:
      */
     Forme *resoudre1(const string &ligne) const
     {
-        const string cherche = "cercle";
+        const string cherche = "Cercle";
         string::size_type pos = ligne.find(cherche);
-        while (pos != string::npos)
+        while (pos != string::npos) // tant que "cercle" est trouvé
         {
-            // "rond" trouvé
+            // "Cercle" trouvé
             vector<double> points;
 
             // on extrait tout ce qui se trouve entre les parenthèses
-            unsigned firstParenthesis = ligne.find("(");
-            unsigned lastParenthesis = ligne.find(")");
+            unsigned firstParenthesis = ligne.find("[");
+            unsigned lastParenthesis = ligne.find("]");
             string coordonnees = ligne.substr (firstParenthesis + 1, lastParenthesis - firstParenthesis - 1);
             istringstream is(coordonnees );
 

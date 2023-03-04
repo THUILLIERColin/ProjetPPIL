@@ -148,14 +148,14 @@ void Polygone::rotation(const Vecteur2D &u, const double angle) {
 
 Polygone::operator string() const {
     ostringstream os;
-    os << "Polygone ( ";
+    os << "Polygone [ ";
     int i;
     for ( i = 0; i < _points.size()-1; i++)
     {
         os << _points[i]->x << " , " << _points[i]->y << " , ";
     }
     os << _points[i]->x << " , " << _points[i]->y;
-    os << " ) " << _couleur;
+    os << _couleur<< " ] " ;
     return os.str();
 }
 
