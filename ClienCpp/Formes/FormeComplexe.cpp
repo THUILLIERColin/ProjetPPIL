@@ -3,8 +3,8 @@
  */
 
 #include "FormeComplexe.h"
-#include "../Visiteur/VisiteurDeLibrairie.h"
-#include "../Visiteur/VisiteurDeSauvegardeTxt.h"
+#include "../Visiteur/Librairie/VisiteurDeLibrairie.h"
+#include "../Visiteur/Sauvegarde/VisiteurDeSauvegardeTxt.h"
 
 
 FormeComplexe::FormeComplexe(const int couleur) : Forme(couleur) {}

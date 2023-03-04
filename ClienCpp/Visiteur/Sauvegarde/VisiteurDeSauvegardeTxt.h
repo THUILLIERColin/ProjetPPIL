@@ -4,13 +4,10 @@
 
 #pragma once
 
-#include "Visiteur.h"
+#include "VisiteurDeSauvegarde.h"
 
-class VisiteurDeSauvegardeTxt : public Visiteur {
+class VisiteurDeSauvegardeTxt : public VisiteurDeSauvegarde {
 public:
-    // Visiteur de librairie
-    virtual const void *visite(const Forme *forme, int *s) const = 0;
-
     /**
     * @brief Visiteur qui permettre de sauvegarder une forme dans un fichier de sauvegarde
     * @param forme (Forme*) la forme à sauvegarder

@@ -1,12 +1,12 @@
-/**
-* @author THUILLIER Colin
-*/
+//
+// Created by Colin Thuiller on 04/03/2023.
+//
 
-#include "VisiteurDeLibrairie.h"
+#include "VisiteurDeLibrairieJava.h"
 
 using namespace std;
 
-const void *VisiteurDeLibrairie::visite(const Forme *forme, SOCKET *s) const {
+const void *VisiteurDeLibrairieJava::visite(const Forme *forme, SOCKET *s) const {
     int r;
 
     ostringstream oss;
@@ -17,5 +17,5 @@ const void *VisiteurDeLibrairie::visite(const Forme *forme, SOCKET *s) const {
         throw Erreur("Erreur lors de l'envoi de la requete");
     }
 
-    return 0;
+    return 0
 }

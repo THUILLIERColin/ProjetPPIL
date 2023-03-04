@@ -3,8 +3,8 @@
  */
 
 #include "Polygone.h"
-#include "../Visiteur/VisiteurDeLibrairie.h"
-#include "../Visiteur/VisiteurDeSauvegardeTxt.h"
+#include "../Visiteur/Librairie/VisiteurDeLibrairie.h"
+#include "../Visiteur/Sauvegarde/VisiteurDeSauvegardeTxt.h"
 
 
 Polygone::Polygone(const int couleur) : Forme(couleur) {}

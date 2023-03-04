@@ -3,8 +3,8 @@
  */
 
 #include "Cercle.h"
-#include "../Visiteur/VisiteurDeLibrairie.h"
-#include "../Visiteur/VisiteurDeSauvegardeTxt.h"
+#include "../Visiteur/Librairie/VisiteurDeLibrairie.h"
+#include "../Visiteur/Sauvegarde/VisiteurDeSauvegardeTxt.h"
 #include <cmath>
 
 using namespace std;
