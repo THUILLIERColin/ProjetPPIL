@@ -13,7 +13,7 @@ public class DessinerSegment extends ExpertDessiner {
     }
 
     @Override
-    public boolean dessiner(String requete, FenetreDeDessin cadreDeDessin, boolean memeFenetre, Vecteur2D Vmin, Vecteur2D Vmax) {
+    public boolean dessiner(String requete, FenetreDeDessin fenetreDeDessin, boolean diffFenetre, Vecteur2D Vmin, Vecteur2D Vmax) {
         if(requete.contains("Segment"))
         {
             int crochetDeb = requete.indexOf("[");

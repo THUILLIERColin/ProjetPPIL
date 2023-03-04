@@ -15,7 +15,7 @@ public class DessinerPolygone extends ExpertDessiner {
     }
 
     @Override
-    public boolean dessiner(String requete, FenetreDeDessin cadreDeDessin, boolean memeFenetre, Vecteur2D Vmin, Vecteur2D Vmax) {
+    public boolean dessiner(String requete, FenetreDeDessin fenetreDeDessin, boolean diffFenetre, Vecteur2D Vmin, Vecteur2D Vmax) {
         //savoir si on va parser un polygone/triangle
         if(requete.contains("Polygone"))
         {

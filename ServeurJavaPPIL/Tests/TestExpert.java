@@ -15,7 +15,7 @@ public class TestExpert {
         String requete = "Cercle [ 1 , 2 , 1 ] ff0000";
         String requete2 = "Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] ff0000";
         String requete3 = "Segment [ 1 , 1 , 2 , 2 ] ff0000";
-        String requete4 = "FormeComplexe : { Cercle [ 1 , 2 , 1 ] 0 ; Segment [ 1 , 1 , 2 , 2 ] 0 ; Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] 0 } ( 0 , 1 ) / ( 2 , 3 )";
+        String requete4 = "FormeComplexe : { Cercle [ 1 , 2 , 1 ] 0 ; Segment [ 1 , 1 , 2 , 2 ] 0 ; Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] 0 } (0 ,1) / (2 ,3)";
 
 
         requetes[0] = requete;
