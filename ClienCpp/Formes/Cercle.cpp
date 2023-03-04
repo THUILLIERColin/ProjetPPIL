@@ -223,7 +223,7 @@ Cercle::operator string()const
         << _centre.x << " , "
         << _centre.y << " , "
        << _rayon << " ] "
-       << _couleur;
+       << hex << _couleur;
     return os.str();
 }
 
