@@ -4,7 +4,7 @@
 
 #include "Segment.h"
 #include "../Visiteur/VisiteurDeLibrairie.h"
-
+#include "../Visiteur/VisiteurDeSauvegardeTxt.h"
 
 
 using namespace std;
@@ -125,6 +125,14 @@ Vecteur2D Segment::getCentreDeSymetrie() const
     return g;
 }
 
+/************************************************************************
+ * Implémentation des visiteurs
+ ***********************************************************************/
+
 const void *Segment::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const {
     return visiteur->visite(this,s);
+}
+
+const void *Segment::sauvegarde(const VisiteurDeSauvegardeTxt *visiteur) const {
+    return visiteur->visite(this);
 }

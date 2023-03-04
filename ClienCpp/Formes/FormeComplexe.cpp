@@ -4,6 +4,7 @@
 
 #include "FormeComplexe.h"
 #include "../Visiteur/VisiteurDeLibrairie.h"
+#include "../Visiteur/VisiteurDeSauvegardeTxt.h"
 
 
 FormeComplexe::FormeComplexe(const int couleur) : Forme(couleur) {}
@@ -132,6 +133,13 @@ FormeComplexe::operator string() const {
     return oss.str();
 }
 
+/*******************************************
+ * Implementation des visiteurs
+ *******************************************/
 const void* FormeComplexe::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const{
     return visiteur->visite(this, s);
+}
+
+const void *FormeComplexe::sauvegarde(const VisiteurDeSauvegardeTxt *visiteur) const {
+    return visiteur->visite(this);
 }

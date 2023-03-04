@@ -1,14 +1,11 @@
 /**
  * @author LEOST Maelan
-/**
-* @author LEOST Maelan
 */
 
 #pragma once
 #include <string>
 #include "ExpertChargement.h"
 #include "../Erreur/Erreur.h"
-#include
 
 using namespace std;
 
@@ -48,7 +45,6 @@ public :
         if (_suivant != NULL)
             return _suivant->resoudre(ligne);
 
-        throw Erreur("Erreur lors du chargement de la forme")
+        throw Erreur("Erreur lors du chargement de la forme");
     }
-}
-
+};
