@@ -17,5 +17,5 @@ const void *VisiteurDeLibrairieJava::visite(const Forme *forme, SOCKET *s) const
         throw Erreur("Erreur lors de l'envoi de la requete");
     }
 
-    return 0
+    return 0;
 }
