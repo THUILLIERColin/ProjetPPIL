@@ -2,7 +2,7 @@ package Monde.Dessiner;
 
 import Monde.Vecteur2D;
 
-public class GenererMonde {
+public class OperationMonde {
 
     public double lambda,eps1,eps2,a,b;
     /* Paramètres du monde :
@@ -23,7 +23,7 @@ public class GenererMonde {
      * @param hdE point haut droit ecran
      * @details Cette méthode sert à créer un objet de la classe GenererMonde qui représente la transformation entre le système de coordonnées monde (qui représente les objets que l'on veut dessiner) et le système de coordonnées écran (qui représente la fenêtre de dessin).
      */
-    public GenererMonde(Vecteur2D bgM, Vecteur2D hdM, Vecteur2D bgE, Vecteur2D hdE){
+    public OperationMonde(Vecteur2D bgM, Vecteur2D hdM, Vecteur2D bgE, Vecteur2D hdE){
 
         // On calcule la valeur minimale entre la largeur de la fenêtre de dessin divisée par la différence de coordonnées horizontales (abscisses) entre les coins haut-droit et bas-gauche du monde,
         // et la hauteur négative de la fenêtre de dessin divisée par la différence de coordonnées verticales (ordonnées) entre les coins haut-droit et bas-gauche du monde.
@@ -57,6 +57,9 @@ public class GenererMonde {
         // On calcule la valeur b qui représente le décalage vertical à appliquer pour centrer le monde dans la fenêtre de dessin.
         // On soustrait au centre vertical de la fenêtre de dessin le centre vertical du monde multiplié par le coefficient de zoom lambda.
         this.b = C1.getY() - this.lambda * this.eps2* C2.getY();
+
+        this.lambdaEps1 = this.lambda * this.eps1;
+        this.lambdaEps2 = this.lambda * this.eps2;
     }
 
     /**

@@ -4,12 +4,7 @@ import ChainOfResponsibility.DessinerCercle;
 import ChainOfResponsibility.DessinerFormeComplexe;
 import ChainOfResponsibility.DessinerPolygone;
 import ChainOfResponsibility.DessinerSegment;
-import Monde.Dessiner.Couple;
 import Monde.Dessiner.FenetreDeDessin;
-import Monde.Dessiner.GenererMonde;
-import Monde.Vecteur2D;
-
-import java.awt.*;
 
 public class TestDessinCercle {
     public static void main(String[] args) throws InterruptedException {

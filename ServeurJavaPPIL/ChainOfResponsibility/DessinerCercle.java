@@ -2,7 +2,7 @@ package ChainOfResponsibility;
 
 import Monde.Dessiner.Couple;
 import Monde.Dessiner.FenetreDeDessin;
-import Monde.Dessiner.GenererMonde;
+import Monde.Dessiner.OperationMonde;
 import Monde.Vecteur2D;
 
 import java.awt.*;
@@ -58,7 +58,7 @@ public class DessinerCercle extends ExpertDessiner{
 
                 // On verifie si la figure est dans le groupe ou pas
                 if(diffFenetre){
-                    GenererMonde monde = new GenererMonde(Vmin, Vmax, new Vecteur2D(0,-fenetreDeDessin.HAUTEUR), new Vecteur2D(fenetreDeDessin.LARGEUR,0));
+                    OperationMonde monde = new OperationMonde(Vmin, Vmax, new Vecteur2D(0,-fenetreDeDessin.HAUTEUR), new Vecteur2D(fenetreDeDessin.LARGEUR,0));
 
                     centre = monde.transforme(centre);
 
@@ -68,9 +68,9 @@ public class DessinerCercle extends ExpertDessiner{
                 }
                 else {
 
-                    Couple<Vecteur2D> p = GenererMonde.basGaucheHautDroitCercle(centre,r);
+                    Couple<Vecteur2D> p = OperationMonde.basGaucheHautDroitCercle(centre,r);
 
-                    GenererMonde monde = new GenererMonde(
+                    OperationMonde monde = new OperationMonde(
                             p.getPremier(),p.getDeuxieme(),
                             new Vecteur2D(0, fenetreDeDessin.HAUTEUR),
                             new Vecteur2D(fenetreDeDessin.LARGEUR,0));
@@ -83,7 +83,8 @@ public class DessinerCercle extends ExpertDessiner{
 
                 }
                 // On dessine le cercle
-                fenetreDeDessin.graphics.drawOval((int)centre.getX(),(int)centre.getY(),r,r);
+
+                fenetreDeDessin.graphics.fillOval((int)centre.getX(),(int)centre.getY(),r,r);
                 System.out.println("Cercle [ " + centre.getX() + " , " + centre.getY() + " , " + r + " ] " + couleur );
                 return true;
             }

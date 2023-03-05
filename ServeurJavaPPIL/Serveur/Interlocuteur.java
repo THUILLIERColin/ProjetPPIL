@@ -27,19 +27,16 @@ public class Interlocuteur extends Thread
             {
                 String requete = this.fluxEntrant.readLine();
                 System.out.println("le client n° " + this.noClient + "a envoyé : " + requete);
-                String reponse = requete.toUpperCase();
-                this.fluxSortant.println(reponse);
             }
         }
         catch (IOException e)
         {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         catch(NullPointerException e)
         {
-            System.out.println("le client n° "+ this.noClient + " a mis fin ŕ la conversation");
+            System.out.println("Le client n° "+ this.noClient + " a mis fin a la conversation");
         }
-        System.out.println("arręt du thread n° " + this.noClient);
+        System.out.println("Arręt du thread n° " + this.noClient);
     }
 }
