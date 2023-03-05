@@ -71,9 +71,6 @@ public :
 
 };
 inline ostream& operator<<(ostream& os, const FormeComplexe& formeComplexe) {
-    os << "FormeComplexe : " << endl;
-    for (int i = 0; i < formeComplexe.listeFormes.size(); i++) {
-        os << *formeComplexe.listeFormes[i] << endl;
-    }
+    os << (string) formeComplexe;
     return os;
 }

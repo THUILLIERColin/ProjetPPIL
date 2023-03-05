@@ -86,10 +86,11 @@ int main(){
     /**************************************************************************
      *  Partie 2 : Le réseau
      *************************************************************************/
-     /**
+     /*
     // Initialisation de la communication
     // prendre l'instance dans InitCommunication
     InitCommunication *initCommunication = InitCommunication::getInstance();
+      */
 
 
     /**************************************************************************
