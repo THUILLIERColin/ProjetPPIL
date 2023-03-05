@@ -45,8 +45,11 @@ Forme *ExpertChargementFormeComplexeCOR::resoudre1(const string &ligne) const
             coordonnees.erase(0, pos + delimiter.length());// on supprime la forme lue de la chaine de caractère coordonnees
         }
 
+        // Récupération et attribution de la couleur avec un scanf car la couleur est un string et non un int et on veut un int
+        int couleur;
+        sscanf(ligne.c_str(), "FormeComplexe { %*s } %d", &couleur); // on récupère la couleur du groupe de forme
 
-        vector<Forme*> res; // vecteur de forme qui contiendra les formes du groupe de forme
+        vector<Forme*> formeComplexe; // vecteur de forme qui contiendra les formes du groupe de forme
         ExpertChargementCOR* expertSuivant; // expert qui permettra de charger les formes du groupe de forme
         expertSuivant = new ExpertChargementSegmentCOR(NULL);
         expertSuivant = new ExpertChargementPolygoneCOR(expertSuivant);
@@ -60,29 +63,12 @@ Forme *ExpertChargementFormeComplexeCOR::resoudre1(const string &ligne) const
             // groupe de forme de groupe de forme ICI
             if (forme != NULL)
             {
-                res.push_back(forme);
+                formeComplexe.push_back(forme);// on ajoute la forme lue dans le vecteur de forme du groupe de forme
             }
         }
 
-        FormeComplexe *formeComplexe = new FormeComplexe();
-
-        // affichage des formes + construction du groupe de forme
-        for (const auto &str : res)
-        {
-            //cout << "forme : " << str << endl;
-            formeComplexe->ajouterForme(str);
-        }
-
-        // Récupération et attribution de la couleur avec un scanf car la couleur est un string et non un int et on veut un int
-        int couleur;
-
-        formeComplexe->setCouleur(couleur);
-
-        // Affichage du groupe de forme créé
-        cout << *formeComplexe << endl;
-
         // Retour du groupe de Forme
-        return formeComplexe;
+        return new FormeComplexe(formeComplexe, couleur);
     }
     return NULL;
 }
