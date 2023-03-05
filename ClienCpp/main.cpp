@@ -128,7 +128,7 @@ int main(){
      *************************************************************************/
 
      cout << "****************************************************" << endl;
-     cout << "                   RESEAU                   " << endl;
+     cout << "                   RESEAU                   "         << endl;
      cout << "****************************************************" << endl;
      try{
          InitCommunication::getInstance()->demarrerConnection(9111, "0.0.0.0");
@@ -164,21 +164,50 @@ int main(){
      *  Partie 4: Les test sur le COR
      *************************************************************************/
     printf("****************************************************\n                   TESTS COR                   \n****************************************************\n\n\n");
-    ExpertChargementCOR* expert; // expert du DP COR
-    expert = new ExpertChargementSegmentCOR(NULL);
-    expert = new ExpertChargementPolygoneCOR(expert);
-    expert = new ExpertChargementCercleCOR(expert);
-    expert = new ExpertChargementFormeComplexeCOR(expert);
+
+    ExpertChargementCOR* expertSegment; // expert du DP COR
+    ExpertChargementCOR* expertCercle;
+    ExpertChargementCOR* expertPolygone;
+    ExpertChargementCOR* expertFormeComplexe;
+
+    expertSegment = new ExpertChargementSegmentCOR(NULL);
+    expertPolygone = new ExpertChargementPolygoneCOR(expertSegment);
+    expertCercle = new ExpertChargementCercleCOR(expertPolygone);
+    expertFormeComplexe = new ExpertChargementFormeComplexeCOR(expertCercle);
+
+    ExpertChargement* expert = expertFormeComplexe;
+
+    //test rapide sur le COR
+    try{
+        string texte = " Segment [ 1 , 1 , 2 , 2 ] ff0000";
+        Forme* forme = expert->resoudre(texte);
+        cout << " texte a parser : "<< texte <<"on obtient"<<forme << endl;
+
+    }
+    catch (Erreur e) {
+        cout << "erreur" << endl;
+    }
+
 
     //test segment
     printf("********************test sur le COR  segment********************\n");
     Segment segmentCOR(1, 1, 2,2, 0xFF0000);
-    cout << segmentCOR << endl;
-    ifstream fichier("COR/FichiersTest/TestCORSegment.txt");
-    vector<Forme*> formesegment = ChargeurListeForme::charge(fichier);
-    for (Forme* f : formesegment){
-        cout << *f << endl;
-    }
+    cout << segmentCOR << endl; //affiche Segment [ 1 , 1 , 2 , 2 ] ff0000 avec 1 1 et 2 2 les coordonnées de deux vecteurs2D et ff0000 la couleur
+    cout << "essai du parsing d'un fichier texte contenant une fraction par ligne" << endl;
+    ifstream fichierCOR("COR/TestFichiers/TestCORSegment");
+    if (!fichierCOR) cerr << "fichier non ouvert";
+    vector<Forme*> liste = ChargeurListeForme::charge(fichierCOR);
+    // place un it�rateur sur le d�but de la liste
+    vector<Forme*>::iterator it; it = liste.begin();
+    // affiche la liste
+    for ( ; it != liste.end(); ++it)
+        cout << *(*it) << endl;
+    // on lib�re la m�moire
+    for ( ; it != liste.end(); ++it)
+        delete *it;
+
+
+
 
     //test cercle
     printf("\n");
@@ -219,6 +248,7 @@ int main(){
     for (Forme* f : formecomplexe){
         cout << *f << endl;
     }
+
 
     /**************************************************************************
     *  FIN

@@ -34,7 +34,7 @@ public :
      */
     Forme* resoudre(const string& ligne) const;
 
-protected:
+public:
     /**
  * \Description      Méthode du Design Pattern Chain of Responsibility
  * \details    Cette méthode resoudre1() permet de céterminer la forme lue en le passant à l'expert adéquat grâce au Design Pattern Chain of Responsibility.

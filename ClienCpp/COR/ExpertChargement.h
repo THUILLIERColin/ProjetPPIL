@@ -13,7 +13,7 @@ class Forme;
  */
 class ExpertChargement
 {
-protected ://protected pour que les classes filles puissent y accéder
+public ://protected pour que les classes filles puissent y accéder
     /** \Description  Méthode virtuelle pure
      * @param ligne
      * @return Forme*
