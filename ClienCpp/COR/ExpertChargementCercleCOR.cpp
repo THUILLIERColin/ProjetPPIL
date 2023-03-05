@@ -47,5 +47,5 @@ Forme *ExpertChargementCercleCOR::resoudre1(const string &ligne) const
         // création de la forme en des données du fichier de visite
         return new Cercle (points[0], points[1], points[2], couleur);
     }
-    throw Erreur("Erreur lors de la lecture du fichier de sauvegarde pour la forme cercle");
+    return NULL;
 }

@@ -49,5 +49,5 @@ Forme *ExpertChargementSegmentCOR::resoudre1(const string &ligne) const
         return new Segment(points[0], points[1], points[2], points[3], couleur);
     }
 
-    throw Erreur("Erreur lors de la lecture du fichier de sauvegarde pour la forme Segment");
+    return NULL;
 }

@@ -54,5 +54,5 @@ Forme *ExpertChargementPolygoneCOR::resoudre1(const string &ligne) const
         // création de la forme en des données du fichier de visite
         return new Polygone(vecteur, couleur);
     }
-    throw Erreur("Erreur lors de la lecture du fichier de sauvegarde pour la forme Polygone");
+    return NULL;
 }

@@ -84,6 +84,6 @@ Forme *ExpertChargementFormeComplexeCOR::resoudre1(const string &ligne) const
         // Retour du groupe de Forme
         return formeComplexe;
     }
-    throw Erreur("Erreur lors de la lecture du fichier de sauvegarde pour la forme complexe");
+    return NULL;
 }
 

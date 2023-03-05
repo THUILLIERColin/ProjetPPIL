@@ -190,79 +190,53 @@ int main(){
 
     ExpertChargement* expert = expertFormeComplexe;
 
-    //test rapide sur le COR
+    //test rapide sur le COR segment
+    printf("********************test sur le COR  segment********************\n");
     try{
         string texte = " Segment [ 1 , 1 , 2 , 2 ] ff0000";
         Forme* forme = expert->resoudre(texte);
-        cout << " texte a parser : "<< texte <<"on obtient"<<forme << endl;
+        cout << " texte a parser : "<< texte <<"\n on obtient  "<<*forme << endl;
+
+    }
+    catch (Erreur e) {
+        cout << "erreur" << endl;
+    }
+    //test rapide sur le COR cercle
+    printf("\n********************test sur le COR  cerlce********************\n");
+    try{
+        string texte = "Cercle [ 1 , 2 , 1 ] ff0000";
+        Forme* forme2 = expert->resoudre(texte);
+        cout << " texte a parser : "<< texte <<"\n on obtient   "<<*forme2 << endl;
 
     }
     catch (Erreur e) {
         cout << "erreur" << endl;
     }
 
+    //test rapide sur le COR polygone
+    printf("\n********************test sur le COR  polygone********************\n");
+    try{
+        string texte = " Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] ff0000";
+        Forme* forme3 = expert->resoudre(texte);
+        cout << " texte a parser : "<< texte <<"\n on obtient  "<<*forme3 << endl;
 
-    //test segment
-    printf("********************test sur le COR  segment********************\n");
-    Segment segmentCOR(1, 1, 2,2, 0xFF0000);
-    cout << segmentCOR << endl; //affiche Segment [ 1 , 1 , 2 , 2 ] ff0000 avec 1 1 et 2 2 les coordonnées de deux vecteurs2D et ff0000 la couleur
-    cout << "essai du parsing d'un fichier texte contenant une fraction par ligne" << endl;
-    ifstream fichierCOR("COR/TestFichiers/TestCORSegment");
-    if (!fichierCOR) cerr << "fichier non ouvert";
-    vector<Forme*> liste = ChargeurListeForme::charge(fichierCOR);
-    // place un it�rateur sur le d�but de la liste
-    vector<Forme*>::iterator it; it = liste.begin();
-    // affiche la liste
-    for ( ; it != liste.end(); ++it)
-        cout << *(*it) << endl;
-    // on lib�re la m�moire
-    for ( ; it != liste.end(); ++it)
-        delete *it;
-
-
-
-
-    //test cercle
-    printf("\n");
-    printf("********************test sur le COR  cerlce********************\n");
-    Cercle cercleCOR(1, 2, 1, 0xFF0000);
-    cout <<cercleCOR << endl;
-    ifstream fichier2("COR/FichiersTest/TestCORCercle.txt");
-    vector<Forme*> formecercle = ChargeurListeForme::charge(fichier2);
-    for (Forme* f : formecercle){
-        cout << *f << endl;
+    }
+    catch (Erreur e) {
+        cout << "erreur" << endl;
     }
 
-    //test polygone
-    printf("\n");
-    printf("********************test sur le COR  polygone********************\n");
-    Polygone polygoneCOR(0xFF0000);
-    polygoneCOR.addPoint(Vecteur2D(1,1));
-    polygoneCOR.addPoint(Vecteur2D(1,2));
-    polygoneCOR.addPoint(Vecteur2D(2,2));
-    cout << polygoneCOR << endl;
-    ifstream fichier3("COR/FichiersTest/TestCORPolygone.txt");
-    vector<Forme*> formepolygone = ChargeurListeForme::charge(fichier3); //on charge le polygone
-    for (Forme* f : formepolygone) // on affiche le polygone
-    {
-        cout << *f << endl; // on affiche le polygone
+    //test rapide sur le COR
+    printf("\n********************test sur le COR  forme complexe********************\n");
+    try{
+        string texte = " FormeComplexe : { Cercle [ 1 , 2 , 1 ] 0 ; Segment [ 1 , 1 , 2 , 2 ] 0 ; Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] 0 } (0, 1) / (2, 3)";
+        Forme* forme4 = expert->resoudre(texte);
+        cout << " texte a parser : "<< texte <<"\n on obtient   "<<*forme4 << endl;
+
     }
-
-    //test forme complexe
-    printf("\n");
-    printf("********************test sur le COR  forme complexe********************\n");
-    FormeComplexe formeComplexeCOR(0x000000);
-    formeComplexeCOR.ajouterForme(&cercleCOR);
-    formeComplexeCOR.ajouterForme(&segmentCOR);
-    formeComplexeCOR.ajouterForme(&polygoneCOR);
-    cout << formeComplexeCOR << endl;
-    ifstream fichier4("COR/FichiersTest/TestCORFormeComplexe.txt");
-    vector<Forme*> formecomplexe = ChargeurListeForme::charge(fichier4);
-    for (Forme* f : formecomplexe){
-        cout << *f << endl;
+    catch (Erreur e) {
+        cout << "erreur" << endl;
     }
-
-
+    
     /**************************************************************************
     *  FIN
     *************************************************************************/
