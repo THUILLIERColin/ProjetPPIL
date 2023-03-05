@@ -15,6 +15,5 @@ public class TestDessinCercle {
         dessinerCercle.envoieAuParseur(requete, fenetreDeDessin, false, null, null);
         fenetreDeDessin.strategy.show();
 
-
     }
 }

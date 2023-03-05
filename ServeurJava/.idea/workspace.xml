@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c22a050-778d-4381-983a-708cf67e438c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ChainOfResponsibility/DessinerCercle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ChainOfResponsibility/DessinerFormeComplexe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ChainOfResponsibility/DessinerPolygone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ChainOfResponsibility/DessinerSegment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ChainOfResponsibility/Expert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ChainOfResponsibility/ExpertDessiner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Monde/Dessiner/Couple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Serveur/Communication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/TestDessinCercle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/TestExpert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/TestVecteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClienCpp/Sauvegarde/sauvegarde.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ClienCpp/Sauvegarde/sauvegarde.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClienCpp/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ClienCpp/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Monde/Dessiner/FenetreDeDessin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monde/Dessiner/FenetreDeDessin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Serveur/Interlocuteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serveur/Interlocuteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServeurJavaPPIL/ChainOfResponsibility/DessinerFormeComplexe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServeurJavaPPIL/ChainOfResponsibility/DessinerFormeComplexe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServeurJavaPPIL/Monde/Dessiner/Couple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServeurJavaPPIL/Monde/Dessiner/Couple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServeurJavaPPIL/Monde/Dessiner/FenetreDeDessin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServeurJavaPPIL/Monde/Dessiner/FenetreDeDessin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServeurJavaPPIL/Serveur/Interlocuteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServeurJavaPPIL/Serveur/Interlocuteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServeurJavaPPIL/Tests/TestDessin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServeurJavaPPIL/Tests/TestDessin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServeurJavaPPIL/Tests/TestDessinCercle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServeurJavaPPIL/Tests/TestDessinCercle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServeurJavaPPIL/Tests/TestExpert.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServeurJavaPPIL/Tests/TestExpert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/TestDessinCercle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/TestDessinCercle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +50,20 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Communication">
+    <configuration name="Communication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Serveur.Communication" />
+      <module name="ServeurJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Serveur.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestDessinCercle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Tests.TestDessinCercle" />
       <module name="ServeurJava" />
@@ -83,6 +79,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Communication" />
         <item itemvalue="Application.TestDessinCercle" />
       </list>
     </recent_temporary>
