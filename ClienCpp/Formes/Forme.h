@@ -104,7 +104,7 @@ public :
      * @param s (SOCKET) socket de communication avec le client
      * @return void (le visiteur dessine le polygone)
      */
-    virtual const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const=0;
+    virtual const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET s) const=0;
 
     /**
      * @author THUILLIER Colin

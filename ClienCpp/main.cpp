@@ -7,6 +7,7 @@
 #include "Formes/Segment.h"
 #include "Formes/Couleur.h"
 #include "Visiteur/Sauvegarde/VisiteurDeSauvegardeTxt.h"
+#include "Visiteur/Librairie/VisiteurDeLibrairieJava.h"
 #include "Communication/InitCommunication.h"
 #include "Formes/FormeComplexe.h"
 #include "COR/ExpertChargementCOR.h"
@@ -126,11 +127,20 @@ int main(){
      *  Partie 2 : Le réseau
      *************************************************************************/
 
-    printf("****************************************************\n                   TESTS RESEAU                   \n****************************************************\n\n\n");
-
-    // Initialisation de la communication
-    // prendre l'instance dans InitCommunication
-    InitCommunication *initCommunication = InitCommunication::getInstance();
+     cout << "****************************************************" << endl;
+     cout << "                   RESEAU                   " << endl;
+     cout << "****************************************************" << endl;
+     try{
+         InitCommunication::getInstance()->demarrerConnection(9111, "0.0.0.0");
+         // On attend que le client se connecte
+         cercle.dessine(new VisiteurDeLibrairieJava(), InitCommunication::getInstance()->getSocket());
+         segment.dessine(new VisiteurDeLibrairieJava(), InitCommunication::getInstance()->getSocket());
+         formeComplexe.dessine(new VisiteurDeLibrairieJava(), InitCommunication::getInstance()->getSocket());
+         InitCommunication::getInstance()->deconnexion();
+     }
+     catch (Erreur e) {
+         cout << e << endl;
+     }
 
 
 

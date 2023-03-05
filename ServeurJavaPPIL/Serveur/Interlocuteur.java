@@ -28,19 +28,23 @@ public class Interlocuteur extends Thread
     @Override
     public void run()
     {
+        boolean fin = false;
         try
         {
-            while(!this.isInterrupted())
+            while(!this.isInterrupted() || !fin)
             {
                 String requete = this.fluxEntrant.readLine();
-                System.out.println("le client n° " + this.noClient + "a envoyé : " + requete);
-
-                FenetreDeDessin fenetreDeDessin = new FenetreDeDessin("cadre dessin",60,60, FenetreDeDessin.LARGEUR,FenetreDeDessin.HAUTEUR);
-                fenetreDeDessin.setResizable(false);
-
-                expert.envoieAuParseur(requete,fenetreDeDessin,false,null,null);
-
-                fenetreDeDessin.getBufferStrategy().show();
+                if(requete == null)
+                {
+                    fin = true;
+                }
+                else
+                {
+                    System.out.println("Requete du client " + this.noClient + " : " + requete);
+                    FenetreDeDessin fenetreDeDessin = new FenetreDeDessin("Fenetre de dessin",0,0,FenetreDeDessin.LARGEUR, FenetreDeDessin.HAUTEUR);
+                    this.expert.envoieAuParseur(requete, fenetreDeDessin, false, null, null);
+                    fenetreDeDessin.getBufferStrategy().show();
+                }
             }
         }
         catch (IOException e)

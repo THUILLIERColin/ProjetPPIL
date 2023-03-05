@@ -13,5 +13,5 @@ public:
      * @param forme (Forme*) la forme à dessiner
      * @param s (Socket*) le socket de communication avec le serveur
      */
-    const void *visite(const Forme * forme, SOCKET * s) const;
+    const void *visite(const Forme * forme, SOCKET s) const;
 };

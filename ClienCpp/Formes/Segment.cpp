@@ -132,7 +132,7 @@ Vecteur2D Segment::getCentreDeSymetrie() const
  * Implémentation des visiteurs
  ***********************************************************************/
 
-const void *Segment::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const {
+const void *Segment::dessine(const VisiteurDeLibrairie *visiteur, SOCKET s) const {
     return visiteur->visite(this,s);
 }
 
