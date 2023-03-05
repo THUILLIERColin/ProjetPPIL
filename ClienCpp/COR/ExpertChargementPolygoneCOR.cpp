@@ -37,7 +37,7 @@ Forme *ExpertChargementPolygoneCOR::resoudre1(const string &ligne) const
 
         // on enlève toutes les virgules et on stocke les nombres dans un vecteur
         string valeurLues;
-        while ( getline( is, valeurLues, ',' ) ) points.push_back(stod(valeurLues)); // on lit le flux is et on stocke la valeur dans la variable t
+        while ( getline( is, valeurLues, ',' ) ) points.push_back(stod(valeurLues)); // on lit le flux is et on stocke la valeur dans la variable valeurLues
 
         // tab de vecteurs
         vector<Vecteur2D*> vecteur;

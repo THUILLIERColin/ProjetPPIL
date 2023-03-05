@@ -110,26 +110,35 @@ int main(){
     printf("\n");
     printf("********************test sur la forme complexe********************\n");
     FormeComplexe formeComplexe(0x000000);
-    formeComplexe.ajouterForme(&cercle);
-    formeComplexe.ajouterForme(&segment);
-    formeComplexe.ajouterForme(&p);
+    Polygone p2((int) Couleur::ROUGE);
+    p2.addPoint(Vecteur2D(1,1));
+    p2.addPoint(Vecteur2D(1,2));
+    p2.addPoint(Vecteur2D(2,2));
+    Segment segment2(1, 1, 2,2, 0xFF0000);
+    Cercle cercle2(1, 2, 1, 0x000000);
+    formeComplexe.ajouterForme(&cercle2);
+    formeComplexe.ajouterForme(&segment2);
+    formeComplexe.ajouterForme(&p2);
     cout << formeComplexe << endl;
     printf("\n");
 
     /**************************************************************************
      *  Partie 2 : Le réseau
      *************************************************************************/
-     /**
+
+    printf("****************************************************\n                   TESTS RESEAU                   \n****************************************************\n\n\n");
+
     // Initialisation de la communication
     // prendre l'instance dans InitCommunication
     InitCommunication *initCommunication = InitCommunication::getInstance();
-      */
+
 
 
     /**************************************************************************
      *  Partie 3 : La sauvegarde
      *************************************************************************/
-    /**
+
+    printf("****************************************************\n                   TESTS SAUVEGARDE                   \n****************************************************\n\n\n");
 
      cout << "On sauvegarde les formes" << endl;
 
@@ -139,13 +148,17 @@ int main(){
     segment.sauvegarde(new VisiteurDeSauvegardeTxt);
     formeComplexe.sauvegarde(new VisiteurDeSauvegardeTxt);
 
-     */
+
 
     /**************************************************************************
      *  Partie 4: Les test sur le COR
      *************************************************************************/
     printf("****************************************************\n                   TESTS COR                   \n****************************************************\n\n\n");
-    ExpertChargementCOR* expertSuivant ;
+    ExpertChargementCOR* expert; // expert du DP COR
+    expert = new ExpertChargementSegmentCOR(NULL);
+    expert = new ExpertChargementPolygoneCOR(expert);
+    expert = new ExpertChargementCercleCOR(expert);
+    expert = new ExpertChargementFormeComplexeCOR(expert);
 
     //test segment
     printf("********************test sur le COR  segment********************\n");
@@ -177,9 +190,10 @@ int main(){
     polygoneCOR.addPoint(Vecteur2D(2,2));
     cout << polygoneCOR << endl;
     ifstream fichier3("COR/FichiersTest/TestCORPolygone.txt");
-    vector<Forme*> formepolygone = ChargeurListeForme::charge(fichier3);
-    for (Forme* f : formepolygone){
-        cout << *f << endl;
+    vector<Forme*> formepolygone = ChargeurListeForme::charge(fichier3); //on charge le polygone
+    for (Forme* f : formepolygone) // on affiche le polygone
+    {
+        cout << *f << endl; // on affiche le polygone
     }
 
     //test forme complexe
