@@ -61,6 +61,6 @@ public:
             return new Polygone(vecteur, couleur);
         }
         return NULL;
-    };
+    }
 };
 

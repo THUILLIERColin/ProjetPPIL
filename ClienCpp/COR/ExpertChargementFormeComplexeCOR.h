@@ -95,5 +95,5 @@ public:
             return formeComplexe;
         }
         return NULL;
-    };
+    }
 };

@@ -81,11 +81,11 @@ public class GenererMonde {
      */
     public int convertirRayonDuCercle( Vecteur2D centre, double r,Vecteur2D min,Vecteur2D max) {
         // On calcule le vecteur qui va du centre du cercle à un point à distance r (rayon) sur le cercle
-        Vecteur2D vr = centre.addition(new Vecteur2D(r, 0));
+        Vecteur2D v = new Vecteur2D(centre.getX() + r, centre.getY());
         // On applique la transformation géométrique sur le vecteur
-        vr = transforme(vr).soustraction(transforme(centre));
+        v = transforme(v).soustraction(transforme(centre));
         // On récupère la coordonnée x du vecteur transformé, que l'on retourne sous forme d'un entier
-        return (int) vr.getX();
+        return (int) v.getX();
     }
 
 

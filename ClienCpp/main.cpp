@@ -15,7 +15,7 @@ int main(){
     /**************************************************************************
      *  Partie 1 : Les tests
      *************************************************************************/
-     /**
+     /*
     printf("Test sur le polygone\n");
     Polygone p((int) Couleur::ROUGE); // il faudra la retransformer en hexa
     cout << "Couleur du polygone (int) : " << p.getCouleur() << endl;
@@ -58,7 +58,7 @@ int main(){
     formeComplexe.ajouterForme(&segment);
     formeComplexe.ajouterForme(&p);
     cout << formeComplexe << endl;
-    /**
+    /*
     cout << segment.calculerAire() << endl;
     cout << segment.getCentreDeSymetrie() << endl;
     cout << segment.getMinXMinY() << endl;
@@ -92,6 +92,8 @@ int main(){
     /**************************************************************************
      *  Partie 3 : La sauvegarde
      *************************************************************************/
+    /*
+
      cout << "On sauvegarde les formes" << endl;
 
     // On sauvegarde le polygone
@@ -99,6 +101,8 @@ int main(){
     cercle.sauvegarde(new VisiteurDeSauvegardeTxt);
     segment.sauvegarde(new VisiteurDeSauvegardeTxt);
     formeComplexe.sauvegarde(new VisiteurDeSauvegardeTxt);
+
+     */
 
     return 0;
 }
