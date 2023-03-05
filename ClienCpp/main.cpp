@@ -120,10 +120,9 @@ int main(){
     /**************************************************************************
      *  Partie 2 : Le réseau
      *************************************************************************/
-     /**
-    // Initialisation de la communication
-    // prendre l'instance dans InitCommunication
-     */
+     cout << "****************************************************" << endl;
+     cout << "                   RESEAU                   " << endl;
+     cout << "****************************************************" << endl;
      try{
          InitCommunication::getInstance()->demarrerConnection(9111, "0.0.0.0");
          // On attend que le client se connecte
