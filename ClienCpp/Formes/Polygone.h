@@ -105,7 +105,7 @@ public :
     /************************************************************************
      * Visiteurs
      * **********************************************************************/
-    const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const;
+    const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET s) const;
     const void* sauvegarde(const VisiteurDeSauvegarde *visiteur) const;
 
 };

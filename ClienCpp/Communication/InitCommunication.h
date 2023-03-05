@@ -107,10 +107,6 @@ public:
         if (r == SOCKET_ERROR) {
             throw Erreur("Erreur lors du bind du socket");
         }
-        r = listen(sock, 5);
-        if (r == SOCKET_ERROR) {
-            throw Erreur("Erreur lors du listen du socket");
-        }
     }
 
     /**

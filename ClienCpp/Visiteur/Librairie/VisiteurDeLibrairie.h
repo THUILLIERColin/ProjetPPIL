@@ -31,6 +31,6 @@ public:
      * @return 0 si tout s'est bien passé
      * @throw Erreur si l'envoi de la requete a échoué
      */
-    virtual const void *visite(const Forme *forme, SOCKET *s) const = 0;
+    virtual const void *visite(const Forme *forme, SOCKET s) const = 0;
 
 };

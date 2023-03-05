@@ -230,7 +230,7 @@ Cercle::operator string()const
 /************************************************************************
  * Implémentation des visiteurs
  * **********************************************************************/
-const void* Cercle::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const{
+const void* Cercle::dessine(const VisiteurDeLibrairie *visiteur, SOCKET s) const{
     return visiteur->visite(this, s);
 }
 

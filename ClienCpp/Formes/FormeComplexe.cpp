@@ -136,7 +136,7 @@ FormeComplexe::operator string() const {
 /*******************************************
  * Implementation des visiteurs
  *******************************************/
-const void* FormeComplexe::dessine(const VisiteurDeLibrairie *visiteur, SOCKET *s) const{
+const void* FormeComplexe::dessine(const VisiteurDeLibrairie *visiteur, SOCKET s) const{
     return visiteur->visite(this, s);
 }
 
