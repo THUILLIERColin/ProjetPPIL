@@ -1,9 +1,12 @@
 package ChainOfResponsibility;
 
+import Monde.Dessiner.Couple;
 import Monde.Dessiner.FenetreDeDessin;
+import Monde.Dessiner.OperationMonde;
 import Monde.Vecteur2D;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public class DessinerPolygone extends ExpertDessiner {
     /**
@@ -15,7 +18,7 @@ public class DessinerPolygone extends ExpertDessiner {
     }
 
     @Override
-    public boolean dessiner(String requete, FenetreDeDessin fenetreDeDessin, boolean diffFenetre, Vecteur2D Vmin, Vecteur2D Vmax) {
+    public boolean dessiner(String requete, FenetreDeDessin fenetreDeDessin, boolean memeFenetre, Vecteur2D Vmin, Vecteur2D Vmax) {
         //savoir si on va parser un polygone/triangle
         if(requete.contains("Polygone"))
         {
@@ -45,50 +48,57 @@ public class DessinerPolygone extends ExpertDessiner {
 
                 // On affiche le polygone
                 System.out.println("Polygone [ " + coordonnees + " ] " + couleur );
-                /*
-                // on lui affcete sa couleur
-                cadreDeDessin.graphics.setColor(Color.decode("#" + couleur));
 
-                // debut de la tranformation monde ecran
+                /* ***********************************************
+                 * On gère la transformation en monde ecran
+                 * ***********************************************/
 
-                Pair<Vecteur2D> pairVect;
+                // On donne la couleur au polygone
+                fenetreDeDessin.graphics.setColor(Color.decode("#" + couleur));
 
-                // savoir si le requete vient du geoupe ou pas
-                // si oui on converti selon les points bgM et hdM du groupe sinon celui de la figule seule
-                if(Isgroupe)
-                    pairVect = new Pair<Vecteur2D>(Vmin,Vmax);
+                // On cree un couple de vecteur2D pour stocker les coordonnees du polygone
+                Couple<Vecteur2D> coupleVect;
+
+                // On verifie si on doit dessiner le polygone dans la meme fenetre ou non (partie d'un groupe)
+                // Si oui on converti selon les points bgM et hdM du groupe sinon celui du polygone
+                if(memeFenetre)
+                    coupleVect = new Couple<Vecteur2D>(Vmin,Vmax);
                 else
-                    pairVect = TransfoMondeEcran.basGaucheHautDroitTriangleEtPolygone(x,y);
+                    coupleVect = OperationMonde.basGaucheHautDroitPolygone(x,y);
 
-                TransfoMondeEcran t = TransfoMondeEcran.creerTransfoMondeEcran(pairVect.getPremier(),
-                        pairVect.getDeuxieme(),
-                        new Vecteur2D(0, Config.HAUTEUR),
-                        new Vecteur2D(Config.LARGEUR,0));
+                OperationMonde t = new OperationMonde(coupleVect.getPremier(),
+                        coupleVect.getDeuxieme(),
+                        new Vecteur2D(0, FenetreDeDessin.HAUTEUR),
+                        new Vecteur2D(FenetreDeDessin.LARGEUR,0));
 
-                // fin de la transormation monde ecran
-
-                ArrayList<Vecteur2D> pointss = Vecteur2D.pointsToVect(x,y);
-
-                // recuperation des points tranformees dans les tebleaux x[] et y[]
-
-                for(int i = 0 ; i < pointss.size() ; i++ ) {
-                    Vecteur2D v = pointss.get(i);
-                    v = t.transforme(v);
-                    pointss.set(i,v);
+                // On recupere les abscisses et ordonnees du polygone
+                // on les converti en coordonnees ecran et on les met dans une liste de Vecteur2D
+                ArrayList<Vecteur2D> lesPoints = new ArrayList<Vecteur2D>();
+                for(int i = 0 ; i < x.length ; i++)
+                {
+                    Vecteur2D vect = new Vecteur2D(x[i],y[i]);
+                    vect = t.transforme(vect);
+                    x[i] = (int) vect.getX();
+                    y[i] = (int) vect.getY();
+                    lesPoints.add(new Vecteur2D(x[i],y[i]));
                 }
 
+                // On met les nouvelles coordonnees dans les tableaux x et y
+                // Pour pouvoir créer un polygone avec la bibliothèque graphique awt
                 for(int i = 0 ; i < x.length ; i++){
-                    x[i] = (int)pointss.get(i).getX();
-                    y[i] = (int)pointss.get(i).getY();
+                    x[i] = (int)lesPoints.get(i).getX();
+                    y[i] = (int)lesPoints.get(i).getY();
                 }
 
-
-                // creation du polygone a dessiner
+                // On cree le polygone
                 Polygon p = new Polygon(y,x,x.length/2);
 
-                // dessin du plugone
-                cadreDessin.graphics.fillPolygon(p);*/
+                // On dessine le polygone
+                fenetreDeDessin.graphics.fillPolygon(p);
 
+                // On affiche le polygone avec System.out.println
+                for(int i = 0 ; i < x.length ; i+=2)
+                    System.out.println("Point " + i/2 + " : " + x[i] + " " + y[i]);
                 return true;
             }
         }

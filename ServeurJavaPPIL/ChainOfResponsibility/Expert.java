@@ -8,7 +8,7 @@ public abstract class Expert {
      * Envoie la requête au parseur
      * @param requete requete de la forme dessiner
      * @param fenetreDeDessin cadre de dessin
-     * @param memeFenetre sert a savoir si on dessine dans la meme fenetre
+     * @param memeFenetre sert a savoir si on dessine dans la meme fenetre si on est dans un groupe
      * @param Vmin vecteur minimum
      * @param Vmax vecteur maximum
      * @throws except programme

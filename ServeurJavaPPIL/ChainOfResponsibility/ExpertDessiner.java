@@ -23,10 +23,10 @@ public abstract class ExpertDessiner extends Expert {
     }
 
     @Override
-    public boolean envoieAuParseur(String requete, FenetreDeDessin fenetreDeDessin, boolean diffFenetre, Vecteur2D Vmin, Vecteur2D Vmax) throws InterruptedException {
-        if(!dessiner(requete, fenetreDeDessin, diffFenetre, Vmin, Vmax)){
+    public boolean envoieAuParseur(String requete, FenetreDeDessin fenetreDeDessin, boolean memeFenetre, Vecteur2D Vmin, Vecteur2D Vmax) throws InterruptedException {
+        if(!dessiner(requete, fenetreDeDessin, memeFenetre, Vmin, Vmax)){
             if (_suivant != null)
-                return _suivant.envoieAuParseur(requete, fenetreDeDessin, diffFenetre, Vmin, Vmax);
+                return _suivant.envoieAuParseur(requete, fenetreDeDessin, memeFenetre, Vmin, Vmax);
             else
                 System.out.println("Erreur : requete non reconnue");
                 return false;
@@ -38,10 +38,10 @@ public abstract class ExpertDessiner extends Expert {
      * Méthode qui permet de dessiner la requete dans le cadre de dessin si possible
      * @param requete forme à dessiner
      * @param fenetreDeDessin cadre de dessin
-     * @param diffFenetre sert a savoir si on dessine dans la meme fenetre
+     * @param memeFenetre sert a savoir si on dessine dans la meme fenetre
      * @param Vmin vecteur minimum
      * @param Vmax vecteur maximum
      * @return vrai si la requete a été traitée, faux sinon
      */
-    public abstract boolean dessiner(String requete, FenetreDeDessin fenetreDeDessin, boolean diffFenetre, Vecteur2D Vmin, Vecteur2D Vmax) throws InterruptedException;
+    public abstract boolean dessiner(String requete, FenetreDeDessin fenetreDeDessin, boolean memeFenetre, Vecteur2D Vmin, Vecteur2D Vmax) throws InterruptedException;
 }

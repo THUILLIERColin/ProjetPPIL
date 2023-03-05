@@ -137,7 +137,7 @@ public class OperationMonde {
      * @return Pair<Vecteur2D> : une paire de vecteur2D qui sont
      * le point bas gauche et le point haut droit du plan selon le triangle ou le polygone
      */
-    public static Couple<Vecteur2D> basGaucheHautDroitTriangleEtPolygone(int x[] , int y[]){
+    public static Couple<Vecteur2D> basGaucheHautDroitPolygone(int x[] , int y[]){
 
         // On initialise les variables avec les valeurs maximales et minimales possibles pour x et y
         double minX = Integer.MAX_VALUE  , minY = Integer.MAX_VALUE;

@@ -1,7 +1,11 @@
 package ChainOfResponsibility;
 
+import Monde.Dessiner.Couple;
 import Monde.Dessiner.FenetreDeDessin;
+import Monde.Dessiner.OperationMonde;
 import Monde.Vecteur2D;
+
+import java.awt.*;
 
 public class DessinerSegment extends ExpertDessiner {
     /**
@@ -13,7 +17,7 @@ public class DessinerSegment extends ExpertDessiner {
     }
 
     @Override
-    public boolean dessiner(String requete, FenetreDeDessin fenetreDeDessin, boolean diffFenetre, Vecteur2D Vmin, Vecteur2D Vmax) {
+    public boolean dessiner(String requete, FenetreDeDessin fenetreDeDessin, boolean memeFenetre, Vecteur2D Vmin, Vecteur2D Vmax) {
         if(requete.contains("Segment"))
         {
             int crochetDeb = requete.indexOf("[");
@@ -39,40 +43,41 @@ public class DessinerSegment extends ExpertDessiner {
 
                 System.out.println("Segment [ " + gauche + " , " + haut + " , " + droit + " , " + bas + " ] " + couleur );
 
-                /*
-                // on affecte a la forme la couleur specifique
-                cadreDeDessin.graphics.setColor(Color.decode("#" + couleur));
+                // On donne la couleur au segment
+                fenetreDeDessin.graphics.setColor(Color.decode("#" + couleur));
 
-                //origine de la droite
+                // On cherche le point de depart et d'arrivee du segment
                 Vecteur2D deb = new Vecteur2D(gauche,haut) ;
-                // fin de la droite
                 Vecteur2D fin = new Vecteur2D(droit,bas);
 
-                Pair<Vecteur2D> pairVect;
+                Couple<Vecteur2D> coupleVect;
 
-                // debut de la tranformation monde ecran
+                /* ***********************************************
+                 * On gère la transformation en monde ecran
+                 * ***********************************************/
 
-                // savoir si le requete vient du geoupe ou pas
-                // si oui on converti selon les points bgM et hdM du groupe sinon celui du segment seul
-                if(Isgroupe)
-                    pairVect = TransfoMondeEcran.basGaucheHautDroitSegment(Vmin,Vmax);
+                // On verifie si la figure est dans le groupe ou pas
+                // Si oui on doit convertir selon les points bgM et hdM du groupe sinon celui du segment seul
+                if(memeFenetre)
+                    coupleVect = OperationMonde.basGaucheHautDroitSegment(Vmin,Vmax);
                 else
-                    pairVect = TransfoMondeEcran.basGaucheHautDroitSegment(deb,fin);
+                    coupleVect = OperationMonde.basGaucheHautDroitSegment(deb,fin);
 
 
+                // On initialise le monde ecran à partir des donnees
+                OperationMonde monde = new OperationMonde(coupleVect.getPremier(),
+                        coupleVect.getDeuxieme(),
+                        new Vecteur2D(0, FenetreDeDessin.HAUTEUR),new Vecteur2D(FenetreDeDessin.LARGEUR,0));
 
+                // On convertit les points du segment en monde ecran
+                deb = monde.transforme(deb);
+                fin = monde.transforme(fin);
 
-                TransfoMondeEcran t2 = TransfoMondeEcran.creerTransfoMondeEcran(pairVect.getPremier(),
-                        pairVect.getDeuxieme(),
-                        new Vecteur2D(0, Config.HAUTEUR),new Vecteur2D(Config.LARGEUR,0));
+                // On dessine le segment
+                fenetreDeDessin.graphics.drawLine((int)deb.getX(),(int)deb.getY(),(int)fin.getX(),(int)fin.getY());
 
-                deb = t2.transforme(deb);
-                fin = t2.transforme(fin);
+                System.out.println("Segment [ " + deb.getX() + " , " + deb.getY() + " , " + fin.getX() + " , " + fin.getY() + " ] " + couleur );
 
-                // fin de la transformation monde ecran
-
-                cadreDessin.graphics.drawLine((int)deb.getX(),(int)deb.getY(),(int)fin.getX(),(int)fin.getY());
-                */
                 return true;
 
             }
