@@ -25,8 +25,8 @@ FormeComplexe::~FormeComplexe() {
 
 FormeComplexe& FormeComplexe::ajouterForme(Forme *forme) {
     Forme *f = forme->clone();
-    f->setCouleur(getCouleur());
     listeFormes.push_back(f);
+    listeFormes.back()->setCouleur(_couleur); // On met la couleur de la forme complexe à toutes les formes
     return (*this);
 }
 
@@ -54,6 +54,10 @@ FormeComplexe& FormeComplexe::setCouleurListeFormes(const int couleur) {
         listeFormes[i]->setCouleur(couleur);
     }
     return (*this);
+}
+
+vector<Forme*> FormeComplexe::getListeFormes() const {
+    return listeFormes;
 }
 
 Vecteur2D FormeComplexe::getMinXMinY() const {

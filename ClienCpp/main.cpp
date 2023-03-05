@@ -130,12 +130,25 @@ int main(){
      cout << "****************************************************" << endl;
      cout << "                   RESEAU                   "         << endl;
      cout << "****************************************************" << endl;
+    Cercle cercleEnvoyee(300, 550, 50, 0x000000);
+    Cercle cercleEnvoyee2(500, 550, 50, 0x000000);
+    Polygone polygoneEnvoye(0x000000);
+    polygoneEnvoye.addPoint(Vecteur2D(350,600));
+    polygoneEnvoye.addPoint(Vecteur2D(450,650));
+    polygoneEnvoye.addPoint(Vecteur2D(450,200));
+    polygoneEnvoye.addPoint(Vecteur2D(350,200));
+    Cercle cercleEnvoyee3(400, 200, 50, 0x000000);
+    FormeComplexe formeComplexeEnvoyee(0xFF00FF);
+    formeComplexeEnvoyee.ajouterForme(&cercleEnvoyee);
+    formeComplexeEnvoyee.ajouterForme(&cercleEnvoyee2);
+    formeComplexeEnvoyee.ajouterForme(&polygoneEnvoye);
+    formeComplexeEnvoyee.ajouterForme(&cercleEnvoyee3);
      try{
          InitCommunication::getInstance()->demarrerConnection(9111, "0.0.0.0");
          // On attend que le client se connecte
-         cercle.dessine(new VisiteurDeLibrairieJava(), InitCommunication::getInstance()->getSocket());
-         segment.dessine(new VisiteurDeLibrairieJava(), InitCommunication::getInstance()->getSocket());
-         formeComplexe.dessine(new VisiteurDeLibrairieJava(), InitCommunication::getInstance()->getSocket());
+
+         formeComplexeEnvoyee.dessine(new VisiteurDeLibrairieJava(), InitCommunication::getInstance()->getSocket());
+
          InitCommunication::getInstance()->deconnexion();
      }
      catch (Erreur e) {

@@ -12,8 +12,8 @@ private :
     vector<Forme*> listeFormes;
 public :
     /*** Constructeur ***/
-    FormeComplexe(const int couleur=0x000000);
-    FormeComplexe(vector<Forme*> listeFormes, const int couleur=0x000000);
+    FormeComplexe(const int couleur=0xFFFFFF);
+    FormeComplexe(vector<Forme*> listeFormes, const int couleur=0xFFFFFF);
     virtual FormeComplexe* clone() const;
 
     /*** Destructeur ***/
@@ -44,6 +44,12 @@ public :
     Forme* getForme(const int& i) const;
 
     FormeComplexe& setCouleurListeFormes(const int couleur);
+
+    /**
+     * @brief Méthode qui permet d'obtenir la liste des formes
+     * @return la liste des formes
+     */
+    vector<Forme*> getListeFormes() const;
 
     virtual Vecteur2D getMinXMinY() const;
 
