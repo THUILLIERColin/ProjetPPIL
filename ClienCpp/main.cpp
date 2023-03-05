@@ -30,37 +30,11 @@ int main(){
     cout << p.getCentreDeSymetrie() << endl;
     cout << p.getNbPoints() << endl;
 
+
     printf("\n");
-    printf("test sur le Cercle\n");
-    Cercle cercle(1, 2, 1, 0x000000);
-    cout << cercle.calculerAire() << endl;
-    cout << cercle.getCentreDeSymetrie() << endl;
-    cout << cercle.getMinXMinY() << endl;
-    cout << cercle.getMaxXMaxY() << endl;
-
-    cercle.translation(Vecteur2D(2,1));
-
-    printf("\n");*/
     printf("test sur le segment\n");
     Segment segment(1, 1, 2,2, 0xFF0000);
     cout << segment << endl;
-
-    //on fait la meme pour un cercle
-    Cercle cercle(1, 2, 1, 0xFF0000);
-    cout << cercle << endl ;
-    //on fait la meme pour un polygone
-    Polygone p(0xFF0000);
-    p.addPoint(Vecteur2D(1,1));
-    p.addPoint(Vecteur2D(1,2));
-    p.addPoint(Vecteur2D(2,2));
-    cout << p << endl;
-    //on fait un essai de forme complexe
-    FormeComplexe formeComplexe(0x000000);
-    formeComplexe.ajouterForme(&cercle);
-    formeComplexe.ajouterForme(&segment);
-    formeComplexe.ajouterForme(&p);
-    cout << formeComplexe << endl;
-
 
     cout << segment.calculerAire() << endl;
     cout << segment.getCentreDeSymetrie() << endl;
@@ -83,10 +57,39 @@ int main(){
 
     printf("\n");
 
+    //test cercle
+    printf("\n");
+    printf("test sur le Cercle\n");
+    Cercle cercle(1, 2, 1, 0x000000);
+    cout << cercle.calculerAire() << endl;
+    cout << cercle.getCentreDeSymetrie() << endl;
+    cout << cercle.getMinXMinY() << endl;
+    cout << cercle.getMaxXMaxY() << endl;
+    cout << cercle << endl ;
+
+    //on fait la meme pour un polygone
+    printf("\n");
+    printf("test sur le polygone\n");
+    Polygone p2(0xFF0000);
+    p2.addPoint(Vecteur2D(1,1));
+    p2.addPoint(Vecteur2D(1,2));
+    p2.addPoint(Vecteur2D(2,2));
+    cout << p2 << endl;
+
+    //on fait un essai de forme complexe
+    printf("\n");
+    printf("test sur la forme complexe\n");
+    FormeComplexe formeComplexe(0x000000);
+    formeComplexe.ajouterForme(&cercle);
+    formeComplexe.ajouterForme(&segment);
+    formeComplexe.ajouterForme(&p);
+    cout << formeComplexe << endl;
+
+
     /**************************************************************************
      *  Partie 2 : Le réseau
      *************************************************************************/
-     /*
+     /**
     // Initialisation de la communication
     // prendre l'instance dans InitCommunication
     InitCommunication *initCommunication = InitCommunication::getInstance();
@@ -111,16 +114,55 @@ int main(){
     /**************************************************************************
      *  Partie 4: Les test sur le COR
      *************************************************************************/
-
-    printf("\n");
+    printf("*************test sur le COR***********");
+    //test segment
     ExpertChargementCOR* expertSuivant ;
-    printf("test sur le segment\n");
-    Segment segment(1, 1, 2,2, 0xFF0000);
-    cout << segment << endl;
-    ifstream fichier("SauvegardeForme.txt");
-    //test du paser de fichier avec COR
-    vector<Forme*> formes = ChargeurListeForme::charge(fichier);
-    for (Forme* f : formes){
+    printf("\n");
+    printf("test sur le COR  segment\n");
+    Segment segmentCOR(1, 1, 2,2, 0xFF0000);
+    cout << segmentCOR << endl;
+    ifstream fichier("COR/FichiersTest/TestCORSegment.txt");
+    vector<Forme*> formesegment = ChargeurListeForme::charge(fichier);
+    for (Forme* f : formesegment){
+        cout << *f << endl;
+    }
+
+    //test cercle
+    printf("\n");
+    printf("test sur le COR  cerlce\n");
+    Cercle cercleCOR(1, 2, 1, 0xFF0000);
+    cout <<cercleCOR << endl;
+    ifstream fichier2("COR/FichiersTest/TestCORCercle.txt");
+    vector<Forme*> formecercle = ChargeurListeForme::charge(fichier2);
+    for (Forme* f : formecercle){
+        cout << *f << endl;
+    }
+
+    //test polygone
+    printf("\n");
+    printf("test sur le COR  polygone\n");
+    Polygone polygoneCOR(0xFF0000);
+    polygoneCOR.addPoint(Vecteur2D(1,1));
+    polygoneCOR.addPoint(Vecteur2D(1,2));
+    polygoneCOR.addPoint(Vecteur2D(2,2));
+    cout << polygoneCOR << endl;
+    ifstream fichier3("COR/FichiersTest/TestCORPolygone.txt");
+    vector<Forme*> formepolygone = ChargeurListeForme::charge(fichier3);
+    for (Forme* f : formepolygone){
+        cout << *f << endl;
+    }
+
+    //test forme complexe
+    printf("\n");
+    printf("test sur le COR  forme complexe\n");
+    FormeComplexe formeComplexeCOR(0x000000);
+    formeComplexeCOR.ajouterForme(&cercleCOR);
+    formeComplexeCOR.ajouterForme(&segmentCOR);
+    formeComplexeCOR.ajouterForme(&polygoneCOR);
+    cout << formeComplexeCOR << endl;
+    ifstream fichier4("COR/FichiersTest/TestCORFormeComplexe.txt");
+    vector<Forme*> formecomplexe = ChargeurListeForme::charge(fichier4);
+    for (Forme* f : formecomplexe){
         cout << *f << endl;
     }
 
