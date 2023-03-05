@@ -43,10 +43,6 @@ Forme *ExpertChargementFormeComplexeCOR::resoudre1(const string &ligne) const
             lesFormes.push_back(token);
         }
 
-        // Récupération et attribution de la couleur avec un scanf car la couleur est un string et non un int et on veut un int
-        int couleur;
-        sscanf(ligne.c_str(), "FormeComplexe { %*s } %d", &couleur); // on récupère la couleur du groupe de forme
-
         vector<Forme*> formeComplexe; // vecteur de forme qui contiendra les formes du groupe de forme
         ExpertChargementCOR* expertSuivant; // expert qui permettra de charger les formes du groupe de forme
         expertSuivant = new ExpertChargementSegmentCOR(NULL);
@@ -65,8 +61,9 @@ Forme *ExpertChargementFormeComplexeCOR::resoudre1(const string &ligne) const
             }
         }
 
+
         // Retour du groupe de Forme
-        return new FormeComplexe(formeComplexe, couleur);
+        return new FormeComplexe(formeComplexe, formeComplexe[0]->getCouleur());
     }
     return NULL;
 }
