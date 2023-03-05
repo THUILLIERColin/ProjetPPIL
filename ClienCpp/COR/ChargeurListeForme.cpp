@@ -19,12 +19,12 @@ vector<Forme*> ChargeurListeForme::charge(ifstream& fichier) // charge un fichie
     expert = new ExpertChargementCercleCOR(expert);
     expert = new ExpertChargementFormeComplexeCOR(expert);
 
-    string temp; // string temporaire pour lire le fichier texte
-    while (getline(fichier, temp)) // tant qu'il y a des lignes à lire
+    string ligne; // string temporaire pour lire le fichier texte
+    while (getline(fichier, ligne)) // tant qu'il y a des lignes à lire
     {
-        //cout << "ligne lue : " << tmp << endl;
+        //cout << "ligne lue : " << temp << endl;
 
-        Forme* forme = expert->resoudre(temp);
+        Forme* forme = expert->resoudre(ligne);
         if (forme != NULL)// si la forme n'est pas nulle
         {
             res.push_back(forme);// on l'ajoute au vecteur de Forme
