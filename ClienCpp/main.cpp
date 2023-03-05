@@ -240,7 +240,18 @@ int main(){
     catch (Erreur e) {
         cout << "erreur" << endl;
     }
-    
+
+    cout << "****************************************************" << endl;
+    cout << "               TEST COR SUR FICHIER                 "<< endl;
+    cout << "****************************************************" << endl;
+
+    cout << "On charge les formes" << endl;
+    ifstream fichier("../Sauvegarde/sauvegarde.txt");
+    vector<Forme*> vec_fractions = ChargeurListeForme::charge(fichier);
+    for (unsigned int i = 0; i < vec_fractions.size(); i++) {
+        cout << *vec_fractions[i] << endl;
+    }
+
     /**************************************************************************
     *  FIN
     *************************************************************************/
