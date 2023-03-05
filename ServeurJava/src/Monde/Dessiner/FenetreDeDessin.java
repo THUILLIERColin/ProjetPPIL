@@ -8,6 +8,12 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferStrategy;
 
+/**
+ * Classe qui permet d'initialiser la fenetre de dessin
+ * @author THUILLIER Colin
+ * @see Frame
+ * @see WindowListener
+ */
 public class FenetreDeDessin extends Frame {
 
     public final static int LARGEUR = 600; // La largeur de la fenętre
@@ -15,13 +21,10 @@ public class FenetreDeDessin extends Frame {
 
     public Graphics graphics;      // pour dessiner sur this
 
-    public BufferStrategy strategy = null;
+    public BufferStrategy strategy;
 
     public final int bordGauche, bordSuperieur;
 
-    public BufferStrategy getBufferStrategy() {
-        return strategy;
-    }
 
     /**
      * Constructeur de la fenetre de dessin

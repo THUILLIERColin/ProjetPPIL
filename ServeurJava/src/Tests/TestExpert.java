@@ -1,9 +1,9 @@
 package Tests;
 
 import ChainOfResponsibility.DessinerCercle;
+import ChainOfResponsibility.DessinerFormeComplexe;
 import ChainOfResponsibility.DessinerPolygone;
 import ChainOfResponsibility.DessinerSegment;
-import ChainOfResponsibility.DessinerFormeComplexe;
 import Monde.Dessiner.FenetreDeDessin;
 
 public class TestExpert {

@@ -32,7 +32,7 @@ public class TestDessin {
             fenetreDeDessin.graphics.setColor(Color.black);
             System.out.println("x = "+centre.getX()+" y = "+centre.getY()+" r = "+rayon);
             System.out.println("x = "+c.getX()+" y ="+c.getY()+" r= "+r);
-            fenetreDeDessin.getBufferStrategy().show();
+            fenetreDeDessin.strategy.show();
 
             /*
             DessinerCercle dessinerCercle = new DessinerCercle(new DessinerPolygone(new DessinerSegment(new DessinerFormeComplexe(null))));

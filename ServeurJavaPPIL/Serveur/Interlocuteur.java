@@ -1,6 +1,5 @@
 package Serveur;
 
-import ChainOfResponsibility.Expert;
 import ChainOfResponsibility.ExpertDessiner;
 import Monde.Dessiner.FenetreDeDessin;
 
@@ -34,7 +33,7 @@ public class Interlocuteur extends Thread
             while(!this.isInterrupted() || !fin)
             {
                 String requete = this.fluxEntrant.readLine();
-                if(requete == null)
+                if(requete == null || requete.trim().equals("quitter"))
                 {
                     fin = true;
                 }
@@ -43,7 +42,7 @@ public class Interlocuteur extends Thread
                     System.out.println("Requete du client " + this.noClient + " : " + requete);
                     FenetreDeDessin fenetreDeDessin = new FenetreDeDessin("Fenetre de dessin",0,0,FenetreDeDessin.LARGEUR, FenetreDeDessin.HAUTEUR);
                     this.expert.envoieAuParseur(requete, fenetreDeDessin, false, null, null);
-                    fenetreDeDessin.getBufferStrategy().show();
+                    fenetreDeDessin.strategy.show();
                 }
             }
         }
