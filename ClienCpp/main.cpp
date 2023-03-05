@@ -9,13 +9,15 @@
 #include "Visiteur/Sauvegarde/VisiteurDeSauvegardeTxt.h"
 #include "Communication/InitCommunication.h"
 #include "Formes/FormeComplexe.h"
+#include "COR/ExpertChargementCOR.h"
+#include "COR/ChargeurListeForme.h"
 
 int main(){
 
     /**************************************************************************
      *  Partie 1 : Les tests
      *************************************************************************/
-     /*
+
     printf("Test sur le polygone\n");
     Polygone p((int) Couleur::ROUGE); // il faudra la retransformer en hexa
     cout << "Couleur du polygone (int) : " << p.getCouleur() << endl;
@@ -38,14 +40,14 @@ int main(){
 
     cercle.translation(Vecteur2D(2,1));
 
-    printf("\n");
-    */
+    printf("\n");*/
     printf("test sur le segment\n");
     Segment segment(1, 1, 2,2, 0xFF0000);
     cout << segment << endl;
+
     //on fait la meme pour un cercle
     Cercle cercle(1, 2, 1, 0xFF0000);
-    cout << cercle << endl;
+    cout << cercle << endl ;
     //on fait la meme pour un polygone
     Polygone p(0xFF0000);
     p.addPoint(Vecteur2D(1,1));
@@ -58,7 +60,8 @@ int main(){
     formeComplexe.ajouterForme(&segment);
     formeComplexe.ajouterForme(&p);
     cout << formeComplexe << endl;
-    /*
+
+
     cout << segment.calculerAire() << endl;
     cout << segment.getCentreDeSymetrie() << endl;
     cout << segment.getMinXMinY() << endl;
@@ -79,7 +82,7 @@ int main(){
     cout << segment.getMaxXMaxY() << endl;
 
     printf("\n");
-*/
+
     /**************************************************************************
      *  Partie 2 : Le réseau
      *************************************************************************/
@@ -92,7 +95,7 @@ int main(){
     /**************************************************************************
      *  Partie 3 : La sauvegarde
      *************************************************************************/
-    /*
+    /**
 
      cout << "On sauvegarde les formes" << endl;
 
@@ -103,6 +106,22 @@ int main(){
     formeComplexe.sauvegarde(new VisiteurDeSauvegardeTxt);
 
      */
+
+    /**************************************************************************
+     *  Partie 4: Les test sur le COR
+     *************************************************************************/
+
+    printf("\n");
+    ExpertChargementCOR* expertSuivant ;
+    printf("test sur le segment\n");
+    Segment segment(1, 1, 2,2, 0xFF0000);
+    cout << segment << endl;
+    ifstream fichier("SauvegardeForme.txt");
+    //test du paser de fichier avec COR
+    vector<Forme*> formes = ChargeurListeForme::charge(fichier);
+    for (Forme* f : formes){
+        cout << *f << endl;
+    }
 
     return 0;
 }
