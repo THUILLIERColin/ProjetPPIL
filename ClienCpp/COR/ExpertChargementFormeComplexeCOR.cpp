@@ -35,14 +35,12 @@ Forme *ExpertChargementFormeComplexeCOR::resoudre1(const string &ligne) const
         // String lue entre les crochets
         // cout << "string lue : " << coordonnees << endl; //  triangle ( -0.3 , 1.7 , 2.8 , -2.5 , 4.3 , 5.2 ) purple, rond ( 5 , -3 , 1.2 ) purple,
 
-        string delimiter = ";";// on définit le délimiteur qui sépare les formes du groupe
-        vector<string> lesformes{};// on crée un vecteur de string qui contiendra les formes du groupe
-        size_t pos = 0; // on crée un compteur pour parcourir la chaine de caractère coordonnees
+        std::istringstream iss(coordonnees);
+        std::vector<std::string> lesFormes;
+        std::string token;
 
-        while ((pos = coordonnees.find(delimiter)) != string::npos) // on parcourt la chaine de caractère coordonnees
-        {
-            lesformes.push_back(coordonnees.substr(0, pos));// on ajoute la forme lue dans le vecteur lesformes
-            coordonnees.erase(0, pos + delimiter.length());// on supprime la forme lue de la chaine de caractère coordonnees
+        while (std::getline(iss, token, ';')) {
+            lesFormes.push_back(token);
         }
 
         // Récupération et attribution de la couleur avec un scanf car la couleur est un string et non un int et on veut un int
@@ -56,7 +54,7 @@ Forme *ExpertChargementFormeComplexeCOR::resoudre1(const string &ligne) const
         expertSuivant = new ExpertChargementCercleCOR(expertSuivant);
 
         // affichage des strings des formes du groupe de forme lue
-        for (const auto &str : lesformes)  // on parcourt le vecteur lesformes, const auto signifie que str est une constante de type auto/ auto  etant
+        for (const auto &str : lesFormes)  // on parcourt le vecteur lesformes, const auto signifie que str est une constante de type auto/ auto  etant
         {
             //cout << "string : " << str << endl;
             Forme* forme = expertSuivant->resoudre(str);// on charge la forme lue grâce à l'expert
