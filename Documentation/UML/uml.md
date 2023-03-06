@@ -3,7 +3,8 @@
 ## Diagramme de classes de la partie client
 
 ### Les formes
-```mermaid 
+
+```mermaid
 classDiagram 
     class Forme{
         #_couleur : int
@@ -39,17 +40,18 @@ classDiagram
         -Vecteur2 : Vecteur2D
     }
     class Vecteur2D{
-        -double _x
-        -double _y
-
+        -_x : double
+        -_y : double
+ 
         +norme() double
         +produitScalaire(Vecteur2D vecteur) double
         +operator-() Vecteur2D
         +operator-(Vecteur2D vecteur) Vecteur2D
     }
-``` 
+```
 
 ### Les Experts
+
 ```mermaid
 classDiagram
 
@@ -58,7 +60,7 @@ classDiagram
     ExpertChargementCOR <|-- ExpertChargementPolygone
     ExpertChargementCOR <|-- ExpertChargementSegment
 
-    ExpertChargementCOR "1" --o "*" ExpertChargementCOR : _suivant
+    ExpertChargementCOR "*" o-- ExpertChargementCOR : _suivant
 
     class ExpertChargement{
         +virtual resoudre(const string & ligne) Forme* 
@@ -68,7 +70,9 @@ classDiagram
     }
 ```
 
+
 ### Les Visiteurs
+
 ```mermaid
 classDiagram
 
@@ -86,8 +90,9 @@ classDiagram
 ```
 
 ### Autres classes
-```mermaid
 
+```mermaid
+classDiagram
     class Erreur{
         +operator string()
         +testeEgalite (int m, int n, const char *message)
