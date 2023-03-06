@@ -15,10 +15,11 @@
 
 int main(){
 
-    /**************************************************************************
-     *  Partie 1 :                   Les tests
-     *************************************************************************/
-    printf("****************************************************\n                   TESTS                   \n****************************************************\n\n\n");
+    cout << "****************************************************" << endl;
+    cout << "                   LES TESTS                   "      << endl;
+    cout << "****************************************************" << endl;
+
+    cout << "\n\n" << endl;
 
     cout << "-----   Test des calculs sur un Segment  -----" << endl;
     Segment segment(1, 1, 2,2, 0xFF0000);
@@ -106,7 +107,7 @@ int main(){
     cout << "\t - Calcul du point le plus à droite et le plus en haut après rotation : " << p.getMaxXMaxY() << endl;
 
     cout << "\n\n" << endl;
-    cout << "-----   Test des calculs sur un Segment  -----" << endl;
+    cout << "-----   Test des calculs sur ue forme complexe  -----" << endl;
     FormeComplexe formeComplexe(0xFF0000);
     Polygone p2((int) Couleur::ROUGE);
     p2.addPoint(Vecteur2D(1,1));
@@ -123,7 +124,19 @@ int main(){
     cout << "\t - Calcul du centre de symétrie : " << formeComplexe.getCentreDeSymetrie() << endl;
     cout << "\t - Nombre de formes dans le groupe : " << formeComplexe.getNombreFormes() << endl;
     cout << "\t - Calcul du point le plus à gauche et le plus en bas : " << formeComplexe.getMinXMinY() << endl;
-
+    formeComplexe.translation(Vecteur2D(2,1));
+    cout << "On applique la translation (2,1) : " << formeComplexe << endl;
+    cout << "\t - Calcul du centre de symétrie après translation : " << formeComplexe.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcul du point le plus à gauche et le plus en bas après translation : " << formeComplexe.getMinXMinY() << endl;
+    formeComplexe.homothetie(Vecteur2D(2,1),5);
+    cout << "\tOn applique la homothétie (2,1) avec zoom de 5 : " << formeComplexe << endl;
+    cout << "\t - Calcul du centre de symétrie après homothétie : " << formeComplexe.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcul du point le plus à gauche et le plus en bas après homothétie : " << formeComplexe.getMinXMinY() << endl;
+    formeComplexe.rotation(Vecteur2D(2,1),90);
+    cout << "\tOn applique la rotation de 90° à partir des coordonées (2,1) : " << formeComplexe << endl;
+    cout << "\t - Calcul du centre de symétrie après rotation : " << formeComplexe.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcul du point le plus à gauche et le plus en bas après rotation : " << formeComplexe.getMinXMinY() << endl;
+    cout << "\n\n" << endl;
     /**************************************************************************
      *  Partie 2 : Le réseau
      *************************************************************************/
@@ -160,28 +173,35 @@ int main(){
      catch (Erreur e) {
          cout << e << endl;
      }
+    cout << "\n\n" << endl;
 
     /**************************************************************************
      *  Partie 3 : La sauvegarde
      *************************************************************************/
 
-    printf("****************************************************\n                   TESTS SAUVEGARDE                   \n****************************************************\n\n\n");
-
-     cout << "On sauvegarde les formes" << endl;
+    cout << "\n\n" << endl;
+    cout << "****************************************************" << endl;
+    cout << "                   LA SAUVEGARDE                   "  << endl;
+    cout << "****************************************************" << endl;
+    cout << "\n\n" << endl;
+    cout << "On sauvegarde les formes" << endl;
 
     // On sauvegarde le polygone
     p.sauvegarde(new VisiteurDeSauvegardeTxt);
     cercle.sauvegarde(new VisiteurDeSauvegardeTxt);
     segment.sauvegarde(new VisiteurDeSauvegardeTxt);
     formeComplexe.sauvegarde(new VisiteurDeSauvegardeTxt);
-
+    cout << "\n\n" << endl;
 
 
     /**************************************************************************
      *  Partie 4: Les test sur le COR
      *************************************************************************/
-    printf("****************************************************\n                   TESTS COR                   \n****************************************************\n\n\n");
-
+    cout << "\n\n" << endl;
+    cout << "****************************************************" << endl;
+    cout << "                   COR                   "         << endl;
+    cout << "****************************************************" << endl;
+    cout << "\n\n" << endl;
     ExpertChargementCOR* expertSegment; // expert du DP COR
     ExpertChargementCOR* expertCercle;
     ExpertChargementCOR* expertPolygone;
@@ -195,65 +215,79 @@ int main(){
     ExpertChargement* expert = expertFormeComplexe;
 
     //test rapide sur le COR segment
-    printf("********************test sur le COR  segment********************\n");
+    cout << "------------  test sur le COR  segment  ------------" << endl;
     try{
         string texte = " Segment [ 1 , 1 , 2 , 2 ] ff0000";
         Forme* forme = expert->resoudre(texte);
-        cout << " texte a parser : "<< texte <<"\n on obtient  "<<*forme << endl;
+        cout << " texte a parser : "<< texte << endl;
+        cout << "on obtient : " << *forme << endl;
 
     }
     catch (Erreur e) {
-        cout << "erreur" << endl;
+        cout << e << endl;
     }
+
+    cout << "\n\n" << endl;
     //test rapide sur le COR cercle
-    printf("\n********************test sur le COR  cerlce********************\n");
+    cout << "------------  test sur le COR  cercle  ------------" << endl;
     try{
         string texte = "Cercle [ 1 , 2 , 1 ] ff0000";
-        Forme* forme2 = expert->resoudre(texte);
-        cout << " texte a parser : "<< texte <<"\n on obtient   "<<*forme2 << endl;
+        Forme* forme = expert->resoudre(texte);
+        cout << " texte a parser : "<< texte << endl;
+        cout << "on obtient : " << *forme << endl;
 
     }
     catch (Erreur e) {
-        cout << "erreur" << endl;
+        cout << e << endl;
     }
 
+    cout << "\n\n" << endl;
     //test rapide sur le COR polygone
-    printf("\n********************test sur le COR  polygone********************\n");
+    cout << "------------  test sur le COR  polygone  ------------" << endl;
     try{
         string texte = " Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] ff0000";
-        Forme* forme3 = expert->resoudre(texte);
-        cout << " texte a parser : "<< texte <<"\n on obtient  "<<*forme3 << endl;
+        Forme* forme = expert->resoudre(texte);
+        cout << " texte a parser : "<< texte << endl;
+        cout << "on obtient : " << *forme << endl;
 
     }
     catch (Erreur e) {
         cout << "erreur" << endl;
     }
 
-    //test rapide sur le COR
-    printf("\n********************test sur le COR  forme complexe********************\n");
+    cout << "\n\n" << endl;
+    //test rapide sur le COR forme complexe
+    cout << "------------  test sur le COR  formeComplexe  ------------" << endl;
     try{
         string texte = " FormeComplexe : { Cercle [ 1 , 2 , 1 ] 0 ; Segment [ 1 , 1 , 2 , 2 ] 0 ; Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] 0 } (0, 1) / (2, 3)";
-        Forme* forme4 = expert->resoudre(texte);
-        cout << " texte a parser : "<< texte <<"\n on obtient   "<<*forme4 << endl;
+        Forme* forme = expert->resoudre(texte);
+        cout << " texte a parser : "<< texte << endl;
+        cout << "on obtient : " << *forme << endl;
 
     }
     catch (Erreur e) {
-        cout << "erreur" << endl;
+        cout << e << endl;
     }
+
+    cout << "\n\n" << endl;
 
     cout << "****************************************************" << endl;
     cout << "               TEST COR SUR FICHIER                 "<< endl;
     cout << "****************************************************" << endl;
 
-    cout << "On charge les formes" << endl;
+    cout << "\n\n" << endl;
+    cout << "On charge les formes : " << endl;
+    cout << "\n\n" << endl;
     ifstream fichier("../Sauvegarde/sauvegarde.txt");
     vector<Forme*> vec_fractions = ChargeurListeForme::charge(fichier);
     for (unsigned int i = 0; i < vec_fractions.size(); i++) {
         cout << *vec_fractions[i] << endl;
     }
 
-    /**************************************************************************
-    *  FIN
-    *************************************************************************/
+    cout << "\n\n" << endl;
+    cout << "****************************************************" << endl;
+    cout << "               FIN DES TESTS                 "<< endl;
+    cout << "****************************************************" << endl;
+    cout << "\n\n" << endl;
     return 0;
 }
