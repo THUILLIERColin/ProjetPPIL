@@ -3,7 +3,7 @@ package Monde.Dessiner;
 import Monde.Vecteur2D;
 
 /**
- * La classe OperationMonde permet de faire des opérations sur le monde, comme par exemple
+ * La classe OperationMonde permet de faire des opérations sur le monde, comme
  *         le changement de repère, la transformation en monde écran, etc.
  */
 public class OperationMonde {
