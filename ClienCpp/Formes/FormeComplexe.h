@@ -43,8 +43,18 @@ public :
      */
     Forme* getForme(const int& i) const;
 
+    /**
+     * @brief Méthode qui permet de modifier la couleur de toutes les formes de la liste des formes
+     * @param couleur
+     * @return la forme complexe pour pouvoir chaîner les méthodes
+     */
     FormeComplexe& setCouleurListeFormes(const int couleur);
 
+    /**
+     * @brief Méthode qui permet d'obtenir le nombre de formes
+     * @return le nombre de formes
+     */
+     int getNombreFormes() const;
     /**
      * @brief Méthode qui permet d'obtenir la liste des formes
      * @return la liste des formes
