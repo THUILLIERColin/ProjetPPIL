@@ -35,11 +35,11 @@ Forme *ExpertChargementFormeComplexeCOR::resoudre1(const string &ligne) const
         // String lue entre les crochets
         // cout << "string lue : " << coordonnees << endl; //  triangle ( -0.3 , 1.7 , 2.8 , -2.5 , 4.3 , 5.2 ) purple, rond ( 5 , -3 , 1.2 ) purple,
 
-        std::istringstream iss(coordonnees);
-        std::vector<std::string> lesFormes;
-        std::string token;
+        istringstream iss(coordonnees);
+        vector<string> lesFormes;
+        string token;
 
-        while (std::getline(iss, token, ';')) {
+        while (getline(iss, token, ';')) {
             lesFormes.push_back(token);
         }
 

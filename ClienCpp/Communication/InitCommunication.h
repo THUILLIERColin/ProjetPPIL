@@ -1,5 +1,6 @@
 /**
 * @author THUILLIER Colin
+* @details initCommunication est fait pour fonctionner sur mac et linux
 */
 
 #pragma once
