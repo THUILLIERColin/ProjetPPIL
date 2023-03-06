@@ -30,6 +30,10 @@ FormeComplexe& FormeComplexe::ajouterForme(Forme *forme) {
     return (*this);
 }
 
+int FormeComplexe::getNombreFormes() const {
+    return listeFormes.size();
+}
+
 void FormeComplexe::supprimerForme(Forme *forme) {
     for(int i = 0; i < listeFormes.size(); i++) {
         if (listeFormes[i] == forme) {

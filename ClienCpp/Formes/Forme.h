@@ -78,6 +78,7 @@ public :
 
     /**  @brief  Opération de rotation
      * @param u est le centre de la rotation
+     * @param angle est l'angle de rotation
      */
     virtual void rotation(const Vecteur2D &u, const double angle ) = 0;
 

@@ -20,97 +20,94 @@ int main(){
      *************************************************************************/
     printf("****************************************************\n                   TESTS                   \n****************************************************\n\n\n");
 
-
-    printf("********************test sur le segment********************\n");
+    cout << "-----   Test des calculs sur un Segment  -----" << endl;
     Segment segment(1, 1, 2,2, 0xFF0000);
     cout << segment << endl;
 
-    cout << segment.calculerAire() << endl;
-    cout << segment.getCentreDeSymetrie() << endl;
-    cout << segment.getMinXMinY() << endl;
-    cout << segment.getMaxXMaxY() << endl;
+    cout << "\t - Calcule de l'aire : " << segment.calculerAire() << endl;
+    cout << "\t - Calcule du centre de symétrie : " << segment.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcule du point le plus à gauche et le plus en bas : " << segment.getMinXMinY() << endl;
+    cout << "\t - Calcule du point le plus à droite et le plus en haut : " << segment.getMaxXMaxY() << endl;
     segment.translation(Vecteur2D(2,1));
-    printf("\ntest sur le Segment apres translation\n");
-    cout << segment.getCentreDeSymetrie() << endl;
-    cout << segment.getMinXMinY() << endl;
-    cout << segment.getMaxXMaxY() << endl;
-    printf("\ntest sur le Segment apres homothetie\n");
+    cout << "\tOn applique la translation (2,1) : " << segment << endl;
+
+    cout << "\t - Calcule du centre de symétrie après translation : " << segment.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcule du point le plus à gauche et le plus en bas après translation : " << segment.getMinXMinY() << endl;
+    cout << "\t - Calcule du point le plus à droite et le plus en haut après translation : " << segment.getMaxXMaxY() << endl;
     segment.homothetie(Vecteur2D(2,1),5);
-    cout << segment.getCentreDeSymetrie() << endl;
-    cout << segment.getMinXMinY() << endl;
-    cout << segment.getMaxXMaxY() << endl;
-    printf("\ntest sur le Segment apres rotation\n");
-    cout << segment.getCentreDeSymetrie() << endl;
-    cout << segment.getMinXMinY() << endl;
-    cout << segment.getMaxXMaxY() << endl;
+    cout << "\tOn applique la homothétie (2,1) avec zoom de 5 : " << segment << endl;
 
-    printf("\n");
+    cout << "\t - Calcule du centre de symétrie après homothétie : " << segment.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcule du point le plus à gauche et le plus en bas après homothétie : " << segment.getMinXMinY() << endl;
+    cout << "\t - Calcule du point le plus à droite et le plus en haut après homothétie : " << segment.getMaxXMaxY() << endl;
+    segment.rotation(Vecteur2D(2,1),90);
+    cout << "\tOn applique la rotation de 90° à partir des coordonées (2,1) : " << segment << endl;
 
-    //test cercle
-    printf("\n");
-    printf("********************test sur le Cercle********************\n");
+
+    cout << "\t - Calcule du centre de symétrie après rotation : " << segment.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcule du point le plus à gauche et le plus en bas après rotation : " << segment.getMinXMinY() << endl;
+    cout << "\t - Calcule du point le plus à droite et le plus en haut après rotation : " << segment.getMaxXMaxY() << endl;
+
+    cout << "\n\n" << endl;
+    cout << "-----   Test des calculs sur un Cercle  -----" << endl;
     Cercle cercle(1, 2, 1, 0x000000);
-    cout << cercle.calculerAire() << endl;
-    cout << cercle.getCentreDeSymetrie() << endl;
-    cout << cercle.getMinXMinY() << endl;
-    cout << cercle.getMaxXMaxY() << endl;
     cout << cercle << endl ;
-    //test transaltion
-    cercle.translation(Vecteur2D(2,1));
-    printf("\ntest sur le Cercle apres translation\n");
-    cout << cercle.getCentreDeSymetrie() << endl;
-    cout << cercle.getMinXMinY() << endl;
-    cout << cercle.getMaxXMaxY() << endl;
-    //test homothetie
-    printf("\ntest sur le Cercle apres homothetie\n");
-    cercle.homothetie(Vecteur2D(2,1),5);
-    cout << cercle.getCentreDeSymetrie() << endl;
-    cout << cercle.getMinXMinY() << endl;
-    cout << cercle.getMaxXMaxY() << endl;
-    //test rotation
-    printf("\ntest sur le Cercle apres rotation\n");
-    cercle.rotation(Vecteur2D(2,1),90);
-    cout << cercle.getCentreDeSymetrie() << endl;
-    cout << cercle.getMinXMinY() << endl;
-    cout << cercle.getMaxXMaxY() << endl;
 
-    //on fait la meme pour un polygone
-    printf("\n");
-    printf("********************test sur le polygone********************\n");
-    Polygone p((int) Couleur::ROUGE); // il faudra la retransformer en hexa
-    cout << "Couleur du polygone (int) : " << p.getCouleur() << endl;
-    cout << "Couleur du polygone (hexa) : " << std::hex << p.getCouleur() << endl;
+    cout << "\t - Calcul de l'aire : " << cercle.calculerAire() << endl;
+    cout << "\t - Calcul du centre de symétrie : " << cercle.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcul du point le plus à gauche et le plus en bas : " << cercle.getMinXMinY() << endl;
+    cout << "\t - Calcul du point le plus à droite et le plus en haut : " << cercle.getMaxXMaxY() << endl;
+    cercle.translation(Vecteur2D(2,1));
+    cout << "\tOn applique la translation (2,1) : " << cercle << endl;
+
+    cout << "\t - Calcul du centre de symétrie après translation : " << cercle.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcul du point le plus à gauche et le plus en bas après translation : " << cercle.getMinXMinY() << endl;
+    cout << "\t - Calcul du point le plus à droite et le plus en haut après translation : " << cercle.getMaxXMaxY() << endl;
+    cercle.homothetie(Vecteur2D(2,1),5);
+    cout << "\tOn applique la homothétie (2,1) avec zoom de 5 : " << cercle << endl;
+
+    cout << "\t - Calcul du centre de symétrie après homothétie : " << cercle.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcul du point le plus à gauche et le plus en bas après homothétie : " << cercle.getMinXMinY() << endl;
+    cout << "\t - Calcul du point le plus à droite et le plus en haut après homothétie : " << cercle.getMaxXMaxY() << endl;
+
+    cercle.rotation(Vecteur2D(2,1),90);
+    cout << "\tOn applique la rotation de 90° à partir des coordonées (2,1) : " << cercle << endl;
+    cout << "\t - Calcul du centre de symétrie après rotation : " << cercle.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcul du point le plus à gauche et le plus en bas après rotation : " << cercle.getMinXMinY() << endl;
+    cout << "\t - Calcul du point le plus à droite et le plus en haut après rotation : " << cercle.getMaxXMaxY() << endl;
+
+    cout << "\n\n" << endl;
+    cout << "-----   Test des calculs sur un Polygone  -----" << endl;
+    Polygone p((int) Couleur::ROUGE);
     p.addPoint(Vecteur2D(1,1));
     p.addPoint(Vecteur2D(1,2));
     p.addPoint(Vecteur2D(2,2));
-
-    cout << p.calculerAire() << endl;
-    cout << p.getCentreDeSymetrie() << endl;
-    cout << p.getNbPoints() << endl;
     cout << p << endl;
-    //test transaltion
-    p.translation(Vecteur2D(2,1));
-    printf("\ntest sur le polygone apres translation\n");
-    cout << p.getCentreDeSymetrie() << endl;
-    cout << p.getMinXMinY() << endl;
-    cout << p.getMaxXMaxY() << endl;
-    //test homothetie
-    printf("\ntest sur le polygone apres homothetie\n");
-    p.homothetie(Vecteur2D(2,1),5);
-    cout << p.getCentreDeSymetrie() << endl;
-    cout << p.getMinXMinY() << endl;
-    cout << p.getMaxXMaxY() << endl;
-    //test rotation
-    printf("\ntest sur le polygone apres rotation\n");
-    p.rotation(Vecteur2D(2,1),90);
-    cout << p.getCentreDeSymetrie() << endl;
-    cout << p.getMinXMinY() << endl;
-    cout << p.getMaxXMaxY() << endl;
 
-    //on fait un essai de forme complexe
-    printf("\n");
-    printf("********************test sur la forme complexe********************\n");
-    FormeComplexe formeComplexe(0x000000);
+    cout << "\t - Calcul de l'aire : " << p.calculerAire() << endl;
+    cout << "\t - Calcul du centre de symétrie : " << p.getCentreDeSymetrie() << endl;
+    cout << "\t - Nombre de points : " << p.getNbPoints() << endl;
+    cout << "\t - Calcul du point le plus à gauche et le plus en bas : " << p.getMinXMinY() << endl;
+    cout << "\t - Calcul du point le plus à droite et le plus en haut : " << p.getMaxXMaxY() << endl;
+    p.translation(Vecteur2D(2,1));
+    cout << "\tOn applique la translation (2,1) : " << p << endl;
+    cout << "\t - Calcul du centre de symétrie après translation : " << p.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcul du point le plus à gauche et le plus en bas après translation : " << p.getMinXMinY() << endl;
+    cout << "\t - Calcul du point le plus à droite et le plus en haut après translation : " << p.getMaxXMaxY() << endl;
+    p.homothetie(Vecteur2D(2,1),5);
+    cout << "\tOn applique la homothétie (2,1) avec zoom de 5 : " << p << endl;
+    cout << "\t - Calcul du centre de symétrie après homothétie : " << p.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcul du point le plus à gauche et le plus en bas après homothétie : " << p.getMinXMinY() << endl;
+    cout << "\t - Calcul du point le plus à droite et le plus en haut après homothétie : " << p.getMaxXMaxY() << endl;
+    p.rotation(Vecteur2D(2,1),90);
+    cout << "\tOn applique la rotation de 90° à partir des coordonées (2,1) : " << p << endl;
+    cout << "\t - Calcul du centre de symétrie après rotation : " << p.getCentreDeSymetrie() << endl;
+    cout << "\t - Calcul du point le plus à gauche et le plus en bas après rotation : " << p.getMinXMinY() << endl;
+    cout << "\t - Calcul du point le plus à droite et le plus en haut après rotation : " << p.getMaxXMaxY() << endl;
+
+    cout << "\n\n" << endl;
+    cout << "-----   Test des calculs sur un Segment  -----" << endl;
+    FormeComplexe formeComplexe(0xFF0000);
     Polygone p2((int) Couleur::ROUGE);
     p2.addPoint(Vecteur2D(1,1));
     p2.addPoint(Vecteur2D(1,2));
@@ -121,7 +118,11 @@ int main(){
     formeComplexe.ajouterForme(&segment2);
     formeComplexe.ajouterForme(&p2);
     cout << formeComplexe << endl;
-    printf("\n");
+
+    cout << "\t - Calcul de l'aire : " << formeComplexe.calculerAire() << endl;
+    cout << "\t - Calcul du centre de symétrie : " << formeComplexe.getCentreDeSymetrie() << endl;
+    cout << "\t - Nombre de formes dans le groupe : " << formeComplexe.getNombreFormes() << endl;
+    cout << "\t - Calcul du point le plus à gauche et le plus en bas : " << formeComplexe.getMinXMinY() << endl;
 
     /**************************************************************************
      *  Partie 2 : Le réseau
