@@ -5,14 +5,14 @@
 #include "ExpertChargementFormeComplexeCOR.h"
 
 /**
-    * \Description      Constructeur de la classe ExpertChargementFormeComplexeCOR
+    * @brief      Constructeur de la classe ExpertChargementFormeComplexeCOR
     * \details    Ce constructeur permet de créer un expert chargement de forme complexe.
-    * \param      *expertSuivant l'expert chargement suivant dans la chaîne
+    * @param      *expertSuivant l'expert chargement suivant dans la chaîne
     */
 ExpertChargementFormeComplexeCOR::ExpertChargementFormeComplexeCOR(ExpertChargementCOR *expertSuivant):ExpertChargementCOR(expertSuivant) { }
 
 /**
-    * \Description      Méthode du Design Pattern Chain of Responsibility
+    * @brief      Méthode du Design Pattern Chain of Responsibility
     * \details    Cette méthode resoudre1() permet de céterminer la forme lue en le passant à l'expert adéquat grâce au Design Pattern Chain of Responsibility.
     * @param      *ligne le problème à résoudre, ici une ligne lue depuis le fichier de sauvegarde réprésentant une forme
     * @return    la forme lue

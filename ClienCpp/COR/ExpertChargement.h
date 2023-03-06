@@ -9,12 +9,12 @@ using namespace std;
 class Forme;
 
 /**
- * \Description    Classe abstraite qui sert à résoudre le problème de la ligne lue
+ * @brief    Classe abstraite qui sert à résoudre le problème de la ligne lue
  */
 class ExpertChargement
 {
 public ://protected pour que les classes filles puissent y accéder
-    /** \Description  Méthode virtuelle pure
+    /** @brief  Méthode virtuelle pure
      * @param ligne
      * @return Forme*
      * sert à résoudre le problème de la ligne lue

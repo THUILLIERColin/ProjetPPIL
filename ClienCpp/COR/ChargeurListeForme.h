@@ -16,13 +16,13 @@
 #include "ExpertChargementFormeComplexeCOR.h"
 
 /**
- * \Description    Classe qui charge un fichier texte et retourne un vecteur de Formes
+ * @brief    Classe qui charge un fichier texte et retourne un vecteur de Formes
  */
 class ChargeurListeForme {
 public:
 
     /**
-     * \Description    Fonction qui charge et appelle le DP COR en appelant tous les Experts
+     * @brief    Fonction qui charge et appelle le DP COR en appelant tous les Experts
      * @param      fichier   un fichier texte
      * @return     Un vecteur de Formes contenant toutes les formes du fichier texte ifs
      */

@@ -19,7 +19,7 @@ public:
     /**
      * \Description      Constructeur de la classe ExpertChargementSegmentCOR
      * \details    Ce constructeur permet de créer un expert chargement de segment.
-     * \param      *expertSuivant l'expert chargement suivant dans la chaîne
+     * @param      *expertSuivant l'expert chargement suivant dans la chaîne
      */
     ExpertChargementSegmentCOR(ExpertChargementCOR *expertSuivant);
 

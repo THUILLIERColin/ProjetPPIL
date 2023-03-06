@@ -22,27 +22,27 @@ public :
     * Constructeurs et destructeur
     *
     * **********************************************************************/
-    /**  \Description  Constructeur
+    /**  @brief  Constructeur
      * @param x
      * @param y
      * @param rayon
      * @param couleur
-     * sert à construire un cercle
+     * @detail sert à construire un cercle
      */
     Cercle(int x, int y, double rayon, const int& couleur) : Forme(couleur),_centre(x,y) {
         setRayon(rayon);
     }
 
-    /**  \Description  Constructeur
+    /**  @brief  Constructeur
      * @param _centre
      * @param _rayon
      * @param couleur
-     * sert à construire un cercle
+     * @detail sert à construire un cercle
      */
     Cercle(Vecteur2D _centre, double rayon, const int& couleur) : Forme(couleur), _rayon(rayon),_centre(_centre) {}
 
-    /**  \Description  Destructeur
-     * sert à détruire l'objet
+    /**  @brief  Destructeur
+     * @detail sert à détruire l'objet
      */
     virtual ~Cercle() {}
 
@@ -54,22 +54,22 @@ public :
      * **********************************************************************/
 
 
-    /**  \Description  getter du centre
+    /**  @brief  getter du centre
      * @return Vecteur2D
      */
     const Vecteur2D &getCentre() const;
 
-    /**  \Description  setter du centre
+    /**  @brief  setter du centre
      * @param centre
      */
     void setCentre(const Vecteur2D &centre);
 
-    /**  \Description  getter du rayon
+    /**  @brief  getter du rayon
      * @return double
      */
     double getRayon() const;
 
-    /**  \Description  setter du rayon
+    /**  @brief  setter du rayon
      */
     void setRayon(double rayon);
 
@@ -79,17 +79,17 @@ public :
      *
      * **********************************************************************/
 
-    /** \Description  Clone la forme
+    /** @brief  Clone la forme
      * @return Cercle
-     * sert à cloner un cercle
+     * @detail sert à cloner un cercle
      */
     Cercle* clone() const;
 
     /**
-	 * \Description Constructeur par recopie.
+	 * @brief Constructeur par recopie.
 	 * @param op Cercle Une instance du cercle à copier.
      * @detail Il s'agit d'une allocation dynamique (new).
-     * se sert pour copier un cercle
+     *  @detail sert pour copier un cercle
 	 */
     Cercle(const Cercle& op);
 
@@ -99,15 +99,15 @@ public :
      *
      * **********************************************************************/
 
-    /** \Description Avoir le point X minimal et point Y minimal  du plan selon la figure
+    /** @brief Avoir le point X minimal et point Y minimal  du plan selon la figure
     * @return un vecteur2D qui contient le le point min x et le point min Y
-     * sert à avoir le point min x et le point min Y
+     * @detail sert à avoir le point min x et le point min Y
     */
     virtual Vecteur2D getMinXMinY() const;
 
-    /** \Description  Avoir le point X maximal et point Y maximal  du plan selon la figure
+    /** @brief  Avoir le point X maximal et point Y maximal  du plan selon la figure
      * @return un vecteur2D qui contient le le point max x et le point max Y
-     * sert à avoir le point max x et le point max Y
+     * @detail sert à avoir le point max x et le point max Y
      */
     virtual Vecteur2D getMaxXMaxY() const;
 
@@ -118,18 +118,18 @@ public :
      * **********************************************************************/
 
     /**
-    * \Descprition Opération de translation
+    * @brief Opération de translation
     * @param u est le vecteur de translation
     */
     virtual void translation(const Vecteur2D& u);
 
-    /** \Description Opération d'homothétie
+    /** @brief Opération d'homothétie
     * @param u est le centre de l'homothétie
     * @param k est le coefficient d'homothétie
     **/
     virtual void homothetie(const Vecteur2D& u,const double& k);
 
-    /**  \Description  Opération de rotation
+    /**  @brief  Opération de rotation
      * @param u est le centre de la rotation
      */
     virtual void rotation(const Vecteur2D &u, const double angle );
@@ -140,11 +140,11 @@ public :
      *
      * **********************************************************************/
 
-    /** \Description  Calculer l'aire de la figure
+    /** @brief  Calculer l'aire de la figure
     */
     double calculerAire() const;
 
-    /** \Description  Avoir le centre de symétrie de la figure
+    /** @brief  Avoir le centre de symétrie de la figure
      */
     Vecteur2D getCentreDeSymetrie() const;
 
@@ -155,7 +155,7 @@ public :
      * **********************************************************************/
 
     /**
-	 * \Description Surcharge de l'opérateur =.
+	 * @brief Surcharge de l'opérateur =.
 	 * @detail Affectation par recopie d'un vecteur passé en paramètre.
 	 * @param op Cercle Le cercle à copier.
 	 * @return Cercle
@@ -163,7 +163,7 @@ public :
     const Cercle& operator = (const Cercle& op);
 
     /**
-	 * \Description Surcharge de l'opérateur ==.
+	 * @brief Surcharge de l'opérateur ==.
 	 * @detail Compare l'instance avec le vecteur passé en paramètre.
 	 * @param op Cercle
 	 * @return bool
@@ -171,7 +171,7 @@ public :
     bool operator == (const Cercle& op)const;
 
     /**
-     * \Description Surcharge de l'opérateur !=.
+     * @brief Surcharge de l'opérateur !=.
      * @detail Vérifie si l'instance et le vecteur passé en paramètre sont égaux.
      * @param op Cercle
      * @return bool
@@ -184,11 +184,11 @@ public :
      *
      * **********************************************************************/
 
-    /** \Description  Opérateur de conversion d'objet en chaîne de caractères.
+    /** @brief  Opérateur de conversion d'objet en chaîne de caractères.
     */
     operator string() const;
 
-    /** \Description  Surcharge de l'opérateur <<.
+    /** @brief  Surcharge de l'opérateur <<.
     */
     friend inline ostream& operator << (ostream& os, const Cercle& c);
 
@@ -200,7 +200,7 @@ public :
     const void* sauvegarde(const VisiteurDeSauvegarde *visiteur) const;
 };
 
-/** \Description opérateur d affichage
+/** @brief opérateur d affichage
  * @param os
  * @param s
  * @return

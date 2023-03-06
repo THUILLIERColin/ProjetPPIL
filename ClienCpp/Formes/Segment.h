@@ -19,12 +19,12 @@ public :
      *
      * **********************************************************************/
 
-    /**  \Description  Constructeur
+    /**  @brief  Constructeur
     */
     Segment(double g, double h, double d, double b, const int& couleur) : Forme(couleur) , Vecteur1(g, h), Vecteur2(d, b) {}
 
-    /**  \Description  Deconstructeur
-     * sert à détruire l'objet
+    /**  @brief  Deconstructeur
+     * @detail sert à détruire l'objet
     */
     virtual ~Segment() {}
 
@@ -47,7 +47,7 @@ public :
      *
      * **********************************************************************/
 
-    /**  \Description  clone de la classe
+    /**  @brief  clone de la classe
      * @return Segment
      */
     Segment* clone() const { return new Segment(*this); }
@@ -61,20 +61,20 @@ public :
     /**
     * \Descprition Opération de translation
     * @param u est le vecteur de translation
-     * sert a déplacer la figure
+     * @detail sert a déplacer la figure
     */
     virtual void translation(const Vecteur2D& u) ;
 
-    /** \Description Opération d'homothétie
+    /** @brief Opération d'homothétie
     * @param u est le centre de l'homothétie
     * @param k est le coefficient d'homothétie
-     * sert a agrandir ou rétrécir la figure
+     * @detail sert a agrandir ou rétrécir la figure
     **/
     virtual void homothetie(const Vecteur2D& u, const double& k);
 
-    /**  \Description  Opération de rotation
+    /**  @brief  Opération de rotation
      * @param u est le centre de la rotation
-     * sert a faire tourner la figure
+     * @detail sert a faire tourner la figure
      */
     virtual void rotation(const Vecteur2D &u, const double angle );
 
@@ -84,12 +84,12 @@ public :
     *
     * **********************************************************************/
 
-    /** \Description  Calculer l'aire du segment (0)
+    /** @brief  Calculer l'aire du segment (0)
      * @return 0
     */
     double calculerAire() const;
 
-    /** \Description  Avoir le centre de symétrie du segment
+    /** @brief  Avoir le centre de symétrie du segment
      */
     Vecteur2D getCentreDeSymetrie() const;
 
@@ -115,12 +115,12 @@ public :
      *
      * **********************************************************************/
 
-    /** \Description  Opérateur de conversion d'objet en chaîne de caractères.
+    /** @brief  Opérateur de conversion d'objet en chaîne de caractères.
     */
 
     operator string() const;
 
-    /** \Description  Opérateur d'affichage.
+    /** @brief  Opérateur d'affichage.
     */
     friend inline ostream& operator << (ostream& os, const Segment& m);
 

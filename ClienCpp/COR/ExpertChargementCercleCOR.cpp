@@ -6,7 +6,7 @@
 
 
 /**
- * \Description      Constructeur de la classe ExpertChargementCercleCOR
+ * @brief      Constructeur de la classe ExpertChargementCercleCOR
  * \details    Ce constructeur permet de créer un expert chargement de cercle.
  * \param      *expertSuivant l'expert chargement suivant dans la chaîne
  */
@@ -14,7 +14,7 @@ ExpertChargementCercleCOR::ExpertChargementCercleCOR(ExpertChargementCOR *expert
 
 
 /**
- * \Description      Méthode du Design Pattern Chain of Responsibility
+ * @brief      Méthode du Design Pattern Chain of Responsibility
  * \details    Cette méthode resoudre1() permet de céterminer la forme lue en le passant à l'expert adéquat grâce au Design Pattern Chain of Responsibility.
  * @param      *ligne le problème à résoudre, ici une ligne lue depuis le fichier de sauvegarde réprésentant une forme
  * @return    la forme lue

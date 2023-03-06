@@ -8,7 +8,7 @@
 /**
   * \Description      Constructeur de la classe ExpertChargementSegmentCOR
   * \details    Ce constructeur permet de créer un expert chargement de segment.
-  * \param      *expertSuivant l'expert chargement suivant dans la chaîne
+  * @param      *expertSuivant l'expert chargement suivant dans la chaîne
   */
 ExpertChargementSegmentCOR::ExpertChargementSegmentCOR(ExpertChargementCOR *expertSuivant):ExpertChargementCOR(expertSuivant) { }
 
@@ -49,5 +49,5 @@ Forme *ExpertChargementSegmentCOR::resoudre1(const string &ligne) const
         return new Segment(points[0], points[1], points[2], points[3], couleur);
     }
 
-    return NULL;
+    @brief
 }

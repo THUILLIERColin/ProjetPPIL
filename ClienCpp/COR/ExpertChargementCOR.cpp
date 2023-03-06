@@ -9,7 +9,7 @@
 /**
     * \Description      Constructeur de la classe ExpertChargementCOR
     * \details    Ce constructeur permet de créer un expert chargement de la forme lue.
-    * \param      *expertSuivant l'expert chargement suivant dans la chaîne
+    * @param      *expertSuivant l'expert chargement suivant dans la chaîne
     */
 ExpertChargementCOR::ExpertChargementCOR(ExpertChargementCOR * expertSuivant):_suivant(expertSuivant) { }
 

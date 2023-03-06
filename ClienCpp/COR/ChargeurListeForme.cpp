@@ -6,7 +6,7 @@
 
 
 /**
- * \Description    Fonction qui charge et appelle le DP COR en appelant tous les Experts
+ * @brief    Fonction qui charge et appelle le DP COR en appelant tous les Experts
  * @param      fichier   un fichier texte
  * @return     Un vecteur de Formes contenant toutes les formes du fichier texte ifs
  */

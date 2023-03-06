@@ -1,5 +1,5 @@
 /**
- * @author LEOST Maelan et Colin THUILLIER
+ * @author LEOST Maelan @brief
  */
 
 #include "Matrices2x2.h"
@@ -12,7 +12,7 @@
 *
 * **********************************************************************/
 
-/** \Description construteur a partir de 4 reels
+/** @paramruteur a partir de 4 reels
  * @param m11
  * @param m12
  * @param m21
@@ -21,7 +21,7 @@
  */
 Matrices2x2::Matrices2x2(const Vecteur2D &u1, const Vecteur2D &u2) {Vecteur1=u1,Vecteur2=u2;}
 
-/** \Description constructeur a partir de deux vecteur2D
+/** @paramructeur a partir de deux vecteur2D
  * @param Vecteur1
  * @param Vecteur2
  * sert à construire un objet
@@ -56,7 +56,7 @@ void Matrices2x2::setVecteur2(const Vecteur2D &vecteur2) {
 *
 * **********************************************************************/
 
-/** \Description operateur binaire +
+/** @brief operateur binaire +
 * @param m
 * @return Matrices2x2
 * sert a additionner deux matrices
@@ -66,7 +66,7 @@ const Matrices2x2 Matrices2x2::operator+(const Matrices2x2 &m) const
     return Matrices2x2(Vecteur1+m.Vecteur1,Vecteur2+m.Vecteur2);
 }
 
-/** \Description operateur binaire -
+/** @brief operateur binaire -
     * @param m
     * @return Matrices2x2
     * sert a soustraire deux matrices
@@ -76,7 +76,7 @@ const Matrices2x2 Matrices2x2::operator-(const Matrices2x2 &m) const
     return Matrices2x2(Vecteur1-m.Vecteur1,Vecteur2-m.Vecteur2);
 }
 
-/** \Description operateur unaire -
+/** @brief operateur unaire -
  * @param
  * @return
  * sert a inverser une matrice
@@ -86,7 +86,7 @@ const Matrices2x2 Matrices2x2::operator-() const
     return Matrices2x2(-Vecteur1,-Vecteur2);
 }
 
-/** \Description operateur binaire *
+/** @brief operateur binaire *
 * @param a
 * @return Matrices2x2
 * sert a multiplier une matrice par un reel
@@ -96,7 +96,7 @@ const Matrices2x2 Matrices2x2::operator*(const double &a) const
     return Matrices2x2(Vecteur1*a,Vecteur2*a);
 }
 
-/** \Description operateur binaire *
+/** @brief operateur binaire *
 * @param vec
 * @return Vecteur2D
 * sert a multiplier une matrice par un vecteur
@@ -108,7 +108,7 @@ const Vecteur2D Matrices2x2::operator*(const Vecteur2D &vecteur) const
     return Vecteur2D(l1,l2);
 }
 
-/** \Description operateur binaire *
+/** @brief operateur binaire *
 * @param vec
 * @return Vecteur2D
 * sert a multiplier une matrice par un vecteur
@@ -118,7 +118,7 @@ const Matrices2x2 Matrices2x2::operator*(const Matrices2x2 &m) const
     return Matrices2x2();
 }
 
-/** \Description operateur binaire =
+/** @brief operateur binaire =
 * @param a
 * @return Matrices2x2
 * sert a affecter une matrice a une autre
@@ -135,7 +135,7 @@ Matrices2x2& Matrices2x2::operator=(const Matrices2x2 &m)
     return *this;
 }
 
-/** \Description operateur binaire ==
+/** @brief operateur binaire ==
  * @param matrice
  * @return
  * sert a comparer deux matrices
@@ -152,7 +152,7 @@ const bool Matrices2x2::operator==(const Matrices2x2 &m) const
     * **********************************************************************/
 
 
-/** \Description methode produitScalaire
+/** @brief methode produitScalaire
  * @param
  */
 const double Matrices2x2::produitScalaire() const
@@ -160,7 +160,7 @@ const double Matrices2x2::produitScalaire() const
     return Vecteur1.produitScalaire(Vecteur2);
 }
 
-/** \Description methode inverse
+/** @brief methode inverse
  * @param
  * @return Matrices2x2
  * sert a calculer l'inverse d'une matrice
@@ -170,7 +170,7 @@ const Matrices2x2 Matrices2x2::inverse() const
     return this->comatrice()*(1/this->produitScalaire());
 }
 
-/** \Description methode comatrice
+/** @brief methode comatrice
  * @param
  * @return Matrices2x2
  * sert a calculer la comatrice d'une matrice
