@@ -1,6 +1,6 @@
-//
-// Created by Colin Thuiller on 04/03/2023.
-//
+/**
+* @author THUILLIER Colin
+*/
 
 #include "VisiteurDeLibrairieJava.h"
 
