@@ -1,0 +1,69 @@
+\hypertarget{_polygone_8h_source}{}\doxysection{Polygone.\+h}
+\label{_polygone_8h_source}\index{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Formes/Polygone.h@{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Formes/Polygone.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Forme.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Vecteur2D.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_polygone}{Polygone}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_forme}{Forme}}\ \{}
+\DoxyCodeLine{00012\ private\ :}
+\DoxyCodeLine{00013\ \ \ \ \ vector<Vecteur2D*>\ \_points;}
+\DoxyCodeLine{00014\ public\ :}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ /***\ Constructeur\ ***/}}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_polygone}{Polygone}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ couleur=0x000000);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_polygone}{Polygone}}(vector<Vecteur2D*>\ points,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ couleur);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_polygone}{Polygone}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_polygone}{Polygone}}\&\ p);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_polygone}{Polygone}}*\ \mbox{\hyperlink{class_polygone_aadd28a0ed89728b444fc7513f5fe8d7d}{clone}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ /***\ Destructeur\ ***/}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_polygone}{\string~Polygone}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_polygone_ae50f5a86e4d043c8e0a00acc3b41dd0b}{getMinXMinY}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_polygone_a4ce54ba1d55159feaec1521b813a35c3}{getMaxXMaxY}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_polygone_a245d2a26f8c0da7b103e37b7cff8bb42}{calculerAire}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_polygone_a623e7881d07ce05d154e7484f68f8af6}{getCentreDeSymetrie}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_polygone_a1487d8c92753d1a596583d130b12993e}{getNbPoints}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}*\ \mbox{\hyperlink{class_polygone_ad6443801229af24f28b313d7b0acfb63}{getPoint}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ i)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_polygone}{Polygone}}\&\ \mbox{\hyperlink{class_polygone_a9b6d58a6f0e19509639135e3cf9fae26}{addPoint}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\&\ p);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygone_aa6fcb2e35978bb7ba60a1942ce051670}{removePoint}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ i);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygone_a0df08583abd2834088a28ab3e5566797}{removeAllPoints}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygone_a132257d97dd7a32ee27d0ed10dfc26a1}{translation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\&\ u);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygone_acfa35e9599a23e6f79b184aa4db2d6b1}{homothetie}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\&\ u,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ k);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygone_a1be7d2261b9fc701b5b69b84aa7ed55b}{rotation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \&u,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ angle);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{operator}\ string()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{inline}\ ostream\&\ \mbox{\hyperlink{class_polygone_acecb99fa80d004a49bcb3e929dbcd8a5}{operator<<}}(ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_polygone}{Polygone}}\&\ p);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00106\ \textcolor{comment}{\ \ \ \ \ *\ \ Visiteur}}
+\DoxyCodeLine{00107\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{class_polygone_a03ed5393651eb2f59759d04ab7c7d308}{dessine}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_visiteur_de_librairie}{VisiteurDeLibrairie}}\ *visiteur,\ SOCKET\ s)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{class_polygone_a927707788379c672e42ec13744d7a7a3}{sauvegarde}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_visiteur_de_sauvegarde}{VisiteurDeSauvegarde}}\ *visiteur)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \};}
+\DoxyCodeLine{00112\ \textcolor{keyword}{inline}\ ostream\&\ operator\ <<\ (ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_polygone}{Polygone}}\&\ s)}
+\DoxyCodeLine{00113\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ os\ <<\ (string)(s);}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00116\ \}}
+
+\end{DoxyCode}

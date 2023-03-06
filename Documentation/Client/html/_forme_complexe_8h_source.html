@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PPIL_Client:  Fichier source de /Users/thuillercolin/Documents/Cours/License/L3_Maths-Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Formes/FormeComplexe.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PPIL_Client
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f396504afdc959660871b003fa10164d.html">Documents</a></li><li class="navelem"><a class="el" href="dir_8a4b2864123749416b5f82c0e43417ed.html">Cours</a></li><li class="navelem"><a class="el" href="dir_e5b8599d94ff513ee43e8639a7194e89.html">License</a></li><li class="navelem"><a class="el" href="dir_32f37c2eef662e3774be776856b8acac.html">L3_Maths-Info</a></li><li class="navelem"><a class="el" href="dir_89c400d4f344bcefcfc833c0889781c7.html">S6</a></li><li class="navelem"><a class="el" href="dir_27d516afa10d703d23bec638fc5532b6.html">PPIL</a></li><li class="navelem"><a class="el" href="dir_a1ea8594298b1a6b3ddabdf268acf5c6.html">ProjetPPIL</a></li><li class="navelem"><a class="el" href="dir_07c67e5703d19e49eebd28a5a68f008b.html">PPIL</a></li><li class="navelem"><a class="el" href="dir_27d058b31d26c56bc329ae3838114210.html">ProjetPPIL</a></li><li class="navelem"><a class="el" href="dir_10e5dc40d544c0251d0fb069179bca94.html">ClienCpp</a></li><li class="navelem"><a class="el" href="dir_c648781a6d1214feff1e14b6dd126a39.html">Formes</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">FormeComplexe.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Forme.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_forme_complexe.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_forme_complexe.html">FormeComplexe</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_forme.html">Forme</a>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>private :</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    vector&lt;Forme*&gt; listeFormes;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>public :</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">    /*** Constructeur ***/</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_class" href="class_forme_complexe.html">FormeComplexe</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> couleur=0xFFFFFF);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="class_forme_complexe.html">FormeComplexe</a>(vector&lt;Forme*&gt; listeFormes, <span class="keyword">const</span> <span class="keywordtype">int</span> couleur=0xFFFFFF);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_forme_complexe.html">FormeComplexe</a>* <a class="code hl_function" href="class_forme_complexe.html#a06ec51111189175fe7f10b8d66c71708">clone</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">    /*** Destructeur ***/</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_forme_complexe.html">~FormeComplexe</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_class" href="class_forme_complexe.html">FormeComplexe</a>&amp; <a class="code hl_function" href="class_forme_complexe.html#a182be3a3e11e27df35d445d1deb3507c">ajouterForme</a>(<a class="code hl_class" href="class_forme.html">Forme</a>* forme);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_forme_complexe.html#acadd094b22bb2d96af55bfeccc3c5b57">supprimerForme</a>(<a class="code hl_class" href="class_forme.html">Forme</a>* forme);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_forme_complexe.html#a7f45b1afd11f41af8f6dd874792a540e">supprimerListeFormes</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_class" href="class_forme.html">Forme</a>* <a class="code hl_function" href="class_forme_complexe.html#a8be19d3ed8c207ada2dc7d92a46a10da">getForme</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; i) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_class" href="class_forme_complexe.html">FormeComplexe</a>&amp; <a class="code hl_function" href="class_forme_complexe.html#acdc3fbb88b56aab59ba12e09de3984bb">setCouleurListeFormes</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> couleur);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>     <span class="keywordtype">int</span> <a class="code hl_function" href="class_forme_complexe.html#a7f4030e54e887e4424190a5d307deaa7">getNombreFormes</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    vector&lt;Forme*&gt; <a class="code hl_function" href="class_forme_complexe.html#a06e205bc538ead141dc2756c8535472c">getListeFormes</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a> <a class="code hl_function" href="class_forme_complexe.html#aa2fbcebcb0aeebeccf83ca2dbd1c6735">getMinXMinY</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a> <a class="code hl_function" href="class_forme_complexe.html#a386159aee858a53c4d7d9e7e184ddc7a">getMaxXMaxY</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_forme_complexe.html#a5f9ff27c8cbb6a37c2dcff6e28e6272f">calculerAire</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a> <a class="code hl_function" href="class_forme_complexe.html#ac302bfe7be406269d542587fb795de54">getCentreDeSymetrie</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_forme_complexe.html#ae88d936e90cbd10e20fa836ed6885aaf">translation</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a> &amp;u);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_forme_complexe.html#ad8a4d75f6042f51f82a0712103689a7f">homothetie</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a> &amp;d, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp;k);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_forme_complexe.html#a9fa2cceb2b50452c77a680cccadd8cea">rotation</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a> &amp;u, <span class="keyword">const</span> <span class="keywordtype">double</span> angle);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">virtual</span> <span class="keyword">operator</span> string() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">friend</span> <span class="keyword">inline</span> ostream&amp; operator&lt;&lt;(ostream&amp; os, <span class="keyword">const</span> <a class="code hl_class" href="class_forme_complexe.html">FormeComplexe</a>&amp; formeComplexe);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">     * Visiteur</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="class_forme_complexe.html#af2a2c8ad81b02231f4e5c8d5a67da222">dessine</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_visiteur_de_librairie.html">VisiteurDeLibrairie</a> *visiteur, SOCKET s) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="class_forme_complexe.html#aa6cffd9f5e6032b3fdf7ae7ad5db8271">sauvegarde</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_visiteur_de_sauvegarde.html">VisiteurDeSauvegarde</a> *visiteur) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">inline</span> ostream&amp; operator&lt;&lt;(ostream&amp; os, <span class="keyword">const</span> <a class="code hl_class" href="class_forme_complexe.html">FormeComplexe</a>&amp; formeComplexe) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    os &lt;&lt; (string) formeComplexe;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">return</span> os;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
+<div class="ttc" id="aclass_forme_complexe_html"><div class="ttname"><a href="class_forme_complexe.html">FormeComplexe</a></div><div class="ttdef"><b>Definition:</b> FormeComplexe.h:10</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_a06e205bc538ead141dc2756c8535472c"><div class="ttname"><a href="class_forme_complexe.html#a06e205bc538ead141dc2756c8535472c">FormeComplexe::getListeFormes</a></div><div class="ttdeci">vector&lt; Forme * &gt; getListeFormes() const</div><div class="ttdoc">Méthode qui permet d'obtenir la liste des formes.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:63</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_a06ec51111189175fe7f10b8d66c71708"><div class="ttname"><a href="class_forme_complexe.html#a06ec51111189175fe7f10b8d66c71708">FormeComplexe::clone</a></div><div class="ttdeci">virtual FormeComplexe * clone() const</div><div class="ttdoc">Clone la forme.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:18</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_a182be3a3e11e27df35d445d1deb3507c"><div class="ttname"><a href="class_forme_complexe.html#a182be3a3e11e27df35d445d1deb3507c">FormeComplexe::ajouterForme</a></div><div class="ttdeci">FormeComplexe &amp; ajouterForme(Forme *forme)</div><div class="ttdoc">Méthode qui permet d'ajouter une forme à la liste des formes.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:26</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_a386159aee858a53c4d7d9e7e184ddc7a"><div class="ttname"><a href="class_forme_complexe.html#a386159aee858a53c4d7d9e7e184ddc7a">FormeComplexe::getMaxXMaxY</a></div><div class="ttdeci">virtual Vecteur2D getMaxXMaxY() const</div><div class="ttdoc">Avoir le point X maximal et point Y maximal du plan selon la figure.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:83</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_a5f9ff27c8cbb6a37c2dcff6e28e6272f"><div class="ttname"><a href="class_forme_complexe.html#a5f9ff27c8cbb6a37c2dcff6e28e6272f">FormeComplexe::calculerAire</a></div><div class="ttdeci">virtual double calculerAire() const</div><div class="ttdoc">Calculer l'aire de la figure.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:99</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_a7f4030e54e887e4424190a5d307deaa7"><div class="ttname"><a href="class_forme_complexe.html#a7f4030e54e887e4424190a5d307deaa7">FormeComplexe::getNombreFormes</a></div><div class="ttdeci">int getNombreFormes() const</div><div class="ttdoc">Méthode qui permet d'obtenir le nombre de formes.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:33</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_a7f45b1afd11f41af8f6dd874792a540e"><div class="ttname"><a href="class_forme_complexe.html#a7f45b1afd11f41af8f6dd874792a540e">FormeComplexe::supprimerListeFormes</a></div><div class="ttdeci">void supprimerListeFormes()</div><div class="ttdoc">Méthode qui supprime toutes les formes de la liste des formes.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:45</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_a8be19d3ed8c207ada2dc7d92a46a10da"><div class="ttname"><a href="class_forme_complexe.html#a8be19d3ed8c207ada2dc7d92a46a10da">FormeComplexe::getForme</a></div><div class="ttdeci">Forme * getForme(const int &amp;i) const</div><div class="ttdoc">Méthode qui permet d'obtenir la forme a l'indice i.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:52</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_a9fa2cceb2b50452c77a680cccadd8cea"><div class="ttname"><a href="class_forme_complexe.html#a9fa2cceb2b50452c77a680cccadd8cea">FormeComplexe::rotation</a></div><div class="ttdeci">virtual void rotation(const Vecteur2D &amp;u, const double angle)</div><div class="ttdoc">Opération de rotation.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:126</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_aa2fbcebcb0aeebeccf83ca2dbd1c6735"><div class="ttname"><a href="class_forme_complexe.html#aa2fbcebcb0aeebeccf83ca2dbd1c6735">FormeComplexe::getMinXMinY</a></div><div class="ttdeci">virtual Vecteur2D getMinXMinY() const</div><div class="ttdoc">Avoir le point X minimal et point Y minimal du plan selon la figure.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:67</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_aa6cffd9f5e6032b3fdf7ae7ad5db8271"><div class="ttname"><a href="class_forme_complexe.html#aa6cffd9f5e6032b3fdf7ae7ad5db8271">FormeComplexe::sauvegarde</a></div><div class="ttdeci">const void * sauvegarde(const VisiteurDeSauvegarde *visiteur) const</div><div class="ttdoc">Visiteur de sauvegarde qui va se charger de sauvegarder la forme dans un fichier txt.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:148</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_ac302bfe7be406269d542587fb795de54"><div class="ttname"><a href="class_forme_complexe.html#ac302bfe7be406269d542587fb795de54">FormeComplexe::getCentreDeSymetrie</a></div><div class="ttdeci">virtual Vecteur2D getCentreDeSymetrie() const</div><div class="ttdoc">Avoir le centre de symétrie de la figure.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:108</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_acadd094b22bb2d96af55bfeccc3c5b57"><div class="ttname"><a href="class_forme_complexe.html#acadd094b22bb2d96af55bfeccc3c5b57">FormeComplexe::supprimerForme</a></div><div class="ttdeci">void supprimerForme(Forme *forme)</div><div class="ttdoc">Méthode qui permet de supprimer une forme de la liste des formes.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:37</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_acdc3fbb88b56aab59ba12e09de3984bb"><div class="ttname"><a href="class_forme_complexe.html#acdc3fbb88b56aab59ba12e09de3984bb">FormeComplexe::setCouleurListeFormes</a></div><div class="ttdeci">FormeComplexe &amp; setCouleurListeFormes(const int couleur)</div><div class="ttdoc">Méthode qui permet de modifier la couleur de toutes les formes de la liste des formes.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:56</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_ad8a4d75f6042f51f82a0712103689a7f"><div class="ttname"><a href="class_forme_complexe.html#ad8a4d75f6042f51f82a0712103689a7f">FormeComplexe::homothetie</a></div><div class="ttdeci">virtual void homothetie(const Vecteur2D &amp;d, const double &amp;k)</div><div class="ttdoc">Opération d'homothétie.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:119</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_ae88d936e90cbd10e20fa836ed6885aaf"><div class="ttname"><a href="class_forme_complexe.html#ae88d936e90cbd10e20fa836ed6885aaf">FormeComplexe::translation</a></div><div class="ttdeci">virtual void translation(const Vecteur2D &amp;u)</div><div class="ttdoc">Opération de translation.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:112</div></div>
+<div class="ttc" id="aclass_forme_complexe_html_af2a2c8ad81b02231f4e5c8d5a67da222"><div class="ttname"><a href="class_forme_complexe.html#af2a2c8ad81b02231f4e5c8d5a67da222">FormeComplexe::dessine</a></div><div class="ttdeci">const void * dessine(const VisiteurDeLibrairie *visiteur, SOCKET s) const</div><div class="ttdoc">Visiteur de librairie qui va se charger de dessiner le polygone.</div><div class="ttdef"><b>Definition:</b> FormeComplexe.cpp:144</div></div>
+<div class="ttc" id="aclass_forme_html"><div class="ttname"><a href="class_forme.html">Forme</a></div><div class="ttdef"><b>Definition:</b> Forme.h:14</div></div>
+<div class="ttc" id="aclass_vecteur2_d_html"><div class="ttname"><a href="class_vecteur2_d.html">Vecteur2D</a></div><div class="ttdef"><b>Definition:</b> Vecteur2D.h:18</div></div>
+<div class="ttc" id="aclass_visiteur_de_librairie_html"><div class="ttname"><a href="class_visiteur_de_librairie.html">VisiteurDeLibrairie</a></div><div class="ttdef"><b>Definition:</b> VisiteurDeLibrairie.h:25</div></div>
+<div class="ttc" id="aclass_visiteur_de_sauvegarde_html"><div class="ttname"><a href="class_visiteur_de_sauvegarde.html">VisiteurDeSauvegarde</a></div><div class="ttdef"><b>Definition:</b> VisiteurDeSauvegarde.h:13</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

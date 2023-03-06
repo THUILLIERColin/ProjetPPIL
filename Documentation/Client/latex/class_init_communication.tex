@@ -1,0 +1,114 @@
+\hypertarget{class_init_communication}{}\doxysection{Référence de la classe Init\+Communication}
+\label{class_init_communication}\index{InitCommunication@{InitCommunication}}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_init_communication_a4e9cb02695318193e2dacb3d781d9c3d}{$\sim$\+Init\+Communication}} ()
+\begin{DoxyCompactList}\small\item\em Détruit l\textquotesingle{}instance de la classe \mbox{\hyperlink{class_init_communication}{Init\+Communication}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_init_communication_a65f32d26af16294f3cc4755bb513cbe1}\label{class_init_communication_a65f32d26af16294f3cc4755bb513cbe1}} 
+void {\bfseries deconnexion} ()
+\begin{DoxyCompactList}\small\item\em Permet de se déconnecter du serveur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_init_communication_a8fe706542748b4bfe89ba7dcd7c21b28}{demarrer\+Connection}} (int port, const char $\ast$adresse)
+\begin{DoxyCompactList}\small\item\em Permet de créer un socket. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_init_communication_abb73e71012a0220b9ee50db2a96ac938}{getR}} ()
+\begin{DoxyCompactList}\small\item\em Retourn r. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_init_communication_ae14d47f5ce13b73fe266c08d9e47ff74}{get\+Connecter}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la valeur de connecter. \end{DoxyCompactList}\item 
+SOCKET \mbox{\hyperlink{class_init_communication_a611dfb41765ac9ad5ebcc7716d726c70}{get\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em Retourne le socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_init_communication}{Init\+Communication}} $\ast$ \mbox{\hyperlink{class_init_communication_aeac357befc87a2245f6081f2ce478c88}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Permet de récupérer l\textquotesingle{}instance de la classe \mbox{\hyperlink{class_init_communication}{Init\+Communication}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_init_communication_a4e9cb02695318193e2dacb3d781d9c3d}\label{class_init_communication_a4e9cb02695318193e2dacb3d781d9c3d}} 
+\index{InitCommunication@{InitCommunication}!````~InitCommunication@{$\sim$InitCommunication}}
+\index{````~InitCommunication@{$\sim$InitCommunication}!InitCommunication@{InitCommunication}}
+\doxysubsubsection{\texorpdfstring{$\sim$InitCommunication()}{~InitCommunication()}}
+{\footnotesize\ttfamily virtual Init\+Communication\+::$\sim$\+Init\+Communication (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Détruit l\textquotesingle{}instance de la classe \mbox{\hyperlink{class_init_communication}{Init\+Communication}}. 
+
+Il se déconnecte également du serveur 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_init_communication_a8fe706542748b4bfe89ba7dcd7c21b28}\label{class_init_communication_a8fe706542748b4bfe89ba7dcd7c21b28}} 
+\index{InitCommunication@{InitCommunication}!demarrerConnection@{demarrerConnection}}
+\index{demarrerConnection@{demarrerConnection}!InitCommunication@{InitCommunication}}
+\doxysubsubsection{\texorpdfstring{demarrerConnection()}{demarrerConnection()}}
+{\footnotesize\ttfamily void Init\+Communication\+::demarrer\+Connection (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{const char $\ast$}]{adresse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Permet de créer un socket. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em port} & (int) le port sur lequel le socket sera créé \\
+\hline
+{\em adresse} & (char$\ast$) l\textquotesingle{}adresse sur laquelle le socket sera créé \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_init_communication_ae14d47f5ce13b73fe266c08d9e47ff74}\label{class_init_communication_ae14d47f5ce13b73fe266c08d9e47ff74}} 
+\index{InitCommunication@{InitCommunication}!getConnecter@{getConnecter}}
+\index{getConnecter@{getConnecter}!InitCommunication@{InitCommunication}}
+\doxysubsubsection{\texorpdfstring{getConnecter()}{getConnecter()}}
+{\footnotesize\ttfamily bool Init\+Communication\+::get\+Connecter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne la valeur de connecter. 
+
+\begin{DoxyReturn}{Renvoie}
+connecter (bool) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_init_communication_aeac357befc87a2245f6081f2ce478c88}\label{class_init_communication_aeac357befc87a2245f6081f2ce478c88}} 
+\index{InitCommunication@{InitCommunication}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!InitCommunication@{InitCommunication}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_init_communication}{Init\+Communication}} $\ast$ Init\+Communication\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Permet de récupérer l\textquotesingle{}instance de la classe \mbox{\hyperlink{class_init_communication}{Init\+Communication}}. 
+
+\begin{DoxyReturn}{Renvoie}
+(Init\+Communication$\ast$) l\textquotesingle{}instance de la classe \mbox{\hyperlink{class_init_communication}{Init\+Communication}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_init_communication_abb73e71012a0220b9ee50db2a96ac938}\label{class_init_communication_abb73e71012a0220b9ee50db2a96ac938}} 
+\index{InitCommunication@{InitCommunication}!getR@{getR}}
+\index{getR@{getR}!InitCommunication@{InitCommunication}}
+\doxysubsubsection{\texorpdfstring{getR()}{getR()}}
+{\footnotesize\ttfamily int Init\+Communication\+::getR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourn r. 
+
+\begin{DoxyReturn}{Renvoie}
+r (int) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_init_communication_a611dfb41765ac9ad5ebcc7716d726c70}\label{class_init_communication_a611dfb41765ac9ad5ebcc7716d726c70}} 
+\index{InitCommunication@{InitCommunication}!getSocket@{getSocket}}
+\index{getSocket@{getSocket}!InitCommunication@{InitCommunication}}
+\doxysubsubsection{\texorpdfstring{getSocket()}{getSocket()}}
+{\footnotesize\ttfamily SOCKET Init\+Communication\+::get\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne le socket. 
+
+\begin{DoxyReturn}{Renvoie}
+sock (SOCKET) 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/thuillercolin/\+Documents/\+Cours/\+License/\+L3\+\_\+\+Maths-\/\+Info/\+S6/\+PPIL/\+Projet\+PPIL/\+PPIL/\+Projet\+PPIL/\+Clien\+Cpp/\+Communication/Init\+Communication.\+h\item 
+/\+Users/thuillercolin/\+Documents/\+Cours/\+License/\+L3\+\_\+\+Maths-\/\+Info/\+S6/\+PPIL/\+Projet\+PPIL/\+PPIL/\+Projet\+PPIL/\+Clien\+Cpp/\+Communication/Init\+Communication.\+cpp\end{DoxyCompactItemize}

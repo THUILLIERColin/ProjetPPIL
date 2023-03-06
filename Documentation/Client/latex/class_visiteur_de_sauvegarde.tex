@@ -1,0 +1,50 @@
+\hypertarget{class_visiteur_de_sauvegarde}{}\doxysection{Référence de la classe Visiteur\+De\+Sauvegarde}
+\label{class_visiteur_de_sauvegarde}\index{VisiteurDeSauvegarde@{VisiteurDeSauvegarde}}
+
+
+{\ttfamily \#include $<$Visiteur\+De\+Sauvegarde.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Visiteur\+De\+Sauvegarde\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_visiteur_de_sauvegarde}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual const void $\ast$ \mbox{\hyperlink{class_visiteur_de_sauvegarde_a7b07b4a0807ff2c82592c2c88e868c40}{visite}} (const \mbox{\hyperlink{class_forme}{Forme}} $\ast$forme) const =0
+\begin{DoxyCompactList}\small\item\em Visiteur qui permettre de sauvegarder une forme dans un fichier de sauvegarde. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+THUILLIER Colin
+\end{DoxyAuthor}
+Pour répondre au mieux au exigeance du sujet, j\textquotesingle{}ai choisi de distinguer les visiteurs de librairie et de sauvegarde. Pour pouvoir sauvegarder une forme, il faut donc passer par un visiteur de sauvegarde. Ce qui permet de ne pas avoir à modifier sauvegarder dans les classes de formes. 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_visiteur_de_sauvegarde_a7b07b4a0807ff2c82592c2c88e868c40}\label{class_visiteur_de_sauvegarde_a7b07b4a0807ff2c82592c2c88e868c40}} 
+\index{VisiteurDeSauvegarde@{VisiteurDeSauvegarde}!visite@{visite}}
+\index{visite@{visite}!VisiteurDeSauvegarde@{VisiteurDeSauvegarde}}
+\doxysubsubsection{\texorpdfstring{visite()}{visite()}}
+{\footnotesize\ttfamily virtual const void $\ast$ Visiteur\+De\+Sauvegarde\+::visite (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_forme}{Forme}} $\ast$}]{forme }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Visiteur qui permettre de sauvegarder une forme dans un fichier de sauvegarde. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em forme} & (Forme$\ast$) la forme à sauvegarder \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \mbox{\hyperlink{class_visiteur_de_sauvegarde_txt_a662ae4a64c598af89a223bdf387821bf}{Visiteur\+De\+Sauvegarde\+Txt}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/thuillercolin/\+Documents/\+Cours/\+License/\+L3\+\_\+\+Maths-\/\+Info/\+S6/\+PPIL/\+Projet\+PPIL/\+PPIL/\+Projet\+PPIL/\+Clien\+Cpp/\+Visiteur/\+Sauvegarde/Visiteur\+De\+Sauvegarde.\+h\end{DoxyCompactItemize}

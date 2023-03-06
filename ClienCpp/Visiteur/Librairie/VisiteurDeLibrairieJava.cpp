@@ -16,7 +16,6 @@ const void *VisiteurDeLibrairieJava::visite(const Forme *forme, SOCKET s) const 
     if (r == SOCKET_ERROR) {
         throw Erreur("Erreur lors de l'envoi de la requete");
     }
-    cout << "Requete envoyee : " << requete << endl;
     // Vide le tampon pour envoyer les données immédiatement
     oss.flush();
     return 0;

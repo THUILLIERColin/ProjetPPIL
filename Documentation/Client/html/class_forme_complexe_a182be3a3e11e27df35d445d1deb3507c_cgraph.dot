@@ -1,0 +1,13 @@
+digraph "FormeComplexe::ajouterForme"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="FormeComplexe::ajouterForme",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Méthode qui permet d'ajouter une forme à la liste des formes."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="Forme::clone",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_forme.html#aa846673739124ed44293ceaf515f3fa8",tooltip="Clone la forme."];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="Forme::setCouleur",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_forme.html#a6af8483db79d8bd579684ccf757cc9d2",tooltip="Setter de la couleur."];
+}

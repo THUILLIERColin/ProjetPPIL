@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PPIL_Client:  Fichier source de /Users/thuillercolin/Documents/Cours/License/L3_Maths-Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Formes/Forme.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PPIL_Client
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f396504afdc959660871b003fa10164d.html">Documents</a></li><li class="navelem"><a class="el" href="dir_8a4b2864123749416b5f82c0e43417ed.html">Cours</a></li><li class="navelem"><a class="el" href="dir_e5b8599d94ff513ee43e8639a7194e89.html">License</a></li><li class="navelem"><a class="el" href="dir_32f37c2eef662e3774be776856b8acac.html">L3_Maths-Info</a></li><li class="navelem"><a class="el" href="dir_89c400d4f344bcefcfc833c0889781c7.html">S6</a></li><li class="navelem"><a class="el" href="dir_27d516afa10d703d23bec638fc5532b6.html">PPIL</a></li><li class="navelem"><a class="el" href="dir_a1ea8594298b1a6b3ddabdf268acf5c6.html">ProjetPPIL</a></li><li class="navelem"><a class="el" href="dir_07c67e5703d19e49eebd28a5a68f008b.html">PPIL</a></li><li class="navelem"><a class="el" href="dir_27d058b31d26c56bc329ae3838114210.html">ProjetPPIL</a></li><li class="navelem"><a class="el" href="dir_10e5dc40d544c0251d0fb069179bca94.html">ClienCpp</a></li><li class="navelem"><a class="el" href="dir_c648781a6d1214feff1e14b6dd126a39.html">Formes</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Forme.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;Matrices2x2.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;../Erreur/Erreur.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;pcap/socket.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span><a class="code hl_class" href="class_visiteur_de_librairie.html">VisiteurDeLibrairie</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span><a class="code hl_class" href="class_visiteur_de_sauvegarde.html">VisiteurDeSauvegarde</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_forme.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="class_forme.html">Forme</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>protected :</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">//couleur doit etre en hexadécimal</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">int</span> _couleur;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>public :</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_forme.html#a3c97c1066856b548d2fe6db963a28800">   21</a></span>    <a class="code hl_function" href="class_forme.html#a3c97c1066856b548d2fe6db963a28800">Forme</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_forme.html#ac728a1d9f825dc5107c99304f24819a2">   24</a></span>    <a class="code hl_function" href="class_forme.html#ac728a1d9f825dc5107c99304f24819a2">Forme</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; couleur) : _couleur(couleur) {}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_forme.html#aa846673739124ed44293ceaf515f3fa8">   29</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_forme.html">Forme</a>* <a class="code hl_function" href="class_forme.html#aa846673739124ed44293ceaf515f3fa8">clone</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_forme.html#a15013c3078f01eb3e7a83942e1195de7">   34</a></span>    <a class="code hl_function" href="class_forme.html#a15013c3078f01eb3e7a83942e1195de7">Forme</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_forme.html">Forme</a>&amp; forme){</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        _couleur = forme._couleur;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_forme.html#ab4582182a0cd4da315743afce6c7f05c">   41</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_forme.html#ab4582182a0cd4da315743afce6c7f05c">~Forme</a>() {}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_forme.html#af35680d96ba85f6fb681c967e8f5a8b4">   47</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a> <a class="code hl_function" href="class_forme.html#af35680d96ba85f6fb681c967e8f5a8b4">getMinXMinY</a>() <span class="keyword">const</span> =0;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_forme.html#a5ae7d912ab350908ebaf9f42f3dd2a6f">   53</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a> <a class="code hl_function" href="class_forme.html#a5ae7d912ab350908ebaf9f42f3dd2a6f">getMaxXMaxY</a>() <span class="keyword">const</span> =0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_forme.html#a6af8483db79d8bd579684ccf757cc9d2">   58</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_forme.html#a6af8483db79d8bd579684ccf757cc9d2">setCouleur</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; c){ _couleur = c;}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_forme.html#a12168fce934953532cbc5d934d3fa3a9">   63</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_forme.html#a12168fce934953532cbc5d934d3fa3a9">getCouleur</a>()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> _couleur;}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_forme.html#a5669145fc53281f5577ee673c8bc4be3">   68</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_forme.html#a5669145fc53281f5577ee673c8bc4be3">calculerAire</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_forme.html#ae6b450418bb3263a66405057031fe5ec">   73</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a> <a class="code hl_function" href="class_forme.html#ae6b450418bb3263a66405057031fe5ec">getCentreDeSymetrie</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_forme.html#af1af1437480ea5166aef1cf32f8d2803">   79</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_forme.html#af1af1437480ea5166aef1cf32f8d2803">translation</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a>&amp; u) = 0;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_forme.html#a4e18c6cdb9a907ff80c232774e4f890c">   86</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_forme.html#a4e18c6cdb9a907ff80c232774e4f890c">homothetie</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a>&amp;, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; k) = 0;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_forme.html#a07e7d34529a8f71f9e1c879a6be622de">   93</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_forme.html#a07e7d34529a8f71f9e1c879a6be622de">rotation</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a> &amp;u, <span class="keyword">const</span> <span class="keywordtype">double</span> angle ) = 0;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_forme.html#a6854735436e318a441692bfa95159dd8">   99</a></span>    <span class="keyword">virtual</span> <span class="keyword">operator</span> string()<span class="keyword"> const</span>{</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        ostringstream os;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        os &lt;&lt; <span class="stringliteral">&quot;couleur : &quot;</span> &lt;&lt; _couleur &lt;&lt; endl;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">return</span> os.str();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_forme.html#a99103cfdf249d6a65733bce71fa91190">  108</a></span>    <span class="keyword">friend</span> <span class="keyword">inline</span> ostream&amp; <a class="code hl_friend" href="class_forme.html#a99103cfdf249d6a65733bce71fa91190">operator&lt;&lt;</a>(ostream&amp; os, <span class="keyword">const</span> <a class="code hl_class" href="class_forme.html">Forme</a>&amp; forme) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        os &lt;&lt; (string) forme;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">return</span> os;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_forme.html#a828653a2c1aec4a5acbaf2ae7798d68b">  120</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="class_forme.html#a828653a2c1aec4a5acbaf2ae7798d68b">dessine</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_visiteur_de_librairie.html">VisiteurDeLibrairie</a> *visiteur, SOCKET s) <span class="keyword">const</span>=0;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_forme.html#a425e5b66e137ad8ff4a1093a9fba2b02">  128</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">void</span> *<a class="code hl_function" href="class_forme.html#a425e5b66e137ad8ff4a1093a9fba2b02">sauvegarde</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_visiteur_de_sauvegarde.html">VisiteurDeSauvegarde</a> *visiteur) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>};</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="ttc" id="aclass_forme_html"><div class="ttname"><a href="class_forme.html">Forme</a></div><div class="ttdef"><b>Definition:</b> Forme.h:14</div></div>
+<div class="ttc" id="aclass_forme_html_a07e7d34529a8f71f9e1c879a6be622de"><div class="ttname"><a href="class_forme.html#a07e7d34529a8f71f9e1c879a6be622de">Forme::rotation</a></div><div class="ttdeci">virtual void rotation(const Vecteur2D &amp;u, const double angle)=0</div><div class="ttdoc">Opération de rotation.</div></div>
+<div class="ttc" id="aclass_forme_html_a12168fce934953532cbc5d934d3fa3a9"><div class="ttname"><a href="class_forme.html#a12168fce934953532cbc5d934d3fa3a9">Forme::getCouleur</a></div><div class="ttdeci">int getCouleur() const</div><div class="ttdoc">Getter de la couleur.</div><div class="ttdef"><b>Definition:</b> Forme.h:63</div></div>
+<div class="ttc" id="aclass_forme_html_a15013c3078f01eb3e7a83942e1195de7"><div class="ttname"><a href="class_forme.html#a15013c3078f01eb3e7a83942e1195de7">Forme::Forme</a></div><div class="ttdeci">Forme(const Forme &amp;forme)</div><div class="ttdoc">Constructeur de copie.</div><div class="ttdef"><b>Definition:</b> Forme.h:34</div></div>
+<div class="ttc" id="aclass_forme_html_a3c97c1066856b548d2fe6db963a28800"><div class="ttname"><a href="class_forme.html#a3c97c1066856b548d2fe6db963a28800">Forme::Forme</a></div><div class="ttdeci">Forme()</div></div>
+<div class="ttc" id="aclass_forme_html_a425e5b66e137ad8ff4a1093a9fba2b02"><div class="ttname"><a href="class_forme.html#a425e5b66e137ad8ff4a1093a9fba2b02">Forme::sauvegarde</a></div><div class="ttdeci">virtual const void * sauvegarde(const VisiteurDeSauvegarde *visiteur) const =0</div><div class="ttdoc">Visiteur de sauvegarde qui va se charger de sauvegarder la forme dans un fichier txt.</div></div>
+<div class="ttc" id="aclass_forme_html_a4e18c6cdb9a907ff80c232774e4f890c"><div class="ttname"><a href="class_forme.html#a4e18c6cdb9a907ff80c232774e4f890c">Forme::homothetie</a></div><div class="ttdeci">virtual void homothetie(const Vecteur2D &amp;, const double &amp;k)=0</div><div class="ttdoc">Opération d'homothétie.</div></div>
+<div class="ttc" id="aclass_forme_html_a5669145fc53281f5577ee673c8bc4be3"><div class="ttname"><a href="class_forme.html#a5669145fc53281f5577ee673c8bc4be3">Forme::calculerAire</a></div><div class="ttdeci">virtual double calculerAire() const =0</div><div class="ttdoc">Calculer l'aire de la figure.</div></div>
+<div class="ttc" id="aclass_forme_html_a5ae7d912ab350908ebaf9f42f3dd2a6f"><div class="ttname"><a href="class_forme.html#a5ae7d912ab350908ebaf9f42f3dd2a6f">Forme::getMaxXMaxY</a></div><div class="ttdeci">virtual Vecteur2D getMaxXMaxY() const =0</div><div class="ttdoc">Avoir le point X maximal et point Y maximal du plan selon la figure.</div></div>
+<div class="ttc" id="aclass_forme_html_a6af8483db79d8bd579684ccf757cc9d2"><div class="ttname"><a href="class_forme.html#a6af8483db79d8bd579684ccf757cc9d2">Forme::setCouleur</a></div><div class="ttdeci">void setCouleur(const int &amp;c)</div><div class="ttdoc">Setter de la couleur.</div><div class="ttdef"><b>Definition:</b> Forme.h:58</div></div>
+<div class="ttc" id="aclass_forme_html_a828653a2c1aec4a5acbaf2ae7798d68b"><div class="ttname"><a href="class_forme.html#a828653a2c1aec4a5acbaf2ae7798d68b">Forme::dessine</a></div><div class="ttdeci">virtual const void * dessine(const VisiteurDeLibrairie *visiteur, SOCKET s) const =0</div><div class="ttdoc">Visiteur de librairie qui va se charger de dessiner le polygone.</div></div>
+<div class="ttc" id="aclass_forme_html_a99103cfdf249d6a65733bce71fa91190"><div class="ttname"><a href="class_forme.html#a99103cfdf249d6a65733bce71fa91190">Forme::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, const Forme &amp;forme)</div><div class="ttdoc">Opérateur d'affichage.</div><div class="ttdef"><b>Definition:</b> Forme.h:108</div></div>
+<div class="ttc" id="aclass_forme_html_aa846673739124ed44293ceaf515f3fa8"><div class="ttname"><a href="class_forme.html#aa846673739124ed44293ceaf515f3fa8">Forme::clone</a></div><div class="ttdeci">virtual Forme * clone() const =0</div><div class="ttdoc">Clone la forme.</div></div>
+<div class="ttc" id="aclass_forme_html_ab4582182a0cd4da315743afce6c7f05c"><div class="ttname"><a href="class_forme.html#ab4582182a0cd4da315743afce6c7f05c">Forme::~Forme</a></div><div class="ttdeci">virtual ~Forme()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> Forme.h:41</div></div>
+<div class="ttc" id="aclass_forme_html_ac728a1d9f825dc5107c99304f24819a2"><div class="ttname"><a href="class_forme.html#ac728a1d9f825dc5107c99304f24819a2">Forme::Forme</a></div><div class="ttdeci">Forme(const int &amp;couleur)</div><div class="ttdef"><b>Definition:</b> Forme.h:24</div></div>
+<div class="ttc" id="aclass_forme_html_ae6b450418bb3263a66405057031fe5ec"><div class="ttname"><a href="class_forme.html#ae6b450418bb3263a66405057031fe5ec">Forme::getCentreDeSymetrie</a></div><div class="ttdeci">virtual Vecteur2D getCentreDeSymetrie() const =0</div><div class="ttdoc">Avoir le centre de symétrie de la figure.</div></div>
+<div class="ttc" id="aclass_forme_html_af1af1437480ea5166aef1cf32f8d2803"><div class="ttname"><a href="class_forme.html#af1af1437480ea5166aef1cf32f8d2803">Forme::translation</a></div><div class="ttdeci">virtual void translation(const Vecteur2D &amp;u)=0</div><div class="ttdoc">Opération de translation.</div></div>
+<div class="ttc" id="aclass_forme_html_af35680d96ba85f6fb681c967e8f5a8b4"><div class="ttname"><a href="class_forme.html#af35680d96ba85f6fb681c967e8f5a8b4">Forme::getMinXMinY</a></div><div class="ttdeci">virtual Vecteur2D getMinXMinY() const =0</div><div class="ttdoc">Avoir le point X minimal et point Y minimal du plan selon la figure.</div></div>
+<div class="ttc" id="aclass_vecteur2_d_html"><div class="ttname"><a href="class_vecteur2_d.html">Vecteur2D</a></div><div class="ttdef"><b>Definition:</b> Vecteur2D.h:18</div></div>
+<div class="ttc" id="aclass_visiteur_de_librairie_html"><div class="ttname"><a href="class_visiteur_de_librairie.html">VisiteurDeLibrairie</a></div><div class="ttdef"><b>Definition:</b> VisiteurDeLibrairie.h:25</div></div>
+<div class="ttc" id="aclass_visiteur_de_sauvegarde_html"><div class="ttname"><a href="class_visiteur_de_sauvegarde.html">VisiteurDeSauvegarde</a></div><div class="ttdef"><b>Definition:</b> VisiteurDeSauvegarde.h:13</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

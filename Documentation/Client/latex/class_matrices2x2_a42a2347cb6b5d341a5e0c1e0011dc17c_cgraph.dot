@@ -1,0 +1,11 @@
+digraph "Matrices2x2::produitScalaire"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="Matrices2x2::produitScalaire",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="methode determinant"];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="Vecteur2D::produitScalaire",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_vecteur2_d.html#acff767c8f2eb0ec060a068bc930b821e",tooltip="Calcule le produit scalaire entre deux vecteurs."];
+}

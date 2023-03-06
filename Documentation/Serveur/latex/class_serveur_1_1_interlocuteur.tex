@@ -1,0 +1,63 @@
+\hypertarget{class_serveur_1_1_interlocuteur}{}\doxysection{Référence de la classe Serveur.\+Interlocuteur}
+\label{class_serveur_1_1_interlocuteur}\index{Serveur.Interlocuteur@{Serveur.Interlocuteur}}
+Graphe d\textquotesingle{}héritage de Serveur.\+Interlocuteur\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_serveur_1_1_interlocuteur}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_serveur_1_1_interlocuteur_ab4c181fd50b75a74ecf5e9f30810b18d}{Interlocuteur}} (Socket socket, int no\+Client, \mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_dessiner}{Expert\+Dessiner}} expert)  throws IOException     
+\item 
+void \mbox{\hyperlink{class_serveur_1_1_interlocuteur_a3553497d130958ef93ca1c8135f2fd54}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_serveur_1_1_interlocuteur_ac63d00a5be6ae50c6cd1f71564d2862c}\label{class_serveur_1_1_interlocuteur_ac63d00a5be6ae50c6cd1f71564d2862c}} 
+String\mbox{[}$\,$\mbox{]} {\bfseries formes} = \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Classe qui permet de gérer les requêtes du client et de les envoyer a la chain of responsibility 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_serveur_1_1_interlocuteur_ab4c181fd50b75a74ecf5e9f30810b18d}\label{class_serveur_1_1_interlocuteur_ab4c181fd50b75a74ecf5e9f30810b18d}} 
+\index{Serveur.Interlocuteur@{Serveur.Interlocuteur}!Interlocuteur@{Interlocuteur}}
+\index{Interlocuteur@{Interlocuteur}!Serveur.Interlocuteur@{Serveur.Interlocuteur}}
+\doxysubsubsection{\texorpdfstring{Interlocuteur()}{Interlocuteur()}}
+{\footnotesize\ttfamily Serveur.\+Interlocuteur.\+Interlocuteur (\begin{DoxyParamCaption}\item[{Socket}]{socket,  }\item[{int}]{no\+Client,  }\item[{\mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_dessiner}{Expert\+Dessiner}}}]{expert }\end{DoxyParamCaption}) throws IOException}
+
+Constructeur de l\textquotesingle{}interlocuteur 
+\begin{DoxyParams}{Paramètres}
+{\em socket} & socket du client \\
+\hline
+{\em no\+Client} & numero du client \\
+\hline
+{\em expert} & expert de dessin \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_serveur_1_1_interlocuteur_a3553497d130958ef93ca1c8135f2fd54}\label{class_serveur_1_1_interlocuteur_a3553497d130958ef93ca1c8135f2fd54}} 
+\index{Serveur.Interlocuteur@{Serveur.Interlocuteur}!run@{run}}
+\index{run@{run}!Serveur.Interlocuteur@{Serveur.Interlocuteur}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Serveur.\+Interlocuteur.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Methode run de l\textquotesingle{}interlocuteur
+
+permet de lire les requetes du client et de les envoyer a l\textquotesingle{}expert de dessin 
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/thuillercolin/\+Documents/\+Cours/\+License/\+L3\+\_\+\+Maths-\/\+Info/\+S6/\+PPIL/\+Projet\+PPIL/\+PPIL/\+Projet\+PPIL/\+Serveur\+Java\+PPIL/\+Serveur/Interlocuteur.\+java\end{DoxyCompactItemize}

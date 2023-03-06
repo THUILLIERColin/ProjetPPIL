@@ -12,17 +12,13 @@ public class TestExpert {
         String[] requetes = new String[3];
 
 
-        String requete = "Cercle [ 1 , 2 , 1 ] ff0000";
-        String requete2 = "Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] ff0000";
-        String requete3 = "Segment [ 1 , 1 , 2 , 2 ] ff0000";
+        requetes[0] = "Cercle [ 300, 550, 50 ] ffffff";
+        requetes[1] = "Cercle [ 500, 550, 50 ] ff0000";
+        requetes[2] = "Polygone [ 350, 600, 450, 650, 450, 200 ] ff0000";
 
-        //String requete4 = "FormeComplexe : { Cercle [ 1 , 2 , 1 ] ff3f9f ; Segment [ 1 , 1 , 2 , 2 ] ff0f00 ; Polygone [ 1 , 1 , 1 , 2 , 2 , 2 ] fffff5 } (0 ,1) / (2 ,3)";
+        String requete ="FormeComplexe : { " + requetes[0] + " ; " + requetes[1] + " ; " + requetes[2] + " } ( 0 , 0 ) / ( 1000 , 1000 )";
 
-
-        requetes[0] = requete;
-        requetes[1] = requete2;
-        requetes[2] = requete3;
-        //requetes[3] = requete4;
+        //String requete4 = "FormeComplexe : { Cercle [ 300, 550, 50 ] ff0000 ; Cercle [ 500, 550, 50 ] ff0000 ; Polygone [ 350, 600, 450, 650, 450, 200 ] ff0000 } (0 ,1) / (2 ,3)";
 
         try {
             FenetreDeDessin fenetreDeDessin = new FenetreDeDessin("Fenetre de dessin",60,60,FenetreDeDessin.LARGEUR, FenetreDeDessin.HAUTEUR);

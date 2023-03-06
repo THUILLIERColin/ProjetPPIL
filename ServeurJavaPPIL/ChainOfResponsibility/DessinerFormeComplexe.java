@@ -3,6 +3,8 @@ package ChainOfResponsibility;
 import Monde.Dessiner.FenetreDeDessin;
 import Monde.Vecteur2D;
 
+import java.awt.*;
+
 public class DessinerFormeComplexe extends ExpertDessiner {
     /**
      * Constructeur de la classe DessinerFormeComplexe

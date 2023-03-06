@@ -1,0 +1,12 @@
+digraph "/Users/thuillercolin/Documents/Cours/License/L3_Maths-Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Communication"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_10e5dc40d544c0251d0fb069179bca94 {
+    graph [ bgcolor="#e4e8ed", pencolor="grey50", label="ClienCpp", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_10e5dc40d544c0251d0fb069179bca94.html",tooltip=""]
+  dir_01e5a4c3ab303a5d4832cfdea40c28b4 [label="Communication", fillcolor="#e4e8ed", color="grey25", style="filled,bold", URL="dir_01e5a4c3ab303a5d4832cfdea40c28b4.html",tooltip=""];
+  }
+}

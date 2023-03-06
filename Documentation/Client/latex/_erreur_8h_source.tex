@@ -1,0 +1,68 @@
+\hypertarget{_erreur_8h_source}{}\doxysection{Erreur.\+h}
+\label{_erreur_8h_source}\index{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Erreur/Erreur.h@{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Erreur/Erreur.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_erreur}{Erreur}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ LONGUEURMESSAGE\ =\ 100;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{char}\ message[1+LONGUEURMESSAGE];}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_erreur_ad79ce22141a8664be066e6e7a5686821}{Erreur}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_erreur_ad79ce22141a8664be066e6e7a5686821}{Erreur}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ messageErreur);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ testeEgalite(\textcolor{keywordtype}{int}\ m,\ \textcolor{keywordtype}{int}\ n,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ message);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_erreur_ad239b8fce56d03a9b96a0776f4c3a59f}{testePlusPetitOuEgal}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ b,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ message);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_erreur_acce34c94b6d33f1ddb191305cc36381c}{testeAppartient}}(\textcolor{keywordtype}{int}\ a,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ b,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ message);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_erreur_ad318a27a06c5c1f68506eb00b9fe6beb}{testeNonVide}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *d,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ message);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{operator}\ string()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ ostream\ \&\ operator\ <<\ (ostream\ \&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_erreur}{Erreur}}\ \&\ erreur);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ Erreur::testeEgalite(\textcolor{keywordtype}{int}\ m,\ \textcolor{keywordtype}{int}\ n,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ message)}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#ifdef\ DEBUG}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ m\ !=\ n\ )\ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_erreur_ad79ce22141a8664be066e6e7a5686821}{Erreur}}(message);}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00049\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{inline}\ \textcolor{comment}{/*static*/}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_erreur_ad239b8fce56d03a9b96a0776f4c3a59f}{Erreur::testePlusPetitOuEgal}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ b,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ message)}
+\DoxyCodeLine{00057\ \{}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#ifdef\ DEBUG}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ a\ >\ b\ )\ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_erreur_ad79ce22141a8664be066e6e7a5686821}{Erreur}}(message);}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00061\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{inline}\ \textcolor{comment}{/*static*/}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_erreur_acce34c94b6d33f1ddb191305cc36381c}{Erreur::testeAppartient}}(\textcolor{keywordtype}{int}\ a,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ b,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ message)}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_erreur_ad239b8fce56d03a9b96a0776f4c3a59f}{Erreur::testePlusPetitOuEgal}}(a,x,message);}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{class_erreur_ad239b8fce56d03a9b96a0776f4c3a59f}{Erreur::testePlusPetitOuEgal}}(x,b,message);}
+\DoxyCodeLine{00072\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{comment}{/*\{}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\#ifdef\ DEBUG}}
+\DoxyCodeLine{00076\ \textcolor{comment}{if\ (\ !(\ \ a\ <=\ x\ \&\&\ x\ <=\ b\ )\ )\ throw\ Erreur(message);}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\#endif}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\}*/}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{inline}\ \textcolor{comment}{/*static*/}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_erreur_ad318a27a06c5c1f68506eb00b9fe6beb}{Erreur::testeNonVide}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *d,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ message)}
+\DoxyCodeLine{00085\ \{}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#ifdef\ DEBUG}}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ !d\ )\ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_erreur_ad79ce22141a8664be066e6e7a5686821}{Erreur}}(message);}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00089\ \}}
+\DoxyCodeLine{00090\ }
+
+\end{DoxyCode}

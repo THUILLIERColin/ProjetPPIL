@@ -1,0 +1,73 @@
+\hypertarget{class_erreur}{}\doxysection{Référence de la classe Erreur}
+\label{class_erreur}\index{Erreur@{Erreur}}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_erreur_ad79ce22141a8664be066e6e7a5686821}{Erreur}} ()
+\item 
+\mbox{\Hypertarget{class_erreur_a15bbbbc7e23e4ea5e6bdebe8e299e6be}\label{class_erreur_a15bbbbc7e23e4ea5e6bdebe8e299e6be}} 
+{\bfseries Erreur} (const char $\ast$message\+Erreur)
+\item 
+\mbox{\Hypertarget{class_erreur_a227b2c4491ed0a4646a86da17466f30b}\label{class_erreur_a227b2c4491ed0a4646a86da17466f30b}} 
+{\bfseries operator string} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_erreur_ae246b37f52f80cbb0a07274b9dbf96f4}\label{class_erreur_ae246b37f52f80cbb0a07274b9dbf96f4}} 
+static void {\bfseries teste\+Egalite} (int m, int n, const char $\ast$message)
+\item 
+static void \mbox{\hyperlink{class_erreur_ad239b8fce56d03a9b96a0776f4c3a59f}{teste\+Plus\+Petit\+Ou\+Egal}} (const int a, const int b, const char $\ast$message)
+\item 
+static void \mbox{\hyperlink{class_erreur_acce34c94b6d33f1ddb191305cc36381c}{teste\+Appartient}} (int a, int x, int b, const char $\ast$message)
+\item 
+static void \mbox{\hyperlink{class_erreur_ad318a27a06c5c1f68506eb00b9fe6beb}{teste\+Non\+Vide}} (const void $\ast$d, const char $\ast$message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_erreur_a55ae1259e86044a99bb4e78109ece875}\label{class_erreur_a55ae1259e86044a99bb4e78109ece875}} 
+char {\bfseries message} \mbox{[}1+LONGUEURMESSAGE\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_erreur_a4bad7e055ecc19aa6c7616ddf51d05dd}\label{class_erreur_a4bad7e055ecc19aa6c7616ddf51d05dd}} 
+static const int {\bfseries LONGUEURMESSAGE} = 100
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_erreur_ad79ce22141a8664be066e6e7a5686821}\label{class_erreur_ad79ce22141a8664be066e6e7a5686821}} 
+\index{Erreur@{Erreur}!Erreur@{Erreur}}
+\index{Erreur@{Erreur}!Erreur@{Erreur}}
+\doxysubsubsection{\texorpdfstring{Erreur()}{Erreur()}}
+{\footnotesize\ttfamily Erreur\+::\+Erreur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+mise en oeuvre de la classe \mbox{\hyperlink{class_erreur}{Erreur}} 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_erreur_acce34c94b6d33f1ddb191305cc36381c}\label{class_erreur_acce34c94b6d33f1ddb191305cc36381c}} 
+\index{Erreur@{Erreur}!testeAppartient@{testeAppartient}}
+\index{testeAppartient@{testeAppartient}!Erreur@{Erreur}}
+\doxysubsubsection{\texorpdfstring{testeAppartient()}{testeAppartient()}}
+{\footnotesize\ttfamily void Erreur\+::teste\+Appartient (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{x,  }\item[{int}]{b,  }\item[{const char $\ast$}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+lance une exception si x n\textquotesingle{}est pas dans \mbox{[}a,b\mbox{]} \mbox{\Hypertarget{class_erreur_ad318a27a06c5c1f68506eb00b9fe6beb}\label{class_erreur_ad318a27a06c5c1f68506eb00b9fe6beb}} 
+\index{Erreur@{Erreur}!testeNonVide@{testeNonVide}}
+\index{testeNonVide@{testeNonVide}!Erreur@{Erreur}}
+\doxysubsubsection{\texorpdfstring{testeNonVide()}{testeNonVide()}}
+{\footnotesize\ttfamily void Erreur\+::teste\+Non\+Vide (\begin{DoxyParamCaption}\item[{const void $\ast$}]{d,  }\item[{const char $\ast$}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+lance une exception si d est vide \mbox{\Hypertarget{class_erreur_ad239b8fce56d03a9b96a0776f4c3a59f}\label{class_erreur_ad239b8fce56d03a9b96a0776f4c3a59f}} 
+\index{Erreur@{Erreur}!testePlusPetitOuEgal@{testePlusPetitOuEgal}}
+\index{testePlusPetitOuEgal@{testePlusPetitOuEgal}!Erreur@{Erreur}}
+\doxysubsubsection{\texorpdfstring{testePlusPetitOuEgal()}{testePlusPetitOuEgal()}}
+{\footnotesize\ttfamily void Erreur\+::teste\+Plus\+Petit\+Ou\+Egal (\begin{DoxyParamCaption}\item[{const int}]{a,  }\item[{const int}]{b,  }\item[{const char $\ast$}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+v{\ucr}rifie que a \texorpdfstring{$<$}{<}= b lance une exception si a \texorpdfstring{$>$}{>} b 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/thuillercolin/\+Documents/\+Cours/\+License/\+L3\+\_\+\+Maths-\/\+Info/\+S6/\+PPIL/\+Projet\+PPIL/\+PPIL/\+Projet\+PPIL/\+Clien\+Cpp/\+Erreur/Erreur.\+h\item 
+/\+Users/thuillercolin/\+Documents/\+Cours/\+License/\+L3\+\_\+\+Maths-\/\+Info/\+S6/\+PPIL/\+Projet\+PPIL/\+PPIL/\+Projet\+PPIL/\+Clien\+Cpp/\+Erreur/Erreur.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,117 @@
+\hypertarget{class_expert_chargement_c_o_r}{}\doxysection{Référence de la classe Expert\+Chargement\+COR}
+\label{class_expert_chargement_c_o_r}\index{ExpertChargementCOR@{ExpertChargementCOR}}
+
+
+Classe \mbox{\hyperlink{class_expert_chargement_c_o_r}{Expert\+Chargement\+COR}}.  
+
+
+
+
+{\ttfamily \#include $<$Expert\+Chargement\+COR.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Expert\+Chargement\+COR\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.735537cm]{class_expert_chargement_c_o_r}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_expert_chargement_c_o_r_afa769e689a6b5630f95d3d5310c2672b}{resoudre}} (const string \&ligne) const
+\begin{DoxyCompactList}\small\item\em Méthode du Design Pattern Chain of Responsibility. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_expert_chargement_c_o_r_a7725bcaf5551929eaec0ea4e14991e6e}{resoudre1}} (const string \&ligne) const =0
+\begin{DoxyCompactList}\small\item\em Méthode du Design Pattern Chain of Responsibility. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_expert_chargement_a0ef36abcaedfc41d5dabdb00b69dbaa1}{resoudre}} (const string \&ligne) const =0
+\begin{DoxyCompactList}\small\item\em Méthode virtuelle pure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_expert_chargement_c_o_r_a1a67809b085c59ac5f3479bcc400bffb}{Expert\+Chargement\+COR}} (\mbox{\hyperlink{class_expert_chargement_c_o_r}{Expert\+Chargement\+COR}} $\ast$expert\+Suivant)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_expert_chargement_c_o_r}{Expert\+Chargement\+COR}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Classe \mbox{\hyperlink{class_expert_chargement_c_o_r}{Expert\+Chargement\+COR}}. 
+
+Cette classe \mbox{\hyperlink{class_expert_chargement_c_o_r}{Expert\+Chargement\+COR}} permet de créer un expert chargement de la forme lue. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_expert_chargement_c_o_r_a1a67809b085c59ac5f3479bcc400bffb}\label{class_expert_chargement_c_o_r_a1a67809b085c59ac5f3479bcc400bffb}} 
+\index{ExpertChargementCOR@{ExpertChargementCOR}!ExpertChargementCOR@{ExpertChargementCOR}}
+\index{ExpertChargementCOR@{ExpertChargementCOR}!ExpertChargementCOR@{ExpertChargementCOR}}
+\doxysubsubsection{\texorpdfstring{ExpertChargementCOR()}{ExpertChargementCOR()}}
+{\footnotesize\ttfamily Expert\+Chargement\+COR\+::\+Expert\+Chargement\+COR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_expert_chargement_c_o_r}{Expert\+Chargement\+COR}} $\ast$}]{expert\+Suivant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructeur de la classe \mbox{\hyperlink{class_expert_chargement_c_o_r}{Expert\+Chargement\+COR}}. 
+
+Ce constructeur permet de créer un expert chargement de la forme lue. 
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$expert\+Suivant} & l\textquotesingle{}expert chargement suivant dans la chaîne\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+LEOST Maelan \textbackslash{}\+Description Constructeur de la classe \mbox{\hyperlink{class_expert_chargement_c_o_r}{Expert\+Chargement\+COR}}
+\end{DoxyAuthor}
+Ce constructeur permet de créer un expert chargement de la forme lue. 
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$expert\+Suivant} & l\textquotesingle{}expert chargement suivant dans la chaîne \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_expert_chargement_c_o_r_afa769e689a6b5630f95d3d5310c2672b}\label{class_expert_chargement_c_o_r_afa769e689a6b5630f95d3d5310c2672b}} 
+\index{ExpertChargementCOR@{ExpertChargementCOR}!resoudre@{resoudre}}
+\index{resoudre@{resoudre}!ExpertChargementCOR@{ExpertChargementCOR}}
+\doxysubsubsection{\texorpdfstring{resoudre()}{resoudre()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Expert\+Chargement\+COR\+::resoudre (\begin{DoxyParamCaption}\item[{const string \&}]{ligne }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Méthode du Design Pattern Chain of Responsibility. 
+
+Cette méthode \mbox{\hyperlink{class_expert_chargement_c_o_r_afa769e689a6b5630f95d3d5310c2672b}{resoudre()}} permet de céterminer la forme lue en le passant à l\textquotesingle{}expert adéquat grâce au Design Pattern Chain of Responsibility. 
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$ligne} & le problème à résoudre, ici une ligne lue depuis le fichier de sauvegarde réprésentant une forme \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la forme lue 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_expert_chargement_a0ef36abcaedfc41d5dabdb00b69dbaa1}{Expert\+Chargement}}.
+
+\mbox{\Hypertarget{class_expert_chargement_c_o_r_a7725bcaf5551929eaec0ea4e14991e6e}\label{class_expert_chargement_c_o_r_a7725bcaf5551929eaec0ea4e14991e6e}} 
+\index{ExpertChargementCOR@{ExpertChargementCOR}!resoudre1@{resoudre1}}
+\index{resoudre1@{resoudre1}!ExpertChargementCOR@{ExpertChargementCOR}}
+\doxysubsubsection{\texorpdfstring{resoudre1()}{resoudre1()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Expert\+Chargement\+COR\+::resoudre1 (\begin{DoxyParamCaption}\item[{const string \&}]{ligne }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Méthode du Design Pattern Chain of Responsibility. 
+
+Cette méthode \mbox{\hyperlink{class_expert_chargement_c_o_r_a7725bcaf5551929eaec0ea4e14991e6e}{resoudre1()}} permet de céterminer la forme lue en le passant à l\textquotesingle{}expert adéquat grâce au Design Pattern Chain of Responsibility. 
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$ligne} & le problème à résoudre, ici une ligne lue depuis le fichier de sauvegarde réprésentant une forme \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la forme lue 
+\end{DoxyReturn}
+
+
+Implémenté dans \mbox{\hyperlink{class_expert_chargement_cercle_c_o_r_a1ee447781a1cdc1d6c3f89ff11733374}{Expert\+Chargement\+Cercle\+COR}}, \mbox{\hyperlink{class_expert_chargement_forme_complexe_c_o_r_a96a48b6ebf05fd49da3170afd2b14c8f}{Expert\+Chargement\+Forme\+Complexe\+COR}}, \mbox{\hyperlink{class_expert_chargement_polygone_c_o_r_a08bb85b0df0e96c7cb84f0ab2bad2e5c}{Expert\+Chargement\+Polygone\+COR}}, et \mbox{\hyperlink{class_expert_chargement_segment_c_o_r_aed1fb61d81cbeecdf3ca91f8007f78b6}{Expert\+Chargement\+Segment\+COR}}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/thuillercolin/\+Documents/\+Cours/\+License/\+L3\+\_\+\+Maths-\/\+Info/\+S6/\+PPIL/\+Projet\+PPIL/\+PPIL/\+Projet\+PPIL/\+Clien\+Cpp/\+COR/Expert\+Chargement\+COR.\+h\item 
+/\+Users/thuillercolin/\+Documents/\+Cours/\+License/\+L3\+\_\+\+Maths-\/\+Info/\+S6/\+PPIL/\+Projet\+PPIL/\+PPIL/\+Projet\+PPIL/\+Clien\+Cpp/\+COR/Expert\+Chargement\+COR.\+cpp\end{DoxyCompactItemize}

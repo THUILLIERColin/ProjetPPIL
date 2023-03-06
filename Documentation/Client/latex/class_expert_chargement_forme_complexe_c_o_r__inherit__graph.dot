@@ -1,0 +1,12 @@
+digraph "ExpertChargementFormeComplexeCOR"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="ExpertChargementFormeComplexeCOR",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Classe qui permet de charger une forme complexe."];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="ExpertChargementCOR",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_expert_chargement_c_o_r.html",tooltip="Classe ExpertChargementCOR."];
+  Node3 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="ExpertChargement",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_expert_chargement.html",tooltip="Classe abstraite qui sert à résoudre le problème de la ligne lue."];
+}

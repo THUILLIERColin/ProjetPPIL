@@ -1,0 +1,17 @@
+digraph "Graphe hiérarchique des classes"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [label="Forme",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_forme.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node1 [label="Cercle",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_cercle.html",tooltip=" "];
+  Node0 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="FormeComplexe",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_forme_complexe.html",tooltip=" "];
+  Node0 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="Polygone",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_polygone.html",tooltip=" "];
+  Node0 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="Segment",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_segment.html",tooltip=" "];
+}

@@ -1,0 +1,106 @@
+\hypertarget{_segment_8h_source}{}\doxysection{Segment.\+h}
+\label{_segment_8h_source}\index{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Formes/Segment.h@{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Formes/Segment.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Forme.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_segment}{Segment}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_forme}{Forme}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ private\ :}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ Vecteur1;\ \textcolor{comment}{//points\ du\ segment}}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ Vecteur2;\ \textcolor{comment}{//points\ du\ segment}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ public\ :}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ *\ Constructeurs\ et\ destructeur}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_segment_a15748bbeda0594e03d8d17c0cd7a768e}{Segment}}(\textcolor{keywordtype}{double}\ g,\ \textcolor{keywordtype}{double}\ h,\ \textcolor{keywordtype}{double}\ d,\ \textcolor{keywordtype}{double}\ b,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ couleur)\ :\ \mbox{\hyperlink{class_forme}{Forme}}(couleur)\ ,\ Vecteur1(g,\ h),\ Vecteur2(d,\ b)\ \{\}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_segment_a5babc73a2978e1aa99b73a4c19d41dd8}{\string~Segment}}()\ \{\}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ \ *\ GETTER\ ET\ SETTER}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \&getVecteur1()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ setVecteur1(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \&vecteur);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \&getVecteur2()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ setVecteur2(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \&vecteur);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ \ \ *\ Clone}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_segment}{Segment}}*\ \mbox{\hyperlink{class_segment_adf993f68690b48d78710a5d04f62282b}{clone}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_segment}{Segment}}(*\textcolor{keyword}{this});\ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ \ *\ Methodes\ pour\ les\ opérations\ géométriques\ translation,\ homothétie,\ rotation}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_segment_a678700157046eb0d0d1141a5ee6e63f9}{translation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\&\ u)\ ;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_segment_a8efa03d39553315e3a6e1c1f965f4c9b}{homothetie}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\&\ u,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ k);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_segment_aff2fc4f8be8073f7fb5aa3e6e0c524c2}{rotation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \&u,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ angle\ );}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00083\ \textcolor{comment}{\ \ \ \ *}}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \ *\ Methodes\ pour\ calculerAire\ et\ getCentreDeSymetrie}}
+\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ \ *}}
+\DoxyCodeLine{00086\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_segment_ac8d5922bda8298d6b178c3c9f539dc35}{calculerAire}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_segment_a30f06e74d73f06aa5832bbe803a296b8}{getCentreDeSymetrie}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00098\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00099\ \textcolor{comment}{\ \ \ \ \ *\ methodes\ getMinXMinY\ et\ getMaxXMaxY}}
+\DoxyCodeLine{00100\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00101\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_segment_ad661d0e7bfec3da9c44b46354389aebf}{getMinXMinY}}()\ \textcolor{keyword}{const}\ ;}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_segment_a0ebc2aded1905516f7dcababe28af94a}{getMaxXMaxY}}()\ \textcolor{keyword}{const}\ ;}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00114\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00115\ \textcolor{comment}{\ \ \ \ \ *\ Methodes\ pour\ l'affichage}}
+\DoxyCodeLine{00116\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00117\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{operator}\ string()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{inline}\ ostream\&\ \mbox{\hyperlink{class_segment_aa7035d3e254f717d2e7323c22a96ee24}{operator\ <<\ }}(ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_segment}{Segment}}\&\ m);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00129\ \textcolor{comment}{\ \ \ \ \ *\ Visiteur}}
+\DoxyCodeLine{00130\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{class_segment_ae22ad82397cfbb1783011e66fa7f8fc3}{dessine}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_visiteur_de_librairie}{VisiteurDeLibrairie}}\ *visiteur,\ SOCKET\ s)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{class_segment_a45874e8371d1c49d984291df64ff328b}{sauvegarde}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_visiteur_de_sauvegarde}{VisiteurDeSauvegarde}}\ *visiteur)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{keyword}{inline}\ ostream\&\ operator\ <<\ (ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_segment}{Segment}}\&\ s)}
+\DoxyCodeLine{00137\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ (string)s;}
+\DoxyCodeLine{00139\ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ }
+
+\end{DoxyCode}

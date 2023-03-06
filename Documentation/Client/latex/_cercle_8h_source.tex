@@ -1,0 +1,127 @@
+\hypertarget{_cercle_8h_source}{}\doxysection{Cercle.\+h}
+\label{_cercle_8h_source}\index{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Formes/Cercle.h@{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Formes/Cercle.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Forme.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cercle}{Cercle}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_forme}{Forme}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ private\ :}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \_centre;\ \textcolor{comment}{//centre\ du\ cercle}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ \_rayon;\ \textcolor{comment}{//rayon\ du\ cercle}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ public\ :}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{/*\ ***********************************************************************}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ *}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ *\ Constructeurs\ et\ destructeur}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ *}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ *\ **********************************************************************/}}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_cercle_a4ad845f26156d6623644e9e468b42985}{Cercle}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{double}\ rayon,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ couleur)\ :\ \mbox{\hyperlink{class_forme}{Forme}}(couleur),\_centre(x,y)\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cercle_ab166965772a83365ac4b7514c0089434}{setRayon}}(rayon);}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_cercle_a2e29329a104717efb888206de5e9b557}{Cercle}}(\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \_centre,\ \textcolor{keywordtype}{double}\ rayon,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ couleur)\ :\ \mbox{\hyperlink{class_forme}{Forme}}(couleur),\ \_rayon(rayon),\_centre(\_centre)\ \{\}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_cercle_a8749eabc689e99c4739b332712791997}{\string~Cercle}}()\ \{\}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ \ *\ GETTER\ ET\ SETTER}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \&\mbox{\hyperlink{class_cercle_a7f3717971519416c789f42ee771ab9ef}{getCentre}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cercle_ac32cf43ab91937caf98d1a130f99937c}{setCentre}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \&centre);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_cercle_abc1c953fd5ef431158e89dc8344b1de1}{getRayon}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cercle_ab166965772a83365ac4b7514c0089434}{setRayon}}(\textcolor{keywordtype}{double}\ rayon);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ \ *\ Clone\ et\ constructeur\ par\ copie}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00080\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{class_cercle}{Cercle}}*\ \mbox{\hyperlink{class_cercle_aa1990e18112f2fdd860571c576232d3f}{clone}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{class_cercle}{Cercle}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_cercle}{Cercle}}\&\ op);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00097\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00098\ \textcolor{comment}{\ \ \ \ \ *\ Methodes\ pour\ avoir\ les\ points\ min\ et\ max}}
+\DoxyCodeLine{00099\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00100\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_cercle_a5fbe38425646ad5513a821522fdb3743}{getMinXMinY}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_cercle_aec6f3a64b437d98fc86c4168dde01840}{getMaxXMaxY}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00115\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00116\ \textcolor{comment}{\ \ \ \ \ *\ Methodes\ pour\ les\ opérations\ géométriques\ translation,\ homothétie,\ rotation}}
+\DoxyCodeLine{00117\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00118\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cercle_ac2f98cb38e70363fb07c85ab31850550}{translation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\&\ u);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cercle_af2d702bdebb85918b155b2eded4ea5e4}{homothetie}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\&\ u,\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ k);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cercle_a25d20eedd04c91196ed85d1530410a09}{rotation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \&u,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ angle\ );}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00138\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00139\ \textcolor{comment}{\ \ \ \ \ *\ Methodes\ pour\ calculerAire\ et\ getCentreDeSymetrie}}
+\DoxyCodeLine{00140\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00141\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_cercle_ae9364bba0a4078a03ab45a6af00ecb40}{calculerAire}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_cercle_a86b9c6a66383fdbc0cdfc6475ae7b6f7}{getCentreDeSymetrie}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00152\ \textcolor{comment}{\ \ \ \ \ *\ Methodes\ operator}}
+\DoxyCodeLine{00153\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_cercle}{Cercle}}\&\ \mbox{\hyperlink{class_cercle_a2ca2749b6e6a40f8ce5564e92d65b703}{operator\ =\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_cercle}{Cercle}}\&\ op);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cercle_a5b5b604113fe1db7b63624892c968c04}{operator\ ==\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_cercle}{Cercle}}\&\ op)\textcolor{keyword}{const};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cercle_a94722ce86b2a0e376e70f9b5142721d0}{operator\ !=\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_cercle}{Cercle}}\&\ op)\textcolor{keyword}{const};}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00180\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00181\ \textcolor{comment}{\ \ \ \ \ *\ Methodes\ pour\ l'affichage}}
+\DoxyCodeLine{00182\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{00183\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keyword}{operator}\ string()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{inline}\ ostream\&\ \mbox{\hyperlink{class_cercle_a5daa39c429c1b0abde147b5283057bff}{operator\ <<\ }}(ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_cercle}{Cercle}}\&\ c);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00194\ \textcolor{comment}{\ \ \ \ \ *\ \ Visiteur}}
+\DoxyCodeLine{00195\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{class_cercle_ae66987e05626da1d86281e8ca9af238f}{dessine}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_visiteur_de_librairie}{VisiteurDeLibrairie}}\ *visiteur,\ SOCKET\ s)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{class_cercle_ad8e5ed068c675256609c8e4a979a92eb}{sauvegarde}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_visiteur_de_sauvegarde}{VisiteurDeSauvegarde}}\ *visiteur)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00199\ \};}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00206\ \textcolor{keyword}{inline}\ ostream\&\ operator\ <<\ (ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_cercle}{Cercle}}\&\ s)}
+\DoxyCodeLine{00207\ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ (string)s;}
+\DoxyCodeLine{00209\ \}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ }
+
+\end{DoxyCode}

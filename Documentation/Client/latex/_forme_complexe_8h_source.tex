@@ -1,0 +1,67 @@
+\hypertarget{_forme_complexe_8h_source}{}\doxysection{Forme\+Complexe.\+h}
+\label{_forme_complexe_8h_source}\index{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Formes/FormeComplexe.h@{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Formes/FormeComplexe.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Forme.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_forme_complexe}{FormeComplexe}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_forme}{Forme}}\{}
+\DoxyCodeLine{00011\ private\ :}
+\DoxyCodeLine{00012\ \ \ \ \ vector<Forme*>\ listeFormes;}
+\DoxyCodeLine{00013\ public\ :}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ /***\ Constructeur\ ***/}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_forme_complexe}{FormeComplexe}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ couleur=0xFFFFFF);}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_forme_complexe}{FormeComplexe}}(vector<Forme*>\ listeFormes,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ couleur=0xFFFFFF);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_forme_complexe}{FormeComplexe}}*\ \mbox{\hyperlink{class_forme_complexe_a06ec51111189175fe7f10b8d66c71708}{clone}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ /***\ Destructeur\ ***/}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_forme_complexe}{\string~FormeComplexe}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_forme_complexe}{FormeComplexe}}\&\ \mbox{\hyperlink{class_forme_complexe_a182be3a3e11e27df35d445d1deb3507c}{ajouterForme}}(\mbox{\hyperlink{class_forme}{Forme}}*\ forme);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_forme_complexe_acadd094b22bb2d96af55bfeccc3c5b57}{supprimerForme}}(\mbox{\hyperlink{class_forme}{Forme}}*\ forme);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_forme_complexe_a7f45b1afd11f41af8f6dd874792a540e}{supprimerListeFormes}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_forme}{Forme}}*\ \mbox{\hyperlink{class_forme_complexe_a8be19d3ed8c207ada2dc7d92a46a10da}{getForme}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ i)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_forme_complexe}{FormeComplexe}}\&\ \mbox{\hyperlink{class_forme_complexe_acdc3fbb88b56aab59ba12e09de3984bb}{setCouleurListeFormes}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ couleur);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_forme_complexe_a7f4030e54e887e4424190a5d307deaa7}{getNombreFormes}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ vector<Forme*>\ \mbox{\hyperlink{class_forme_complexe_a06e205bc538ead141dc2756c8535472c}{getListeFormes}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_forme_complexe_aa2fbcebcb0aeebeccf83ca2dbd1c6735}{getMinXMinY}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_forme_complexe_a386159aee858a53c4d7d9e7e184ddc7a}{getMaxXMaxY}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_forme_complexe_a5f9ff27c8cbb6a37c2dcff6e28e6272f}{calculerAire}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_forme_complexe_ac302bfe7be406269d542587fb795de54}{getCentreDeSymetrie}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_forme_complexe_ae88d936e90cbd10e20fa836ed6885aaf}{translation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \&u);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_forme_complexe_ad8a4d75f6042f51f82a0712103689a7f}{homothetie}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \&d,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \&k);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_forme_complexe_a9fa2cceb2b50452c77a680cccadd8cea}{rotation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \&u,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ angle);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{operator}\ string()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{inline}\ ostream\&\ operator<<(ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_forme_complexe}{FormeComplexe}}\&\ formeComplexe);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00083\ \textcolor{comment}{\ \ \ \ \ *\ Visiteur}}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{class_forme_complexe_af2a2c8ad81b02231f4e5c8d5a67da222}{dessine}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_visiteur_de_librairie}{VisiteurDeLibrairie}}\ *visiteur,\ SOCKET\ s)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{class_forme_complexe_aa6cffd9f5e6032b3fdf7ae7ad5db8271}{sauvegarde}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_visiteur_de_sauvegarde}{VisiteurDeSauvegarde}}\ *visiteur)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ \textcolor{keyword}{inline}\ ostream\&\ operator<<(ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_forme_complexe}{FormeComplexe}}\&\ formeComplexe)\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ os\ <<\ (string)\ formeComplexe;}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00092\ \}}
+
+\end{DoxyCode}

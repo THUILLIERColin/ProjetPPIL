@@ -1,0 +1,70 @@
+\hypertarget{_forme_8h_source}{}\doxysection{Forme.\+h}
+\label{_forme_8h_source}\index{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Formes/Forme.h@{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Formes/Forme.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Matrices2x2.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../Erreur/Erreur.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <pcap/socket.h>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_visiteur_de_librairie}{VisiteurDeLibrairie}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_visiteur_de_sauvegarde}{VisiteurDeSauvegarde}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_forme}{Forme}}\ \{}
+\DoxyCodeLine{00015\ protected\ :}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//couleur\ doit\ etre\ en\ hexadécimal}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \_couleur;}
+\DoxyCodeLine{00018\ public\ :}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_forme_a3c97c1066856b548d2fe6db963a28800}{Forme}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_forme_ac728a1d9f825dc5107c99304f24819a2}{Forme}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ couleur)\ :\ \_couleur(couleur)\ \{\}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_forme}{Forme}}*\ \mbox{\hyperlink{class_forme_aa846673739124ed44293ceaf515f3fa8}{clone}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_forme_a15013c3078f01eb3e7a83942e1195de7}{Forme}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_forme}{Forme}}\&\ forme)\{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \_couleur\ =\ forme.\_couleur;}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_forme_ab4582182a0cd4da315743afce6c7f05c}{\string~Forme}}()\ \{\}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_forme_af35680d96ba85f6fb681c967e8f5a8b4}{getMinXMinY}}()\ \textcolor{keyword}{const}\ =0;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_forme_a5ae7d912ab350908ebaf9f42f3dd2a6f}{getMaxXMaxY}}()\ \textcolor{keyword}{const}\ =0;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_forme_a6af8483db79d8bd579684ccf757cc9d2}{setCouleur}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ c)\{\ \_couleur\ =\ c;\}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_forme_a12168fce934953532cbc5d934d3fa3a9}{getCouleur}}()\textcolor{keyword}{\ const}\{\ \textcolor{keywordflow}{return}\ \_couleur;\}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_forme_a5669145fc53281f5577ee673c8bc4be3}{calculerAire}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \mbox{\hyperlink{class_forme_ae6b450418bb3263a66405057031fe5ec}{getCentreDeSymetrie}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_forme_af1af1437480ea5166aef1cf32f8d2803}{translation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\&\ u)\ =\ 0;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_forme_a4e18c6cdb9a907ff80c232774e4f890c}{homothetie}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\&,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ k)\ =\ 0;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_forme_a07e7d34529a8f71f9e1c879a6be622de}{rotation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\ \&u,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ angle\ )\ =\ 0;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{operator}\ string()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ ostringstream\ os;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}couleur\ :\ "{}}\ <<\ \_couleur\ <<\ endl;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os.str();}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{inline}\ ostream\&\ \mbox{\hyperlink{class_forme_a99103cfdf249d6a65733bce71fa91190}{operator<<}}(ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_forme}{Forme}}\&\ forme)\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ os\ <<\ (string)\ forme;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{class_forme_a828653a2c1aec4a5acbaf2ae7798d68b}{dessine}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_visiteur_de_librairie}{VisiteurDeLibrairie}}\ *visiteur,\ SOCKET\ s)\ \textcolor{keyword}{const}=0;}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{class_forme_a425e5b66e137ad8ff4a1093a9fba2b02}{sauvegarde}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_visiteur_de_sauvegarde}{VisiteurDeSauvegarde}}\ *visiteur)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00129\ \};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ }
+
+\end{DoxyCode}

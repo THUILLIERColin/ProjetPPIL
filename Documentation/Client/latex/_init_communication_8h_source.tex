@@ -1,0 +1,107 @@
+\hypertarget{_init_communication_8h_source}{}\doxysection{Init\+Communication.\+h}
+\label{_init_communication_8h_source}\index{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Communication/InitCommunication.h@{/Users/thuillercolin/Documents/Cours/License/L3\_Maths-\/Info/S6/PPIL/ProjetPPIL/PPIL/ProjetPPIL/ClienCpp/Communication/InitCommunication.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <pcap/socket.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <sys/socket.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <netinet/in.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <arpa/inet.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}../Erreur/Erreur.h"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ INVALID\_SOCKET\ -\/1}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ SOCKET\_ERROR\ -\/1}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }sockaddr\_in\ SOCKADDR\_IN;}
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }sockaddr\ SOCKADDR;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_init_communication}{InitCommunication}}\ \{}
+\DoxyCodeLine{00026\ private\ :}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ r;\ \textcolor{comment}{//\ variable\ de\ retour\ des\ fonctions}}
+\DoxyCodeLine{00028\ \ \ \ \ SOCKET\ sock;\ \textcolor{comment}{//\ informations\ concernant\ le\ socket\ à\ créer\ :\ famille\ d'adresses\ acceptées,\ mode\ connecté\ ou\ non,\ protocole}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ connecter\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ true\ si\ le\ client\ est\ connecté\ au\ serveur}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_init_communication}{InitCommunication}}\ *instance;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_init_communication}{InitCommunication}}()\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ création\ du\ socket}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ familleAdresses\ =\ AF\_INET;\ \textcolor{comment}{//\ famille\ d'adresses\ acceptées\ :\ AF\_INET\ pour\ IPv4}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ typeSocket\ =\ SOCK\_STREAM;\ \textcolor{comment}{//\ mode\ connecté\ :\ SOCK\_STREAM\ pour\ TCP}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ protocole\ =\ IPPROTO\_TCP;\ \textcolor{comment}{//\ protocole\ :\ 0\ pour\ TCP\ ou\ UDP}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ sock\ =\ socket(familleAdresses,\ typeSocket,\ protocole);\ \textcolor{comment}{//\ création\ du\ socket}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sock\ ==\ INVALID\_SOCKET)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ ostringstream\ oss;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ oss\ <<\ \textcolor{stringliteral}{"{}la\ création\ du\ socket\ a\ échoué\ :\ code\ d'erreur\ =\ "{}}\ <<\ INVALID\_SOCKET\ <<\ endl;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_erreur}{Erreur}}(oss.str().c\_str());}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_init_communication}{InitCommunication}}\ *\mbox{\hyperlink{class_init_communication_aeac357befc87a2245f6081f2ce478c88}{getInstance}}()\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (instance\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_init_communication}{InitCommunication}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_init_communication_a4e9cb02695318193e2dacb3d781d9c3d}{\string~InitCommunication}}()\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ instance;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_init_communication_a65f32d26af16294f3cc4755bb513cbe1}{deconnexion}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_init_communication_a65f32d26af16294f3cc4755bb513cbe1}{deconnexion}}()\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (connecter)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ r\ =\ close(sock);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (r\ ==\ SOCKET\_ERROR)\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ostringstream\ oss;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ oss\ <<\ \textcolor{stringliteral}{"{}la\ fermeture\ du\ socket\ a\ échoué\ :\ code\ d'erreur\ =\ "{}}\ <<\ SOCKET\_ERROR\ <<\ endl;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_erreur}{Erreur}}(oss.str().c\_str());}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ connecter\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_init_communication_a8fe706542748b4bfe89ba7dcd7c21b28}{demarrerConnection}}(\textcolor{keywordtype}{int}\ port,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *adresse)\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ On\ vérifie\ que\ le\ client\ n'est\ pas\ déjà\ connecté}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (connecter)\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_erreur}{Erreur}}(\textcolor{stringliteral}{"{}Le\ client\ est\ déjà\ connecté"{}});}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ connecter\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Configuration\ de\ la\ connexion}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ SOCKADDR\_IN\ sockaddr;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ sockaddr.sin\_addr.s\_addr\ =\ inet\_addr(adresse);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ sockaddr.sin\_family\ =\ AF\_INET;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ sockaddr.sin\_port\ =\ htons(port);}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ r\ =\ connect(sock,\ (SOCKADDR\ *)\ \&sockaddr,\ \textcolor{keyword}{sizeof}(sockaddr));}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (r\ ==\ SOCKET\_ERROR)\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_erreur}{Erreur}}(\textcolor{stringliteral}{"{}Erreur\ lors\ du\ bind\ du\ socket"{}});}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_init_communication_abb73e71012a0220b9ee50db2a96ac938}{getR}}()\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_init_communication_ae14d47f5ce13b73fe266c08d9e47ff74}{getConnecter}}()\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ connecter;}
+\DoxyCodeLine{00127\ \ \ \ \ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00133\ \ \ \ \ SOCKET\ \mbox{\hyperlink{class_init_communication_a611dfb41765ac9ad5ebcc7716d726c70}{getSocket}}()\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sock;}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \};}
+
+\end{DoxyCode}

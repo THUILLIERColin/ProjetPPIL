@@ -138,8 +138,8 @@ int main(){
          Cercle cercleEnvoyee2(500, 550, 50, 0x000000);
 
          Polygone polygoneEnvoye(0x000000);
-         polygoneEnvoye.addPoint(Vecteur2D(350,600));
-         polygoneEnvoye.addPoint(Vecteur2D(450,650));
+         polygoneEnvoye.addPoint(Vecteur2D(350,500));
+         polygoneEnvoye.addPoint(Vecteur2D(450,500));
          polygoneEnvoye.addPoint(Vecteur2D(450,200));
          polygoneEnvoye.addPoint(Vecteur2D(350,200));
 
@@ -152,9 +152,8 @@ int main(){
          formeComplexeEnvoyee.ajouterForme(&polygoneEnvoye);
          formeComplexeEnvoyee.ajouterForme(&cercleEnvoyee3);
 
-
-
          formeComplexeEnvoyee.dessine(new VisiteurDeLibrairieJava(), InitCommunication::getInstance()->getSocket());
+         cout << "Requete envoyee : " << formeComplexeEnvoyee << endl;
 
          InitCommunication::getInstance()->deconnexion();
      }

@@ -1,0 +1,111 @@
+\hypertarget{class_chain_of_responsibility_1_1_expert_dessiner}{}\doxysection{Référence de la classe Chain\+Of\+Responsibility.\+Expert\+Dessiner}
+\label{class_chain_of_responsibility_1_1_expert_dessiner}\index{ChainOfResponsibility.ExpertDessiner@{ChainOfResponsibility.ExpertDessiner}}
+Graphe d\textquotesingle{}héritage de Chain\+Of\+Responsibility.\+Expert\+Dessiner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.453287cm]{class_chain_of_responsibility_1_1_expert_dessiner}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_dessiner_ae2a5eb7ab11210ad88a882de6f07d4f7}{Expert\+Dessiner}} (\mbox{\hyperlink{class_chain_of_responsibility_1_1_expert}{Expert}} suivant)
+\item 
+\mbox{\hyperlink{class_chain_of_responsibility_1_1_expert}{Expert}} \mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_dessiner_aac91da592b1bce1e150f7592468a9d23}{get\+\_\+suivant}} ()
+\item 
+boolean \mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_dessiner_a91c3fa1db3441cee3fc22009c6b3ca1a}{envoie\+Au\+Parseur}} (String requete, \mbox{\hyperlink{class_monde_1_1_dessiner_1_1_fenetre_de_dessin}{Fenetre\+De\+Dessin}} fenetre\+De\+Dessin, boolean meme\+Fenetre, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmin, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmax)  throws Interrupted\+Exception 
+\item 
+abstract boolean \mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_dessiner_a10762c74f66ecacfaf7ce65be1bbff28}{dessiner}} (String requete, \mbox{\hyperlink{class_monde_1_1_dessiner_1_1_fenetre_de_dessin}{Fenetre\+De\+Dessin}} fenetre\+De\+Dessin, boolean meme\+Fenetre, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmin, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmax)  throws Interrupted\+Exception
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+abstract boolean \mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_a30a3a7a6c86d496ca5177a64b2544311}{envoie\+Au\+Parseur}} (String requete, \mbox{\hyperlink{class_monde_1_1_dessiner_1_1_fenetre_de_dessin}{Fenetre\+De\+Dessin}} fenetre\+De\+Dessin, boolean meme\+Fenetre, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmin, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmax)  throws Interrupted\+Exception
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_chain_of_responsibility_1_1_expert_dessiner_ae2a5eb7ab11210ad88a882de6f07d4f7}\label{class_chain_of_responsibility_1_1_expert_dessiner_ae2a5eb7ab11210ad88a882de6f07d4f7}} 
+\index{ChainOfResponsibility.ExpertDessiner@{ChainOfResponsibility.ExpertDessiner}!ExpertDessiner@{ExpertDessiner}}
+\index{ExpertDessiner@{ExpertDessiner}!ChainOfResponsibility.ExpertDessiner@{ChainOfResponsibility.ExpertDessiner}}
+\doxysubsubsection{\texorpdfstring{ExpertDessiner()}{ExpertDessiner()}}
+{\footnotesize\ttfamily Chain\+Of\+Responsibility.\+Expert\+Dessiner.\+Expert\+Dessiner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chain_of_responsibility_1_1_expert}{Expert}}}]{suivant }\end{DoxyParamCaption})}
+
+Constructeur de l\textquotesingle{}expert de dessin 
+\begin{DoxyParams}{Paramètres}
+{\em suivant} & expert suivant \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_chain_of_responsibility_1_1_expert_dessiner_a10762c74f66ecacfaf7ce65be1bbff28}\label{class_chain_of_responsibility_1_1_expert_dessiner_a10762c74f66ecacfaf7ce65be1bbff28}} 
+\index{ChainOfResponsibility.ExpertDessiner@{ChainOfResponsibility.ExpertDessiner}!dessiner@{dessiner}}
+\index{dessiner@{dessiner}!ChainOfResponsibility.ExpertDessiner@{ChainOfResponsibility.ExpertDessiner}}
+\doxysubsubsection{\texorpdfstring{dessiner()}{dessiner()}}
+{\footnotesize\ttfamily abstract boolean Chain\+Of\+Responsibility.\+Expert\+Dessiner.\+dessiner (\begin{DoxyParamCaption}\item[{String}]{requete,  }\item[{\mbox{\hyperlink{class_monde_1_1_dessiner_1_1_fenetre_de_dessin}{Fenetre\+De\+Dessin}}}]{fenetre\+De\+Dessin,  }\item[{boolean}]{meme\+Fenetre,  }\item[{\mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}}}]{Vmin,  }\item[{\mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}}}]{Vmax }\end{DoxyParamCaption}) throws Interrupted\+Exception\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Méthode qui permet de dessiner la requete dans le cadre de dessin si possible 
+\begin{DoxyParams}{Paramètres}
+{\em requete} & forme à dessiner \\
+\hline
+{\em fenetre\+De\+Dessin} & cadre de dessin \\
+\hline
+{\em meme\+Fenetre} & sert a savoir si on dessine dans la meme fenetre \\
+\hline
+{\em Vmin} & vecteur minimum \\
+\hline
+{\em Vmax} & vecteur maximum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vrai si la requete a été traitée, faux sinon 
+\end{DoxyReturn}
+
+
+Réimplémentée dans \mbox{\hyperlink{class_chain_of_responsibility_1_1_dessiner_cercle_a64bad954bda68cbee892726b5c771eaa}{Chain\+Of\+Responsibility.\+Dessiner\+Cercle}}, \mbox{\hyperlink{class_chain_of_responsibility_1_1_dessiner_forme_complexe_ac65bbcfe80645d243af483feabb8d610}{Chain\+Of\+Responsibility.\+Dessiner\+Forme\+Complexe}}, \mbox{\hyperlink{class_chain_of_responsibility_1_1_dessiner_polygone_abc23a28d300f4a047ee6235f201d0d07}{Chain\+Of\+Responsibility.\+Dessiner\+Polygone}}, et \mbox{\hyperlink{class_chain_of_responsibility_1_1_dessiner_segment_a08e85515d7bb1af5e2a8b4af81749816}{Chain\+Of\+Responsibility.\+Dessiner\+Segment}}.
+
+\mbox{\Hypertarget{class_chain_of_responsibility_1_1_expert_dessiner_a91c3fa1db3441cee3fc22009c6b3ca1a}\label{class_chain_of_responsibility_1_1_expert_dessiner_a91c3fa1db3441cee3fc22009c6b3ca1a}} 
+\index{ChainOfResponsibility.ExpertDessiner@{ChainOfResponsibility.ExpertDessiner}!envoieAuParseur@{envoieAuParseur}}
+\index{envoieAuParseur@{envoieAuParseur}!ChainOfResponsibility.ExpertDessiner@{ChainOfResponsibility.ExpertDessiner}}
+\doxysubsubsection{\texorpdfstring{envoieAuParseur()}{envoieAuParseur()}}
+{\footnotesize\ttfamily boolean Chain\+Of\+Responsibility.\+Expert\+Dessiner.\+envoie\+Au\+Parseur (\begin{DoxyParamCaption}\item[{String}]{requete,  }\item[{\mbox{\hyperlink{class_monde_1_1_dessiner_1_1_fenetre_de_dessin}{Fenetre\+De\+Dessin}}}]{fenetre\+De\+Dessin,  }\item[{boolean}]{meme\+Fenetre,  }\item[{\mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}}}]{Vmin,  }\item[{\mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}}}]{Vmax }\end{DoxyParamCaption}) throws Interrupted\+Exception}
+
+Méthode qui permet de passer la requete a l\textquotesingle{}expert suivant si l\textquotesingle{}expert courant ne peut pas la traiter 
+\begin{DoxyParams}{Paramètres}
+{\em requete} & requete de la forme dessiner \\
+\hline
+{\em fenetre\+De\+Dessin} & cadre de dessin \\
+\hline
+{\em meme\+Fenetre} & sert a savoir si on dessine dans la meme fenetre si on est dans un groupe \\
+\hline
+{\em Vmin} & vecteur minimum \\
+\hline
+{\em Vmax} & vecteur maximum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la forme a été dessinée, false sinon 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Interrupted\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_a30a3a7a6c86d496ca5177a64b2544311}{Chain\+Of\+Responsibility.\+Expert}}.
+
+\mbox{\Hypertarget{class_chain_of_responsibility_1_1_expert_dessiner_aac91da592b1bce1e150f7592468a9d23}\label{class_chain_of_responsibility_1_1_expert_dessiner_aac91da592b1bce1e150f7592468a9d23}} 
+\index{ChainOfResponsibility.ExpertDessiner@{ChainOfResponsibility.ExpertDessiner}!get\_suivant@{get\_suivant}}
+\index{get\_suivant@{get\_suivant}!ChainOfResponsibility.ExpertDessiner@{ChainOfResponsibility.ExpertDessiner}}
+\doxysubsubsection{\texorpdfstring{get\_suivant()}{get\_suivant()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_chain_of_responsibility_1_1_expert}{Expert}} Chain\+Of\+Responsibility.\+Expert\+Dessiner.\+get\+\_\+suivant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode qui return l\textquotesingle{}expert suivant \begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}expert suivant 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/thuillercolin/\+Documents/\+Cours/\+License/\+L3\+\_\+\+Maths-\/\+Info/\+S6/\+PPIL/\+Projet\+PPIL/\+PPIL/\+Projet\+PPIL/\+Serveur\+Java\+PPIL/\+Chain\+Of\+Responsibility/Expert\+Dessiner.\+java\end{DoxyCompactItemize}

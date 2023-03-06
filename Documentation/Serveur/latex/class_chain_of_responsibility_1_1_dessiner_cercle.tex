@@ -1,0 +1,78 @@
+\hypertarget{class_chain_of_responsibility_1_1_dessiner_cercle}{}\doxysection{Référence de la classe Chain\+Of\+Responsibility.\+Dessiner\+Cercle}
+\label{class_chain_of_responsibility_1_1_dessiner_cercle}\index{ChainOfResponsibility.DessinerCercle@{ChainOfResponsibility.DessinerCercle}}
+Graphe d\textquotesingle{}héritage de Chain\+Of\+Responsibility.\+Dessiner\+Cercle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_chain_of_responsibility_1_1_dessiner_cercle}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_chain_of_responsibility_1_1_dessiner_cercle_ab4c7e46f28ab05a0865530f48864cd37}{Dessiner\+Cercle}} (\mbox{\hyperlink{class_chain_of_responsibility_1_1_expert}{Expert}} suivant)
+\item 
+boolean \mbox{\hyperlink{class_chain_of_responsibility_1_1_dessiner_cercle_a64bad954bda68cbee892726b5c771eaa}{dessiner}} (String requete, \mbox{\hyperlink{class_monde_1_1_dessiner_1_1_fenetre_de_dessin}{Fenetre\+De\+Dessin}} fenetre\+De\+Dessin, boolean meme\+Fenetre, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmin, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmax)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_dessiner}{Chain\+Of\+Responsibility.\+Expert\+Dessiner}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_dessiner_ae2a5eb7ab11210ad88a882de6f07d4f7}{Expert\+Dessiner}} (\mbox{\hyperlink{class_chain_of_responsibility_1_1_expert}{Expert}} suivant)
+\item 
+\mbox{\hyperlink{class_chain_of_responsibility_1_1_expert}{Expert}} \mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_dessiner_aac91da592b1bce1e150f7592468a9d23}{get\+\_\+suivant}} ()
+\item 
+boolean \mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_dessiner_a91c3fa1db3441cee3fc22009c6b3ca1a}{envoie\+Au\+Parseur}} (String requete, \mbox{\hyperlink{class_monde_1_1_dessiner_1_1_fenetre_de_dessin}{Fenetre\+De\+Dessin}} fenetre\+De\+Dessin, boolean meme\+Fenetre, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmin, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmax)  throws Interrupted\+Exception 
+\item 
+abstract boolean \mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_dessiner_a10762c74f66ecacfaf7ce65be1bbff28}{dessiner}} (String requete, \mbox{\hyperlink{class_monde_1_1_dessiner_1_1_fenetre_de_dessin}{Fenetre\+De\+Dessin}} fenetre\+De\+Dessin, boolean meme\+Fenetre, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmin, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmax)  throws Interrupted\+Exception
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+abstract boolean \mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_a30a3a7a6c86d496ca5177a64b2544311}{envoie\+Au\+Parseur}} (String requete, \mbox{\hyperlink{class_monde_1_1_dessiner_1_1_fenetre_de_dessin}{Fenetre\+De\+Dessin}} fenetre\+De\+Dessin, boolean meme\+Fenetre, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmin, \mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}} Vmax)  throws Interrupted\+Exception
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_chain_of_responsibility_1_1_dessiner_cercle_ab4c7e46f28ab05a0865530f48864cd37}\label{class_chain_of_responsibility_1_1_dessiner_cercle_ab4c7e46f28ab05a0865530f48864cd37}} 
+\index{ChainOfResponsibility.DessinerCercle@{ChainOfResponsibility.DessinerCercle}!DessinerCercle@{DessinerCercle}}
+\index{DessinerCercle@{DessinerCercle}!ChainOfResponsibility.DessinerCercle@{ChainOfResponsibility.DessinerCercle}}
+\doxysubsubsection{\texorpdfstring{DessinerCercle()}{DessinerCercle()}}
+{\footnotesize\ttfamily Chain\+Of\+Responsibility.\+Dessiner\+Cercle.\+Dessiner\+Cercle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chain_of_responsibility_1_1_expert}{Expert}}}]{suivant }\end{DoxyParamCaption})}
+
+Constructeur de l\textquotesingle{}expert de dessin 
+\begin{DoxyParams}{Paramètres}
+{\em suivant} & expert suivant \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_chain_of_responsibility_1_1_dessiner_cercle_a64bad954bda68cbee892726b5c771eaa}\label{class_chain_of_responsibility_1_1_dessiner_cercle_a64bad954bda68cbee892726b5c771eaa}} 
+\index{ChainOfResponsibility.DessinerCercle@{ChainOfResponsibility.DessinerCercle}!dessiner@{dessiner}}
+\index{dessiner@{dessiner}!ChainOfResponsibility.DessinerCercle@{ChainOfResponsibility.DessinerCercle}}
+\doxysubsubsection{\texorpdfstring{dessiner()}{dessiner()}}
+{\footnotesize\ttfamily boolean Chain\+Of\+Responsibility.\+Dessiner\+Cercle.\+dessiner (\begin{DoxyParamCaption}\item[{String}]{requete,  }\item[{\mbox{\hyperlink{class_monde_1_1_dessiner_1_1_fenetre_de_dessin}{Fenetre\+De\+Dessin}}}]{fenetre\+De\+Dessin,  }\item[{boolean}]{meme\+Fenetre,  }\item[{\mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}}}]{Vmin,  }\item[{\mbox{\hyperlink{class_monde_1_1_vecteur2_d}{Vecteur2D}}}]{Vmax }\end{DoxyParamCaption})}
+
+Méthode qui permet de dessiner la requete dans le cadre de dessin si possible 
+\begin{DoxyParams}{Paramètres}
+{\em requete} & forme à dessiner \\
+\hline
+{\em fenetre\+De\+Dessin} & cadre de dessin \\
+\hline
+{\em meme\+Fenetre} & sert a savoir si on dessine dans la meme fenetre \\
+\hline
+{\em Vmin} & vecteur minimum \\
+\hline
+{\em Vmax} & vecteur maximum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vrai si la requete a été traitée, faux sinon 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_chain_of_responsibility_1_1_expert_dessiner_a10762c74f66ecacfaf7ce65be1bbff28}{Chain\+Of\+Responsibility.\+Expert\+Dessiner}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/thuillercolin/\+Documents/\+Cours/\+License/\+L3\+\_\+\+Maths-\/\+Info/\+S6/\+PPIL/\+Projet\+PPIL/\+PPIL/\+Projet\+PPIL/\+Serveur\+Java\+PPIL/\+Chain\+Of\+Responsibility/Dessiner\+Cercle.\+java\end{DoxyCompactItemize}
