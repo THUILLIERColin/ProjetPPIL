@@ -4,6 +4,10 @@ import Monde.Dessiner.FenetreDeDessin;
 import Monde.Vecteur2D;
 
 public class DessinerFormeComplexe extends ExpertDessiner {
+    /**
+     * Constructeur de la classe DessinerFormeComplexe
+     * @param suivant expert suivant
+     */
     public DessinerFormeComplexe(Expert suivant) {
         super(suivant);
     }

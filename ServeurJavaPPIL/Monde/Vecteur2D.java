@@ -38,10 +38,18 @@ public class Vecteur2D {
         return new Vecteur2D(x, y);
     }
 
+    /**
+     * Getter de la coordonnée x du vecteur
+     * @return coordonnée x du vecteur
+     */
     public double getX() {
         return x;
     }
 
+    /**
+     * Getter de la coordonnée y du vecteur
+     * @return coordonnée y du vecteur
+     */
     public double getY() {
         return y;
     }

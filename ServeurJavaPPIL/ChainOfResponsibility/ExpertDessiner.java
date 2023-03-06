@@ -22,6 +22,16 @@ public abstract class ExpertDessiner extends Expert {
         return _suivant;
     }
 
+    /**
+     * Méthode qui permet de passer la requete a l'expert suivant si l'expert courant ne peut pas la traiter
+     * @param requete requete de la forme dessiner
+     * @param fenetreDeDessin cadre de dessin
+     * @param memeFenetre sert a savoir si on dessine dans la meme fenetre si on est dans un groupe
+     * @param Vmin vecteur minimum
+     * @param Vmax vecteur maximum
+     * @return true si la forme a été dessinée, false sinon
+     * @throws InterruptedException
+     */
     @Override
     public boolean envoieAuParseur(String requete, FenetreDeDessin fenetreDeDessin, boolean memeFenetre, Vecteur2D Vmin, Vecteur2D Vmax) throws InterruptedException {
         if(!dessiner(requete, fenetreDeDessin, memeFenetre, Vmin, Vmax)){

@@ -9,11 +9,9 @@
 
 using namespace std;
 
-/************************************************************************
- *
+/*
  * GETTER ET SETTER
- *
- * **********************************************************************/
+ */
 
 const Vecteur2D &Segment::getVecteur1() const {
     return Vecteur1;
@@ -31,11 +29,9 @@ void Segment::setVecteur2(const Vecteur2D &vecteur) {
     Segment::Vecteur2 = vecteur;
 }
 
-/************************************************************************
- *
+/*
  * Methodes pour avoir les points min et max
- *
- * **********************************************************************/
+ */
 Vecteur2D Segment::getMinXMinY() const {
 
     double minX = Vecteur1.x < Vecteur2.x ? Vecteur1.x : Vecteur2.x;
@@ -50,11 +46,9 @@ Vecteur2D Segment::getMaxXMaxY() const {
     return Vecteur2D(maxX,maxY);
 }
 
-    /************************************************************************
-     *
+    /*
      * Methodes pour les opérations géométriques translation, homothétie, rotation
-     *
-     * **********************************************************************/
+     */
 
 /**
    * \Descprition Opération de translation
@@ -106,11 +100,10 @@ Segment::operator string() const{
     return ss.str();
 }
 
-/************************************************************************
-*
+/**
 * Methodes pour calculerAire et getCentreDeSymetrie
 *
-* **********************************************************************/
+*/
 
 /** @brief  Calculer l'aire du segment (0)
  * @return 0
@@ -128,9 +121,9 @@ Vecteur2D Segment::getCentreDeSymetrie() const
     return g;
 }
 
-/************************************************************************
+/*
  * Implémentation des visiteurs
- ***********************************************************************/
+ */
 
 const void *Segment::dessine(const VisiteurDeLibrairie *visiteur, SOCKET s) const {
     return visiteur->visite(this,s);

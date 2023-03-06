@@ -10,7 +10,6 @@ import java.awt.*;
 public class DessinerCercle extends ExpertDessiner{
     /**
      * Constructeur de l'expert de dessin
-     *
      * @param suivant expert suivant
      */
     public DessinerCercle(Expert suivant) {

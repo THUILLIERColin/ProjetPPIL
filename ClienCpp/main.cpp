@@ -90,7 +90,7 @@ int main(){
     cout << "\t - Calcul du point le plus à gauche et le plus en bas : " << p.getMinXMinY() << endl;
     cout << "\t - Calcul du point le plus à droite et le plus en haut : " << p.getMaxXMaxY() << endl;
     p.translation(Vecteur2D(2,1));
-    cout << "\tOn applique la translation (2,1) : " << p << endl;
+    cout << "On applique la translation (2,1) : " << p << endl;
     cout << "\t - Calcul du centre de symétrie après translation : " << p.getCentreDeSymetrie() << endl;
     cout << "\t - Calcul du point le plus à gauche et le plus en bas après translation : " << p.getMinXMinY() << endl;
     cout << "\t - Calcul du point le plus à droite et le plus en haut après translation : " << p.getMaxXMaxY() << endl;

@@ -8,6 +8,9 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferStrategy;
 
+/**
+ * Classe FenetreDeDessin : classe qui permet d'initialiser la fenetre de dessin
+ */
 public class FenetreDeDessin extends Frame {
 
     public final static int LARGEUR = 600; // La largeur de la fenętre

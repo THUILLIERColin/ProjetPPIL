@@ -159,10 +159,6 @@ Polygone::operator string() const {
     return os.str();
 }
 
-/****************************************************************************************
- * Implementation des visiteurs
- ****************************************************************************************/
-
 const void *Polygone::dessine(const VisiteurDeLibrairie *visiteur, SOCKET s) const
 {
     return visiteur->visite(this, s);

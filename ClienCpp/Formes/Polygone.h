@@ -102,9 +102,9 @@ public :
      */
     friend inline ostream& operator<<(ostream& os, const Polygone& p);
 
-    /************************************************************************
-     * Visiteurs
-     * **********************************************************************/
+    /*
+     *  Visiteur
+     */
     const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET s) const;
     const void* sauvegarde(const VisiteurDeSauvegarde *visiteur) const;
 

@@ -5,7 +5,7 @@
 #pragma once
 
 /**
- * Cette classe enum permet de définir une couleur a partir de valeurs hexadécimales
+ * @brief Cette classe enum permet de définir une couleur a partir de valeurs hexadécimales
  * Elle est faite pour simplifier l'utilisation des couleurs dans le programme
  */
 enum class Couleur {

@@ -17,7 +17,7 @@ private :
     double _rayon; //rayon du cercle
 
 public :
-    /************************************************************************
+    /* ***********************************************************************
     *
     * Constructeurs et destructeur
     *
@@ -47,11 +47,11 @@ public :
     virtual ~Cercle() {}
 
 
-    /************************************************************************
+    /*
      *
      * GETTER ET SETTER
      *
-     * **********************************************************************/
+     */
 
 
     /**  @brief  getter du centre
@@ -73,11 +73,11 @@ public :
      */
     void setRayon(double rayon);
 
-    /************************************************************************
+    /*
      *
      * Clone et constructeur par copie
      *
-     * **********************************************************************/
+     */
 
     /** @brief  Clone la forme
      * @return Cercle
@@ -93,11 +93,11 @@ public :
 	 */
     Cercle(const Cercle& op);
 
-    /************************************************************************
+    /*
      *
      * Methodes pour avoir les points min et max
      *
-     * **********************************************************************/
+     */
 
     /** @brief Avoir le point X minimal et point Y minimal  du plan selon la figure
     * @return un vecteur2D qui contient le le point min x et le point min Y
@@ -111,11 +111,11 @@ public :
      */
     virtual Vecteur2D getMaxXMaxY() const;
 
-    /************************************************************************
+    /*
      *
      * Methodes pour les opérations géométriques translation, homothétie, rotation
      *
-     * **********************************************************************/
+     */
 
     /**
     * @brief Opération de translation
@@ -134,11 +134,11 @@ public :
      */
     virtual void rotation(const Vecteur2D &u, const double angle );
 
-    /************************************************************************
+    /*
      *
      * Methodes pour calculerAire et getCentreDeSymetrie
      *
-     * **********************************************************************/
+     */
 
     /** @brief  Calculer l'aire de la figure
     */
@@ -148,11 +148,9 @@ public :
      */
     Vecteur2D getCentreDeSymetrie() const;
 
-    /************************************************************************
-     *
+    /*
      * Methodes operator
-     *
-     * **********************************************************************/
+     */
 
     /**
 	 * @brief Surcharge de l'opérateur =.
@@ -178,11 +176,11 @@ public :
      */
     bool operator != (const Cercle& op)const;
 
-    /************************************************************************
+    /*
      *
      * Methodes pour l'affichage
      *
-     * **********************************************************************/
+     */
 
     /** @brief  Opérateur de conversion d'objet en chaîne de caractères.
     */
@@ -192,9 +190,9 @@ public :
     */
     friend inline ostream& operator << (ostream& os, const Cercle& c);
 
-    /************************************************************************
-     * Visiteurs
-     * **********************************************************************/
+    /*
+     *  Visiteur
+     */
     const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET s) const;
 
     const void* sauvegarde(const VisiteurDeSauvegarde *visiteur) const;

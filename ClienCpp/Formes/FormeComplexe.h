@@ -79,9 +79,9 @@ public :
 
     friend inline ostream& operator<<(ostream& os, const FormeComplexe& formeComplexe);
 
-    /************************************************************************
+    /*
      * Visiteur
-     * **********************************************************************/
+     */
     const void* dessine(const VisiteurDeLibrairie *visiteur, SOCKET s) const;
     const void* sauvegarde(const VisiteurDeSauvegarde *visiteur) const;
 

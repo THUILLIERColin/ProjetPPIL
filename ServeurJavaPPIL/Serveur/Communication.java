@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * Classe main qui permet de démarrer un serveur pour communiquer avec le client
+ */
 public class Communication {
     public static void main(String[] args) {
 
