@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/clion,intellij,c++,java
 # Edit at https://www.toptal.com/developers/gitignore?templates=clion,intellij,c++,java
 
+## For macOS
+.DS_Store
+
 ### C++ ###
 # Prerequisites
 *.d
