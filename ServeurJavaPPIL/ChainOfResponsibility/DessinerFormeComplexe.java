@@ -50,8 +50,7 @@ public class DessinerFormeComplexe extends ExpertDessiner {
                 fenetreDeDessin2.setResizable(false);
 
                 // On va parser les formes de la forme complexe et les dessiner
-                for (int i = 0 ; i < formes.length -1 ; i++) {
-                    System.out.println(formes[i]);
+                for (int i = 0 ; i < formes.length ; i++) {
                     expertFormeInterieur.envoieAuParseur(formes[i],fenetreDeDessin2,true,vmin,vmax);
                 }
 

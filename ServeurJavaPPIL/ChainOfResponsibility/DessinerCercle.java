@@ -50,7 +50,6 @@ public class DessinerCercle extends ExpertDessiner{
                 // On va stocke les coordonnees du centre du cercle dans un vecteur2D
                 Vecteur2D centre = new Vecteur2D(Xcentre,Ycentre);
 
-                System.out.println("Cercle [ " + x + " , " + y + " , " + r + " ] " + couleur );
 
                 /* ***********************************************
                  * On gère la transformation en monde ecran
@@ -94,8 +93,6 @@ public class DessinerCercle extends ExpertDessiner{
 
                 // On dessine le cercle
                 fenetreDeDessin.graphics.fillOval((int)centre.getX(),(int)centre.getY(),r,r);
-
-                System.out.println("Cercle [ " + centre.getX() + " , " + centre.getY() + " , " + r + " ] " + couleur );
 
                 return true;
             }

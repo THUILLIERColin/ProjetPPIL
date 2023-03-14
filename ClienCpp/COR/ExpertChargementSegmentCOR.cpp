@@ -18,9 +18,8 @@ ExpertChargementSegmentCOR::ExpertChargementSegmentCOR(ExpertChargementCOR *expe
  * @param      *ligne le problème à résoudre, ici une ligne lue depuis le fichier de sauvegarde réprésentant une forme
  * @return    la forme lue
  */
-Forme *ExpertChargementSegmentCOR::resoudre1(const string &ligne) const
+Forme *ExpertChargementSegmentCOR::resoudre1(const string &ligne) const{
 
-{
     const string cherche = "Segment";
     string::size_type pos = ligne.find(cherche); // on cherche le mot "segment" dans la ligne
     while (pos != string::npos) //tant qu on ne le trouve pas

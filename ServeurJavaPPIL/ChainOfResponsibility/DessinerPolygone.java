@@ -46,9 +46,6 @@ public class DessinerPolygone extends ExpertDessiner {
                     y[j]= (int) Double.parseDouble(cords[k].trim());
                 }
 
-                // On affiche le polygone
-                System.out.println("Polygone [ " + coordonnees + " ] " + couleur );
-
                 /* ***********************************************
                  * On gère la transformation en monde ecran
                  * ***********************************************/
@@ -96,9 +93,6 @@ public class DessinerPolygone extends ExpertDessiner {
                 // On dessine le polygone
                 fenetreDeDessin.graphics.fillPolygon(p);
 
-                // On affiche le polygone avec System.out.println
-                for(int i = 0 ; i < x.length ; i+=2)
-                    System.out.println("Point " + i/2 + " : " + x[i] + " " + y[i]);
                 return true;
             }
         }

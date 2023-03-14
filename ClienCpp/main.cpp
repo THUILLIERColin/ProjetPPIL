@@ -15,6 +15,8 @@
 
 int main(){
 
+    /*
+
     cout << "****************************************************" << endl;
     cout << "                   LES TESTS                   "      << endl;
     cout << "****************************************************" << endl;
@@ -137,9 +139,13 @@ int main(){
     cout << "\t - Calcul du centre de symétrie après rotation : " << formeComplexe.getCentreDeSymetrie() << endl;
     cout << "\t - Calcul du point le plus à gauche et le plus en bas après rotation : " << formeComplexe.getMinXMinY() << endl;
     cout << "\n\n" << endl;
+
+     */
     /**************************************************************************
      *  Partie 2 : Le réseau
      *************************************************************************/
+
+    /*
 
      cout << "****************************************************" << endl;
      cout << "                   RESEAU                   "         << endl;
@@ -175,10 +181,13 @@ int main(){
      }
     cout << "\n\n" << endl;
 
+     */
+
     /**************************************************************************
      *  Partie 3 : La sauvegarde
      *************************************************************************/
 
+    /*
     cout << "\n\n" << endl;
     cout << "****************************************************" << endl;
     cout << "                   LA SAUVEGARDE                   "  << endl;
@@ -193,10 +202,12 @@ int main(){
     formeComplexe.sauvegarde(new VisiteurDeSauvegardeTxt);
     cout << "\n\n" << endl;
 
-
+    */
     /**************************************************************************
      *  Partie 4: Les test sur le COR
      *************************************************************************/
+    /*
+
     cout << "\n\n" << endl;
     cout << "****************************************************" << endl;
     cout << "                   COR                   "         << endl;
@@ -289,5 +300,64 @@ int main(){
     cout << "               FIN DES TESTS                 "<< endl;
     cout << "****************************************************" << endl;
     cout << "\n\n" << endl;
+    */
+
+    try{
+        InitCommunication::getInstance()->demarrerConnection(9111, "0.0.0.0");
+
+        cout << "Création d'un rectangle bleu" << endl;
+        Polygone rectangle(0x0000FF);
+        rectangle.addPoint(Vecteur2D(1, -1));
+        rectangle.addPoint(Vecteur2D(5, -1));
+        rectangle.addPoint(Vecteur2D(5, 1));
+        rectangle.addPoint(Vecteur2D(1, 1));
+        cout << "   - " << rectangle << endl;
+
+        cout << "Création d'un triangle vert" << endl;
+        Polygone triangle(0x00FF00);
+        triangle.addPoint(Vecteur2D(6, -1));
+        triangle.addPoint(Vecteur2D(8, 0));
+        triangle.addPoint(Vecteur2D(6, 1));
+        cout << "   - " << triangle << endl;
+
+        cout << "Création d'un cercle jaune" << endl;
+        Cercle cercle(11, 0, 2, 0xFFFF00);
+        cout << "   - " << cercle << endl;
+
+        cout << "On ajoute les formes précédentes dans un groupe\n" << endl;
+        FormeComplexe groupe(0xFF0000);
+        groupe.ajouterForme(&rectangle);
+        groupe.ajouterForme(&triangle);
+        groupe.ajouterForme(&cercle);
+
+        cout << "On effectue des transformations sur le groupe" << endl;
+        cout << " - On applique une translation de (1, 0)" << endl;
+        groupe.translation(Vecteur2D(-1, 0));
+        cout << " - On applique une rotation de 45°" << endl;
+        groupe.rotation(Vecteur2D(0,0), M_PI/4);
+
+        cout << "Calcul et affichage de l'aire du groupe" << endl;
+        cout << "Aire du groupe : " << groupe.calculerAire() << "\n" << endl;
+
+        cout << "On dessine le groupe\n" << endl;
+        groupe.dessine(new VisiteurDeLibrairieJava(), InitCommunication::getInstance()->getSocket());
+
+        cout << "Sauvegarde du groupe dans un fichier\n" << endl;
+        groupe.sauvegarde(new VisiteurDeSauvegardeTxt);
+
+        ifstream fichier("../Sauvegarde/mabellefigure1.txt");
+        vector<Forme*> vec_fractions = ChargeurListeForme::charge(fichier);
+        FormeComplexe groupe2 = *dynamic_cast<FormeComplexe*>(vec_fractions[0]);
+        cout << "On dessine le groupe2" << endl;
+
+        groupe2.dessine(new VisiteurDeLibrairieJava(), InitCommunication::getInstance()->getSocket());
+
+        InitCommunication::getInstance()->deconnexion();
+
+    }
+    catch (Erreur e) {
+        cout << e << endl;
+    }
+
     return 0;
 }

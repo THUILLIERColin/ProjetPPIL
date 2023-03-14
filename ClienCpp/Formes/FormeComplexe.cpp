@@ -148,3 +148,16 @@ const void* FormeComplexe::dessine(const VisiteurDeLibrairie *visiteur, SOCKET s
 const void *FormeComplexe::sauvegarde(const VisiteurDeSauvegarde *visiteur) const {
     return visiteur->visite(this);
 }
+
+
+FormeComplexe &FormeComplexe::operator=(const FormeComplexe &formeComplexe) {
+    if(this != &formeComplexe) {
+        this->setCouleur(formeComplexe.getCouleur());
+        supprimerListeFormes();
+        for (int i = 0; i < formeComplexe.getNombreFormes(); ++i)
+        {
+            ajouterForme(formeComplexe.getForme(i));
+        }
+    }
+    return *this;
+}

@@ -77,6 +77,8 @@ public :
 
     virtual operator string() const;
 
+    FormeComplexe& operator=(const FormeComplexe& formeComplexe);
+
     friend inline ostream& operator<<(ostream& os, const FormeComplexe& formeComplexe);
 
     /*

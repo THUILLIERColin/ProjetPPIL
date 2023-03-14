@@ -57,7 +57,6 @@ public class Interlocuteur extends Thread
                     System.out.println("Requete du client " + this.noClient + " : " + requete);
                     FenetreDeDessin fenetreDeDessin = new FenetreDeDessin("Fenetre de dessin",0,0,FenetreDeDessin.LARGEUR, FenetreDeDessin.HAUTEUR);
                     this.expert.envoieAuParseur(requete, fenetreDeDessin, false, null, null);
-                    fenetreDeDessin.strategy.show();
                 }
             }
         }
